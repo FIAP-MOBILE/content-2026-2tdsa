@@ -1,0 +1,80 @@
+{
+  "repositories": {
+    "checkpoint-2": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "checkpoint-2": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    },
+    "clyvo-challenge": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "clyvo-challenge": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    },
+    "filmski": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "filmski": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    },
+    "firebase-demo": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "auth": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    },
+    "gs1": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "gs1": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    },
+    "react-components": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "react-components": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    },
+    "todoapp": {
+      "pages": [],
+      "slides": [],
+      "assignments": {
+        "todoapp": {
+          "pages": [],
+          "slides": []
+        }
+      }
+    }
+  },
+  "general": {
+    "pages": [
+      "revisitando-o-javascript"
+    ],
+    "slides": []
+  }
+}
