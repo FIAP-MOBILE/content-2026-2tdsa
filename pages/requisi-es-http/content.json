@@ -1,59 +1,6 @@
 {
   "blocks": [
     {
-      "id": "8b19dcc8-786f-49be-a97b-a833489896dd",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Existem algumas formas de se fazer requisições HTTP no ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "React Native",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ".\nAbordaremos aqui duas formas mais comuns: usando o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "fetch",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " e usando o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "axios",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ".",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
       "id": "972cbce1-8e88-409c-9090-aff6275cf2be",
       "type": "paragraph",
       "props": {
@@ -1126,7 +1073,7 @@
       "children": []
     },
     {
-      "id": "3081dc2d-dc91-47eb-9896-372c1f3dd593",
+      "id": "e7d31f30-ea61-4688-a266-ebbcd9352bb9",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
