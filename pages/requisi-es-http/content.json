@@ -1,0 +1,1140 @@
+{
+  "blocks": [
+    {
+      "id": "8b19dcc8-786f-49be-a97b-a833489896dd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Existem algumas formas de se fazer requisições HTTP no ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "React Native",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".\nAbordaremos aqui duas formas mais comuns: usando o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e usando o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "972cbce1-8e88-409c-9090-aff6275cf2be",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "O ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é uma API que já vem nativamente dentro do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Javascript",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Disponibiliza uma interface onde se faz a requisição (",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "request",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ") e resposta (",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "response",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ").\nPara fazer uma requisição, basta chamar o metódo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "(), sendo obrigatório apenas a ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "url",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " a qual se deseja fazer a requisição.\nO retorno de um ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sempre será um objeto ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Promise",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", que é a representação de uma operação assíncrona que tem 3 estados: pendente, concluído e rejeitado.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "884e77ca-528a-4588-9184-13ef086647e2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Então podemos fazer uma requisição fetch de duas formas:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d19f474b-d862-4834-a93d-4ca42586c3d3",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "// Sem uso de async\nconst fetchData = () => {\n  fetch('https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao')\n    .then((response) => console.log(response))\n    .catch((error) => console.log(error));\n};\n\n// Com uso de async\nconst fetchData = async () => {\n  try {\n    const response = await fetch(\n      'https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao',\n    );\n    console.log(response);\n  } catch (error) {\n    console.log(error);\n  }\n};",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f6de2acf-3501-438c-92ec-272534fb46c7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando fazemos a requisição, podemos ver o contéudo da resposta de duas formas:\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "response.text()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Traz o conteúdo exatamente como foi retornado pelo servidor\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "response.json()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Converte o conteúdo retornado do servidor em JSON",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "231b843d-6460-416b-9cad-d0f388f324b1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vale ressaltar que ambos os metódos também são objetos do tipo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Promise",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ou seja, se precisar do retorno deles, deve-se usar a palavra ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "await",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Exemplo:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b4f3afa2-2974-4cbe-a76b-b4684305c538",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const data = await response.json();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "98324549-47dd-4131-8cbf-530f7a211300",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "O ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " por padrão faz requisições com o metódo GET, mas é possível usar os outros mais\ncomuns: ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "POST",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "PUT",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "DELETE",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". O segundo argumento da função ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " onde você pode passar um objeto com as opções da sua requisição. As mais comuns são:\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "method",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ": Define qual metódo deve ser feita a requisição\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "body",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ": Define qual o conteúdo que vai na sua requisição\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "headers",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ": Define quais cabeçalhos irão na sua requisição, como tipo de contéudo, autenticação, etc.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3e2bd4ef-a943-4dfc-b5a2-18aa0112ae53",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "O axios por sua vez é uma das bibliotecas mais populares para se fazer requisição.\nTem os mesmos recursos que o fetch e alguns mais que o tornam uma opção mais utilizada pela comunidade. E como é uma biblioteca, para conseguir utilizar no seu projeto, basta rodar o comando:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5a47e40d-789f-4c19-aec7-91d49e88688f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ddffa2a4-2cb2-43f9-af10-e68487d43284",
+      "type": "terminal",
+      "props": {
+        "code": "npm install axios",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "8daa7033-f9d2-4188-9480-a94691fa0c82",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma vez o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " instalado na sua aplicação, para utiliza-lo basta importa-lo no seu código:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b7789869-731f-4353-89f4-2b0b63cf3754",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import axios from 'axios';",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f7afdf26-51a5-4f0c-bd73-8f454b112c4b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Assim como no ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fetch",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", quando fazemos uma requisição usando o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ele também retorna um objeto ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Promise",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Então para fazer uma requisição, existem duas formas de tratar a resposta:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2196c255-b7d3-4532-98eb-27196a6f60b0",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "// Sem uso de async\nimport axios from 'axios';\n\nconst fetchData = () => {\n  axios\n    .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao')\n    .then((response) => console.log(response))\n    .catch((error) => console.log(error));\n};\n\n// Com uso de async\nconst fetchData = async () => {\n  try {\n    const response = await axios.get(\n      'https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao',\n    );\n    console.log(response);\n  } catch (error) {\n    console.log(error);\n  }\n};",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f84f72e2-aebd-4c9a-9bdf-87d1342855c6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para ver o conteúdo da resposta, no ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é bem mais simples. Existe a propriedade ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "data",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que já faz o tratamento dos dados. Se o conteúdo for um texto, ele não faz nada e retorna o conteúdo normalmente. Caso o conteúdo seja um JSON, ele trata isso e já te retorna no formato JSON.\nExemplo:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "40c51c0b-a76d-43c9-aafd-b90fd692bf1d",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const response = await axios.get(\n  'https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao',\n);\nconsole.log(response.data);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f238661a-da57-43e9-8cd2-925f19473ce9",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma vantagem do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é ser possível criar uma nova instância e deixar algumas configurações pré-definidas. Por exemplo, qual o servidor que você vai fazer a requisição e qual o caminho base. Veja o código a seguir:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e569b9b5-7dc2-443f-9a79-563b766e316f",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const client = axios.create({\n  baseURL: 'https://servicodados.ibge.gov.br/api/v2',\n});\nconst response = await client.get('/censos/nome/joao');\nconsole.log(response.data);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a6e69877-f7f0-44ef-8229-ca4e905d66f8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "É criado um cliente para fazer as requisições e todas as requisições serão feitas no servidor definido no parâmetro ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "baseURL",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". O parâmetro ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "baseURL",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " vai ser concatenado com o argumento que será informado no momento que uma requisição for realizada.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3fdfad63-b948-4d2d-b79a-87720ff4b0c5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para fazer os diferentes tipos de requisição, no axios existe um metódo para cada um deles.\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios.get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Requisição GET\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios.post",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Requisição POST\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios.put",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Requisição PUT\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios.delete",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Requisição DELETE",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3456b714-c3b1-43a4-a805-0a38666183ec",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Caso o código seja feito utilizando ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "TypeScript",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", um recurso interessante do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é que ele permite definir a estrutura dos dados que serão retornados utilizando um ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "type",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Exemplo:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a92d39e4-a231-4e59-b676-d29343d83727",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import axios from 'axios';\n\ntype User = {\n  firstName: string;\n  lastName: string;\n};\n\nconst getData = async () => {\n  const { data } = await axios.get<User>('https://dummyjson.com/users/1');\n  console.log(data.firstName);\n};",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b89539c6-ea67-429a-b0ea-3466741bcd18",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Outro recurso muito interessante do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "axios",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " são os ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptors",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Como o nome sugere, é possível interceptar uma requisição ou uma resposta.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a878d1d6-7bd1-4f93-b9ef-576fd896c237",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "// Antes do request\naxios.interceptors.request.use(\n  (config) => {\n    // Coloque qualquer código aqui para executar antes da requisição ser feita\n    return config;\n  },\n  (error) => {\n    // Faça o tratamento de erro caso a requisição tenha dado errado\n    return Promise.reject(error);\n  },\n);\n\n// Quando se recebe a resposta\naxios.interceptors.response.use(\n  (response) => {\n    // Esse código só é executado quando o status é 2xx\n    // Trate a resposta como achar conveniente\n    return response;\n  },\n  (error) => {\n    // Faça o tratamento de erro caso o status da resposta seja diferente de 2xx\n    return Promise.reject(error);\n  },\n);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "20e62592-f639-4079-bbb6-3aa6567565b9",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vale ressaltar dois pontos sobre ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptors",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c7779340-04a8-4100-a586-d3eeaa80b3f6",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando se configura um ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptor",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " para ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "request",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", deve obrigatoriamente retornar o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "config",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que é passado como paramêtro.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1d5380ce-5845-4af1-9f42-799e33b56570",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Não tem limitação de quantos ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptors",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " podem ser executados. A ordem de execução dos ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptors",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " vai depender da ordem em que eles foram adicionados.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0198e97c-071a-424c-93a8-fd796a9d00d9",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "axios.interceptors.request.use((config) => {\n  console.log('Segundo interceptor');\n  return config;\n});\n\naxios.interceptors.request.use((config) => {\n  console.log('Primeiro interceptor');\n  return config;\n});\n\naxios.interceptors.response.use((config) => {\n  console.log('Primeiro interceptor');\n  return config;\n});\n\naxios.interceptors.response.use((config) => {\n  console.log('Segundo interceptor');\n  return config;\n});",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1c24b72c-15f6-49cb-87c2-942e70602965",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Seguindo a premissa de que se lê o código de cima pra baixo:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dcecdfcc-b3b7-4054-97b2-dc77f01182c1",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "No caso de um ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptor",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "request",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", o primeiro a ser executado é último a ser declarado, ou seja, na ordem de baixo pra cima",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "548106cc-8024-4eaf-ae0d-fcc189e16da1",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "No caso de um ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "interceptor",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "response",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", o primeiro a ser executado é o primeiro a ser declarado, ou seja, na ordem de cima pra baixo",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3081dc2d-dc91-47eb-9896-372c1f3dd593",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
