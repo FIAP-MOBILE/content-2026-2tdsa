@@ -72,9 +72,7 @@
     }
   },
   "general": {
-    "pages": [
-      "revisitando-o-javascript"
-    ],
+    "pages": [],
     "slides": []
   }
 }
