@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p>Existem algumas formas de se fazer requisições HTTP no <code>React Native</code>.<br>Abordaremos aqui duas formas mais comuns: usando o <code>fetch</code> e usando o <code>axios</code>.</p>
+<hr>
+<p>O <code>fetch</code> é uma API que já vem nativamente dentro do <code>Javascript</code>. Disponibiliza uma interface onde se faz a requisição (<code>request</code>) e resposta (<code>response</code>).<br>Para fazer uma requisição, basta chamar o metódo <code>fetch</code>(), sendo obrigatório apenas a <code>url</code> a qual se deseja fazer a requisição.<br>O retorno de um <code>fetch</code> sempre será um objeto <code>Promise</code>, que é a representação de uma operação assíncrona que tem 3 estados: pendente, concluído e rejeitado.</p>
+<hr>
+<p>Então podemos fazer uma requisição fetch de duas formas:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span></div><pre><code class="language-typescript">// Sem uso de async
+const fetchData = () =&gt; {
+  fetch(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao&#39;)
+    .then((response) =&gt; console.log(response))
+    .catch((error) =&gt; console.log(error));
+};
+
+// Com uso de async
+const fetchData = async () =&gt; {
+  try {
+    const response = await fetch(
+      &#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao&#39;,
+    );
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};</code></pre></div></div>
+<hr>
+<p>Quando fazemos a requisição, podemos ver o contéudo da resposta de duas formas:<br><code>response.text()</code> =&gt; Traz o conteúdo exatamente como foi retornado pelo servidor<br><code>response.json()</code> =&gt; Converte o conteúdo retornado do servidor em JSON</p>
+<p>Vale ressaltar que ambos os metódos também são objetos do tipo <code>Promise</code>, ou seja, se precisar do retorno deles, deve-se usar a palavra <code>await</code>. Exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">const data = await response.json();</code></pre></div></div>
+<hr>
+<p>O <code>fetch</code> por padrão faz requisições com o metódo GET, mas é possível usar os outros mais<br>comuns: <code>POST</code>, <code>PUT</code> e <code>DELETE</code>. O segundo argumento da função <code>fetch</code> onde você pode passar um objeto com as opções da sua requisição. As mais comuns são:<br><code>method</code>: Define qual metódo deve ser feita a requisição<br><code>body</code>: Define qual o conteúdo que vai na sua requisição<br><code>headers</code>: Define quais cabeçalhos irão na sua requisição, como tipo de contéudo, autenticação, etc.</p>
+<hr>
+<p>O axios por sua vez é uma das bibliotecas mais populares para se fazer requisição.<br>Tem os mesmos recursos que o fetch e alguns mais que o tornam uma opção mais utilizada pela comunidade. E como é uma biblioteca, para conseguir utilizar no seu projeto, basta rodar o comando:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install axios</code></pre></div></div></div>
+<hr>
+<p>Uma vez o <code>axios</code> instalado na sua aplicação, para utiliza-lo basta importa-lo no seu código:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">import axios from &#39;axios&#39;;</code></pre></div></div>
+<hr>
+<p>Assim como no <code>fetch</code>, quando fazemos uma requisição usando o <code>axios</code> ele também retorna um objeto <code>Promise</code>. Então para fazer uma requisição, existem duas formas de tratar a resposta:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span></div><pre><code class="language-typescript">// Sem uso de async
+import axios from &#39;axios&#39;;
+
+const fetchData = () =&gt; {
+  axios
+    .get(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao&#39;)
+    .then((response) =&gt; console.log(response))
+    .catch((error) =&gt; console.log(error));
+};
+
+// Com uso de async
+const fetchData = async () =&gt; {
+  try {
+    const response = await axios.get(
+      &#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao&#39;,
+    );
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};</code></pre></div></div>
+<hr>
+<p>Para ver o conteúdo da resposta, no <code>axios</code> é bem mais simples. Existe a propriedade <code>data</code> que já faz o tratamento dos dados. Se o conteúdo for um texto, ele não faz nada e retorna o conteúdo normalmente. Caso o conteúdo seja um JSON, ele trata isso e já te retorna no formato JSON.<br>Exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">const response = await axios.get(
+  &#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/joao&#39;,
+);
+console.log(response.data);</code></pre></div></div>
+<hr>
+<p>Uma vantagem do <code>axios</code> é ser possível criar uma nova instância e deixar algumas configurações pré-definidas. Por exemplo, qual o servidor que você vai fazer a requisição e qual o caminho base. Veja o código a seguir:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-typescript">const client = axios.create({
+  baseURL: &#39;https://servicodados.ibge.gov.br/api/v2&#39;,
+});
+const response = await client.get(&#39;/censos/nome/joao&#39;);
+console.log(response.data);</code></pre></div></div>
+<p>É criado um cliente para fazer as requisições e todas as requisições serão feitas no servidor definido no parâmetro <code>baseURL</code>. O parâmetro <code>baseURL</code> vai ser concatenado com o argumento que será informado no momento que uma requisição for realizada.</p>
+<hr>
+<p>Para fazer os diferentes tipos de requisição, no axios existe um metódo para cada um deles.<br><code>axios.get</code> =&gt; Requisição GET<br><code>axios.post</code> =&gt; Requisição POST<br><code>axios.put</code> =&gt; Requisição PUT<br><code>axios.delete</code> =&gt; Requisição DELETE</p>
+<hr>
+<p>Caso o código seja feito utilizando <code>TypeScript</code>, um recurso interessante do <code>axios</code> é que ele permite definir a estrutura dos dados que serão retornados utilizando um <code>type</code>. Exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">import axios from &#39;axios&#39;;
+
+type User = {
+  firstName: string;
+  lastName: string;
+};
+
+const getData = async () =&gt; {
+  const { data } = await axios.get&lt;User&gt;(&#39;https://dummyjson.com/users/1&#39;);
+  console.log(data.firstName);
+};</code></pre></div></div>
+<hr>
+<p>Outro recurso muito interessante do <code>axios</code> são os <code>interceptors</code>. Como o nome sugere, é possível interceptar uma requisição ou uma resposta.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span></div><pre><code class="language-typescript">// Antes do request
+axios.interceptors.request.use(
+  (config) =&gt; {
+    // Coloque qualquer código aqui para executar antes da requisição ser feita
+    return config;
+  },
+  (error) =&gt; {
+    // Faça o tratamento de erro caso a requisição tenha dado errado
+    return Promise.reject(error);
+  },
+);
+
+// Quando se recebe a resposta
+axios.interceptors.response.use(
+  (response) =&gt; {
+    // Esse código só é executado quando o status é 2xx
+    // Trate a resposta como achar conveniente
+    return response;
+  },
+  (error) =&gt; {
+    // Faça o tratamento de erro caso o status da resposta seja diferente de 2xx
+    return Promise.reject(error);
+  },
+);</code></pre></div></div>
+<hr>
+<p>Vale ressaltar dois pontos sobre <code>interceptors</code></p>
+<ul>
+<li>Quando se configura um <code>interceptor</code> para <code>request</code>, deve obrigatoriamente retornar o <code>config</code> que é passado como paramêtro.</li>
+<li>Não tem limitação de quantos <code>interceptors</code> podem ser executados. A ordem de execução dos <code>interceptors</code> vai depender da ordem em que eles foram adicionados.</li>
+</ul>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span></div><pre><code class="language-typescript">axios.interceptors.request.use((config) =&gt; {
+  console.log(&#39;Segundo interceptor&#39;);
+  return config;
+});
+
+axios.interceptors.request.use((config) =&gt; {
+  console.log(&#39;Primeiro interceptor&#39;);
+  return config;
+});
+
+axios.interceptors.response.use((config) =&gt; {
+  console.log(&#39;Primeiro interceptor&#39;);
+  return config;
+});
+
+axios.interceptors.response.use((config) =&gt; {
+  console.log(&#39;Segundo interceptor&#39;);
+  return config;
+});</code></pre></div></div>
+<hr>
+<p>Seguindo a premissa de que se lê o código de cima pra baixo:</p>
+<ul>
+<li>No caso de um <code>interceptor</code> de <code>request</code>, o primeiro a ser executado é último a ser declarado, ou seja, na ordem de baixo pra cima</li>
+<li>No caso de um <code>interceptor</code> de <code>response</code>, o primeiro a ser executado é o primeiro a ser declarado, ou seja, na ordem de cima pra baixo</li>
+</ul>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
