@@ -1,0 +1,1878 @@
+{
+  "blocks": [
+    {
+      "id": "5c16153f-b445-47b7-ad2e-65ffbc93fe22",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "00081928-cff9-4d12-9fb6-5c2acd684c3c",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Linguagem Interpretada",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "decb4482-f473-4833-9ded-36d5dd71d8fc",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Tipagem dinâmica fraca",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e3d266fb-26ff-43de-b3f8-fe3ab389a546",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Multi-paradigma",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "087fdaca-51cd-4c2e-8252-30f49114b621",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Inicialmente projetada para Web",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d345347e-9039-425f-ba21-ba37daf57463",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pode ser usada como Client-side & Server-side",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "287f3fd0-7599-4d8f-859c-4143771e5025",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Linguagem mais popular nos dias de hoje.\nFonte: ",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://survey.stackoverflow.co/2023/#most-popular-technologies-language",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://survey.stackoverflow.co/2023/#most-popular-technologies-language",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f51334eb-54b4-4304-b7b3-ecd6bf22c57e",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Linguagem criada em 1995 por Brendan Eich (Netscape)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "318c601f-f4ee-48e6-bd39-fb7d0aada7ec",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Possui o nome JavaScript como forma de aproveitar a fama da linguagem Java na época de seu lançamento",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "56c0ab2f-d05f-4aa3-b2fb-a4ff4c15ec59",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "No Internet Explorer 3, iniciou-se uma implementação modificada chamada JScript",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "96b2f5ff-469f-4e50-8cb1-500492355b8a",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Enviada para a European Computer Manufacturers Association para padronização da linguagem em 1997",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "06d9a266-9f6d-4022-99fa-cb712c2f18c5",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Sintaxe semelhante com outras linguagens baseadas em C",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b23d4172-bad7-4d08-bf3b-681255c014ad",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "ECMAScript é a especificação de linguagens scripts padronizada, onde engloba o Javascript",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c8052c2f-6376-483e-9e4e-075e412fe555",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Usada no desenvolvimento WEB (Client-side)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c1cbc98b-3ed4-40a3-8813-c61c7c79c1ae",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Usada no desenvolvimento WEB (Server-side / Node.JS)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1030eafe-3e00-44e2-91d5-01f76227a5d3",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Usada no desenvolvimento Desktop (Electron)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "31a65710-09d6-465f-8c58-752b1f5a7dfc",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Usada no desenvolvimento Mobile (Cordova, PhoneGap, Ionic, React-Native)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e7778ec0-475c-46b6-b5c5-cc83fecf2d5e",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Constants",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "813eda0d-6c7c-4d1c-ad65-0757e01be6b8",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Block Scope",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "02f9fdb2-8dd0-48dd-a625-077c7c9372cb",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Arrow Functions",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "aedc11ad-5ca5-40d8-bb60-394199cff1c7",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Template Literals",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bf96b17d-ffa9-4b8c-92db-d04ecc1a775b",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "De-structuring",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "060a42c6-dccf-4c65-b62d-8140af9e4353",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Modules",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ce0c73c5-d57c-4a14-948a-3846581c008e",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Classes",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "432749db-3fc3-41f4-b23a-28df1717a7f1",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Iterators",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b84717cf-9790-4d89-9249-ee9e68770d63",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Collections",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "65cb0675-0c5c-4f67-b4d6-6955d9d29269",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Promises",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "07d7c3c2-4bad-44db-918c-4cf20c1a473c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Escolha de IDE",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "847ec2f2-bf5a-407d-8362-a455f4375af3",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "link",
+          "href": "https://code.visualstudio.com/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://code.visualstudio.com/",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (Recomendado)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "df3977c2-c2cd-4805-983d-d8395f88b020",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "link",
+          "href": "http://brackets.io/",
+          "content": [
+            {
+              "type": "text",
+              "text": "http://brackets.io/",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6557e584-ac05-4cbe-8449-a8cb39a0fa73",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vamos inicialmente utilizar o NodeJS para aprendizado.\nDeve-se instalar a última versão estável.\n",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://nodejs.org/en/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://nodejs.org/en/",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "62859027-ad75-4f62-b969-e2bd5fd91af2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4c0f0ec2-9a23-4f6c-8428-a3499aace873",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": ":warning: IMPORTANTE",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ": É recomendado utilizar a versão LTS (Long Term Support)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "853febaf-4657-457f-8d97-8b68d8f69f21",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Após o NodeJS ser instalado, vamos usar o terminal (cmd, prompt, etc) para confirmar a versão instalada com o seguinte comando.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "01a9a33c-4a87-4f1d-aec2-7646f3ce0bcf",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "node --version",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "74fa4cf5-863b-4a15-a115-fae51dc6b28b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Após tudo instalado, vamos criar nosso primeiro projeto em NodeJS. Quando instalado, uma ferramenta\nchamada ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NPM",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é instalada automaticamente.O ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NPM",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " funciona como um gerenciador de pacotes para NodeJS, ou seja, através dele é possível adicionar bibliotecas de terceiros em seu projeto.Crie uma pasta em seu computador chamada ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "HelloWorld",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "272e8b2b-2764-4999-af6f-e307ab41e858",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Abra o terminal, vá até a pasta HelloWorld criada e digite o seguinte comando:\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "npm init -y",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "968f010e-95cf-43b1-8568-0463ed4c3b1e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Abra a pasta do projeto em seu editor preferido e crie um arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "index.js",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " com o seguinte conteúdo:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "24f4e054-32ba-4e19-ad8f-ae900b5ed771",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "console.log('Hello World');",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1aba213e-ed3c-4c56-85bc-9a73c94dda06",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Execute o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "index.js",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " através do comando no terminal:\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "node index.js",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "16e32c08-0759-4d5e-ad5c-697031074bbc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Existem 3 formas de declarar variável:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8fd35949-103d-495c-b9b6-51beb5d25608",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Escopo apenas dentro do bloco utilizado, porém uma vez inicializada, não permite alteração de valor\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "let",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Escopo apenas dentro do bloco utilizado. Permite alteração de valor\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "var",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " => Escopo global ou dentro da função onde foi declarado. Permite alterar seu valor. NÃO RECOMENDADO",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "523b4b5a-3afb-4ade-a8d2-ceaa34b71300",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Também conhecido como interpolação de string. Facilita para\nconcatenar (juntar) strings",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d40227dc-52e3-4236-949b-8eafeccce9de",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const a = 10;\nconst b = 20;\n\n// Sem template string\nconst msg = 'A = ' + a + 'B = ' + B;\nconsole.log(msg2);\n\n// Com template string\nconst msg2 = `A = ${a} B = ${b}`;\nconsole.log(msg2);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4b87d50e-dd0a-461d-a889-e1560e40385b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Funções é o agrupamento de um conjunto de instruções. Ao invés de ficar repetindo o mesmo código diversas vezes, basta criar uma função.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "39394160-b18b-4fae-8c0b-d402f5ccc70f",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "function soma(a, b) {\n  return a + b;\n}\n\nconsole.log(soma(3, 4));",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0cad592f-094a-47e8-869b-24dd2bb3eb2f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "É possível criar funções com parâmetros opcionais",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9012c022-b1a0-4002-b81e-9387534240e0",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "function soma(a, b = 0) {\n  return a + b;\n}\n\nconsole.log(soma(3));",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "86963fc2-0ac3-4389-b7e0-0d1871ac3d56",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "let digaOla = function () {\n  console.log('Olá');\n};\n\ndigaOla();\n\nconst idade = 16;\nlet bemVindo;\nif (idade < 18) {\n  bemVindo = function () {\n    console.log('Olá');\n  };\n} else {\n  bemVindo = function () {\n    console.log('Saudações');\n  };\n}\n\nbemVindo();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c288bbdf-2c7c-452c-90b0-82c57b85080a",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const soma = (a, b) => a + b;\nconsole.log(soma(3, 4));\n\nconst dobro = (n) => n * 2;\nconsole.log(dobro(4));\n\nconst digaOla = () => console.log('Olá');\ndigaOla();\n\nconst sayHello = (_) => console.log('Hello');\nsayHello();\n\nconst subtracao = (a, b) => {\n  const resultado = a - b;\n  return resultado;\n};\nconsole.log(subtracao(10, 8));",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "68c9d9b9-4a5a-43f7-a073-df054f6b39bd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3120e653-72c6-4072-b464-467e23f1f2c8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma característica importante das ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Arrow Functions",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é que não se pode declarar paramêtros com o mesmo nome na sua definição",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7425c93b-a7ee-4bb1-8187-df3cd1eeb77a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "O Spread Operator é representado por três pontos ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "...",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e converte um array em elementos individuais.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f9c04c0d-4890-4195-ad0a-81d37b6284e2",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const meuArray = [1, 2, 3];\nconsole.log(meuArray);\nconsole.log(...meuArray);\nconsole.log([...meuArray, 4, 5, 6]);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "19872cca-b202-4d8a-9f8f-3b1b7208731d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Podemos utilizar os mesmos recursos para objetos. Com ele, duplicamos seus valores em um novo objeto.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bf686cee-6d39-4735-880f-23f1b29b3e1a",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const data = { firstName: 'Leonardo', lastName: 'Bragatti' };\nconsole.log({ ...data, email: 'email@email.com' });",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "eec3afc9-055f-45bd-a6b8-54a261edcba8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "A técnica de Destructuring permite a quebra de estrutura complexas em partes únicas.\nÉ possível aplicá-la em Arrays e Objetos:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4343f1fc-88e1-4d91-8fee-81cd91f9e2a3",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const meuArray = ['azul', 'vermelo', 'verde'];\nconst [cor1, cor2, cor3] = meuArray;\n\nconsole.log(cor1);\nconsole.log(cor2);\nconsole.log(cor3);\n\nconst meuObjeto = { x: 10, y: 20, z: 30 };\nconst { x, y } = meuObjeto;\n\nconsole.log(x);\nconsole.log(y);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4253602f-d66d-40d4-b2f0-d205c79a39cd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Javascript não tem uma implementação robusta de orientação a objetos. Mas é possível criar objetos no seu código.\nObjetos em Javascript pode ser criados sem uso de classes, criando estruturas em tempo de execução.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b966fc90-189c-4ce2-a7bc-abc1eff114e3",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const carro1 = { marca: 'Fiat', modelo: '500', cor: 'Branco' };\nconst carro2 = { marca: 'Fiat', modelo: '500', cor: 'Branco' };\n\nconsole.log(carro1);\nconsole.log(carro1.marca);\nconsole.log(carro1.modelo);\nconsole.log(carro1.cor);\n\nconsole.log(carro2);\nconsole.log(carro2.marca);\nconsole.log(carro2.modelo);\nconsole.log(carro2.cor);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c14fffb1-ee3e-413b-adda-af08f7047a9f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Definindo objetos com declaração literal.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "04a3c5fa-f817-4655-b20b-2d2714de8a18",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const pessoa = {\n  nome: 'Mario',\n  sobrenome: 'de Andrade',\n  id: 4483,\n  nomeCompleto: () => {\n    return `${this.nome} ${this.sobrenome}`.trim();\n  },\n};\nconsole.log(pessoa);\nconsole.log(pessoa.nomeCompleto());",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6f32ceea-3690-4e24-abc1-dcb1d4da8993",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Instância de objetos a partir de implementação vazia",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d984c589-1483-4415-b719-edd42827a984",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const criarNovaPessoa = (nome) => {\n  const obj = {};\n  obj.nome = nome;\n\n  obj.saudacao = () => {\n    console.log(`Olá, ${obj.nome}`);\n  };\n\n  return obj;\n};\n\nconst pessoa = criarNovaPessoa('Ale');\npessoa.saudacao();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dca6840c-be47-41b3-b578-f51ea1dbe7a4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Instância de objetos utilizando função que representa uma classe e o operador ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "new",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "64717f2e-62a8-4310-bea1-62e1ed6bf726",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "function Pessoa(nome) {\n  this.nome = nome;\n  this.saudacao = () => {\n    console.log(`Olá, ${this.nome}`);\n  };\n}\n\nconst pessoa = new Pessoa('Ale');\npessoa.saudacao();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2362701a-a960-45db-a526-97f7340f5622",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "É possível escrever códigos orientados a objetos de forma clara, com sintaxe parecida com outras linguagens de programação",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c1df370f-bb7f-4677-82e2-22be7b07be56",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "class Pessoa {\n  // Constructor\n  constructor() {\n    this.nome = '';\n    this.email = '';\n  }\n}\n\nconst pessoa = new Pessoa();\npessoa.nome = 'João';\nconsole.log(pessoa.nome);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8f803945-ee13-4675-9a50-2b9ae28d77ba",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Javascript não possui modificadores de visibilidade: público, privado ou protegido.\nPara deixar claro que algo é privado, usamos o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "_",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " (underline) antes do nome do atributo e manipulamos seu valor através de métodos ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "set",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3282d69b-429a-4733-8029-c83a3fdafeb3",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "class Pessoa {\n  // Constructor\n  constructor() {\n    this._nome = ''; // \"privado\"\n  }\n\n  get nome() {\n    return this._nome;\n  }\n\n  set nome(value) {\n    this._nome = value;\n  }\n}\n\nconst pessoa = new Pessoa();\npessoa.nome = 'João'; // Sem a sintaxe do metódo\nconsole.log(pessoa.nome);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "585f0621-f0b0-44f0-b3ad-867ca877e542",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "É possível definir métodos estáticos",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6412b19f-f678-48a0-af7a-85fca5f0daec",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "class Pessoa {\n  // Constructor\n  constructor(nome) {\n    this._nome = '';\n  }\n\n  get nome() {\n    return this._nome;\n  }\n\n  static qualClasseSou() {\n    console.log('Sou a classe Pessoa.');\n  }\n}\n\nconst pessoa = new Pessoa('Ale');\nPessoa.qualClasseSou();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "eab356bc-2856-4e5e-b5fa-511c54069123",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Utilizando herança de objetos",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "21ccb5b2-7f28-4954-943c-b5cda60d4a7c",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "class Carro {\n  constructor(marca) {\n    this.marca = marca;\n  }\n}\n\nclass SUV extends Carro {\n  constructor(marca, tipoCambio) {\n    super(marca);\n    this.tipoCambio = tipoCambio;\n  }\n}\n\nconst suv = new SUV('Honda', 'Automatico');\nconsole.log(suv.marca);\nconsole.log(suv.tipoCambio);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0de0440e-f433-4f5c-9922-1d740b561782",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Módulos são pedaços de códigos JavaScript escritos em um arquivo de modo que seja possível usar apenas um trecho deste arquivo dentro de outro arquivo.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "09096a27-4bb3-4957-bfda-1b31b95e00cf",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Eles podem ser exportados de forma nomeada ou forma default.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4c792b2b-fd14-43e2-8f95-131461e2ffbe",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dentro de outro arquivo, eles serão importados, podendo usar a técnica de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Destructuring",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bb974677-9bcd-4950-81bb-06fe379e6097",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Isso facilita a componentização do código, deixando-o mais organizado e legível.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "623b81ff-3cd0-48bf-8bbb-d5a8a28de5c7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Classes, funções e variáveis presentes em um arquivo podem ser exportadas de\nforma nomeada. Ex: arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "MeuModulo.js",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5195c8b0-1d0a-4618-9858-fdc8256ea8ca",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "class MinhaClasse {\n  show() {\n    console.log('Um metódo dentro da classe');\n  }\n}\n\nconst minhaFuncao = (_) => console.log('Uma função');\nconst minhaVariavel = 10;\n\nexport { MinhaClasse, minhaFuncao, minhaVariavel };",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4a816060-cbe4-4722-b9f4-b3cd8f18d1f5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para importar somente a MinhaClasse do arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "MeuModulo.js",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " dentro do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "index.js",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "609f1ff0-2525-4b34-ba59-8c6b1ad16fa3",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import { MinhaClasse } from './MeuModulo.js';\n\nconst a = new MinhaClasse();\na.show();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4314fdb6-f516-4172-afbe-3873adef62d9",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para executar usando o NodeJS, sem o uso do Babel, adicione a linha ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "type",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", conforme abaixo, no arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "package.json",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dfc72926-7142-4736-8670-b7e95f2984e1",
+      "type": "codeBlock",
+      "props": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"name\": \"Teste\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f2be828c-b567-4feb-bdfa-c2be110ab9a9",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Módulos podem ter um ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "default export",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Isso é útil quando o arquivo possui apenas uma classe ou método para ser exportado, não precisando fazer o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Destructuring",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " para importar",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "cb28fe6b-b9e3-4a97-9ae4-4b93bf44165a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "MeuModulo.js",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "855272d4-b654-4504-b012-30bf19a0da96",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "export default class MinhaClasse {\n  show() {\n    console.log('Um metódo dentro da classe');\n  }\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "509c8e3d-5cbf-4d2d-a366-c3a83cf29d6d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "f430792f-3445-4a96-956b-9c89d93e2343",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a6e1577a-2921-402f-9f5b-e9f946d4b479",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "index.js",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d1110cc7-b0ba-454e-95d5-4264b9353648",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import MinhaClasse from './MeuModulo.js';\n\nconst a = new MinhaClasse();\na.show();",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d9a263aa-cdda-4e11-bb11-c57f0c9b1963",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "link",
+          "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://developer.mozilla.org/en-US/docs/Web/JavaScript\n",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference\n",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "href": "https://javascript.info/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://javascript.info/\n",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "href": "https://jsfiddle.net/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://jsfiddle.net/\n",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "href": "https://codepen.io/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://codepen.io/\n",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "href": "https://hackerrank.com",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://hackerrank.com",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a886a5f8-36fc-439f-a99c-eb79bf8da47f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
