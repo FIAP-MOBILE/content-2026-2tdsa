@@ -83,7 +83,8 @@
       "02-revisitando-o-react",
       "09-async-storage",
       "10-context",
-      "11-firebase"
+      "11-firebase",
+      "12-firebase-firestore"
     ],
     "slides": []
   }
