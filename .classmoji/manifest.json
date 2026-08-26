@@ -73,6 +73,7 @@
   },
   "general": {
     "pages": [
+      "03-preparando-o-ambiente",
       "requisies-http",
       "revisitando-o-javascript",
       "02-revisitando-o-react"
