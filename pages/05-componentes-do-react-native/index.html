@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p>Quase tudo que é exibido na tela é considerado um componente.<br>Existem componentes utilizados para ajudar a exibir ou manusear outros componentes.</p>
+<hr>
+<p>O mais básico de todos, ele nada mais é que um recipiente para agrupar elementos.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span></div><pre><code class="language-typescript">import React from &#39;react&#39;;
+
+import { View, Text } from &#39;react-native&#39;;
+
+const ViewBoxesWithColorAndText = () =&gt; {
+  return (
+    &lt;View style={{ flexDirection: &#39;row&#39;, height: 100, padding: 20 }}&gt;
+      &lt;View style={{ backgroundColor: &#39;blue&#39;, flex: 0.3 }} /&gt;
+      &lt;View style={{ backgroundColor: &#39;red&#39;, flex: 0.5 }} /&gt;
+      &lt;Text&gt;Hello World!&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default ViewBoxesWithColorAndText;</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>Sua função é exibir um texto. Tem suporte a estilização, aninhamento e manuseamento de toque.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+
+import { Text } from &#39;react-native&#39;;
+
+const TextInANest = () =&gt; {
+  const [titleText, setTitleText] = useState(`Bird&#39;s Nest`);
+  const bodyText = `This is not really a bird nest`;
+
+  const onPressTitle = () =&gt; {
+    setTitleText(`Bird&#39;s Nest [pressed]`);
+  };
+
+  return (
+    &lt;Text style={{ fontFamily: &#39;Cochin&#39; }}&gt;
+      &lt;Text style={{ fontSize: 20, fontWeight: &#39;bold&#39; }} onPress={onPressTitle}&gt;
+        {titleText}
+        {&#39;\n&#39;}
+        {&#39;\n&#39;}
+      &lt;/Text&gt;
+      &lt;Text numberOfLines={5}&gt;{bodyText}&lt;/Text&gt;
+    &lt;/Text&gt;
+  );
+};
+
+export default TextInANest;</code></pre></div></div>
+<hr>
+<p>Componente de imagem, com suporte a diversos formatos, inclusive selecionar imagens tiradas pela camera.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span></div><pre><code class="language-typescript">import React from &#39;react&#39;;
+
+import { View, Image } from &#39;react-native&#39;;
+
+const DisplayImage = () =&gt; {
+  return (
+    &lt;View style={{ paddingTop: 50 }}&gt;
+      &lt;Image
+        style={{ width: 50, height: 50 }}
+        source={{ uri: &#39;https://reactnative.dev/img/tiny_logo.png&#39; }}
+      /&gt;
+      &lt;Image
+        style={{ width: 66, height: 58 }}
+        source={{ uri: &#39;https://reactnative.dev/img/tiny_logo.png&#39; }}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default DisplayImage;</code></pre></div></div>
+<hr>
+<p>Utilizado para realizar entradas de texto. Oferece uma série de configurações como correção automática, diferentes tipos de teclado, auto capitalização e etc.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span></div><pre><code class="language-typescript">import React from &#39;react&#39;;
+
+import { View, TextInput, Text } from &#39;react-native&#39;;
+
+const TextInputExample = () =&gt; {
+  const [text, onChangeText] = React.useState(&#39;Useless text&#39;);
+  const [number, onChangeNumber] = React.useState(&#39;&#39;);
+  return (
+    &lt;View&gt;
+      &lt;TextInput
+        style={{ height: 40, margin: 12, borderWidth: 1 }}
+        onChangeText={onChangeText}
+        value={text}
+      /&gt;
+      &lt;Text&gt;Text: {text}&lt;/Text&gt;
+      &lt;TextInput
+        style={{ height: 40, margin: 12, borderWidth: 1 }}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder=&quot;useless placeholder&quot;
+        keyboardType=&quot;numeric&quot;
+      /&gt;
+      &lt;Text&gt;Number: {number}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default TextInputExample;</code></pre></div></div>
+<hr>
+<p>Componente que encobre todos os elementos dentro dele, sendo possível rolar a tela.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span><span class="line-number">43</span><span class="line-number">44</span><span class="line-number">45</span><span class="line-number">46</span><span class="line-number">47</span><span class="line-number">48</span><span class="line-number">49</span><span class="line-number">50</span><span class="line-number">51</span><span class="line-number">52</span><span class="line-number">53</span><span class="line-number">54</span><span class="line-number">55</span><span class="line-number">56</span><span class="line-number">57</span><span class="line-number">58</span><span class="line-number">59</span><span class="line-number">60</span><span class="line-number">61</span><span class="line-number">62</span><span class="line-number">63</span></div><pre><code class="language-typescript">import { ScrollView, Text } from &#39;react-native&#39;;
+
+const ScrollExample = () =&gt; {
+  return (
+    &lt;ScrollView style={{ flex: 1, marginHorizontal: 20 }}&gt;
+      &lt;Text&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ipsum
+        enim, ultrices at facilisis at, commodo et eros. Integer sit amet
+        ultrices leo, eget vehicula ipsum. Phasellus magna elit, aliquam sed ex
+        nec, pulvinar convallis augue. Aliquam eu quam turpis. Vestibulum id sem
+        tempus, dignissim mauris sed, mollis ipsum. Suspendisse dolor est,
+        feugiat ac dictum ac, pretium id turpis. Aliquam luctus nulla risus, et
+        rutrum massa maximus varius. Nulla id tristique libero, in lacinia nisi.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at massa
+        lorem. Etiam vel pulvinar lectus. Sed iaculis rutrum sem, nec pharetra
+        arcu pharetra sit amet. Proin molestie vulputate quam, a congue ligula
+        tincidunt ac. Aenean ipsum purus, sagittis id libero ut, ultrices dictum
+        lacus. Donec id diam id lorem aliquam mattis. Vivamus sed urna ornare,
+        fringilla sem non, fermentum leo. Duis imperdiet vestibulum ornare. In
+        venenatis lorem eu cursus dignissim. Aliquam scelerisque, purus sed
+        imperdiet egestas, nisl augue finibus risus, et tristique enim nisl id
+        odio. Morbi aliquet tempus tortor, et fermentum nulla posuere et. Cras
+        ante justo, porttitor blandit nisi nec, vulputate tempor nisi. Curabitur
+        at nisl eu quam consectetur auctor eget nec diam. Aliquam sagittis purus
+        nec tristique interdum. Praesent facilisis eros ipsum, ac ullamcorper
+        turpis finibus non. Nam maximus est ut elit eleifend, in tempus arcu
+        sollicitudin. Suspendisse maximus neque eget hendrerit tempus. Aenean
+        finibus est nulla, vel tempor mauris interdum at. Aenean fringilla
+        finibus mauris vitae cursus. Sed pulvinar accumsan justo. Quisque
+        vehicula erat arcu, sit amet rhoncus augue bibendum nec. Class aptent
+        taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+        himenaeos. Nunc convallis eget nisi et euismod. Sed euismod aliquet
+        interdum. Nulla aliquam at ipsum condimentum porttitor. Curabitur
+        sagittis ipsum nec odio fermentum feugiat. Vestibulum id lorem
+        sollicitudin, tempor leo sodales, elementum dui. Morbi scelerisque erat
+        dolor, at accumsan mi rhoncus id. Suspendisse at faucibus purus. Aenean
+        ac lectus molestie, tincidunt quam at, imperdiet arcu. Duis dictum
+        feugiat tortor eget volutpat. Aliquam erat volutpat. Quisque eleifend
+        congue lorem, ut tempor dui fermentum vel. Duis vitae venenatis tortor.
+        Sed molestie mauris eget tempus tincidunt. Donec varius nunc vel ante
+        vehicula, sit amet mollis est sollicitudin. Pellentesque felis sapien,
+        pulvinar et aliquet volutpat, pretium sit amet orci. Nulla et fermentum
+        nisl. Ut maximus urna sed rhoncus scelerisque. Etiam faucibus tempus
+        arcu, non bibendum leo. Nullam ac dui dapibus, posuere orci et, tempus
+        enim. Nam velit nibh, imperdiet ac est in, dictum viverra justo. Aliquam
+        eu molestie ligula. Nulla vitae est quis felis facilisis pharetra. Nulla
+        ut dolor tempus, pellentesque arcu vitae, efficitur nibh. Proin sed
+        pharetra orci. Integer sit amet odio ut arcu malesuada maximus id non
+        lorem. Fusce imperdiet cursus ligula, at tristique nulla vehicula nec.
+        Fusce rhoncus neque quam, vitae consequat odio pellentesque finibus.
+        Curabitur dapibus dolor a lobortis faucibus. Curabitur cursus, augue a
+        varius porta, diam metus gravida urna, id pellentesque neque lectus in
+        nunc. Vivamus fermentum porttitor cursus. Nunc magna neque, dignissim et
+        malesuada vitae, convallis maximus nunc. Ut facilisis, mi vitae dapibus
+        convallis, sem dolor fringilla neque, a rutrum odio tellus dictum
+        ligula. Nulla quis consequat nunc, in molestie eros. Curabitur nec
+        pulvinar nisl, pellentesque dapibus mauris.
+      &lt;/Text&gt;
+    &lt;/ScrollView&gt;
+  );
+};
+
+export default ScrollExample;</code></pre></div></div>
+<hr>
+<p>É uma abstração de CSS dentro do ReactNative.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span></div><pre><code class="language-typescript">import { StyleSheet, Text, View } from &#39;react-native&#39;;
+
+const StyledComponent = () =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;React Native&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: &#39;#eaeaea&#39;,
+  },
+  title: {
+    textAlign: &#39;center&#39;,
+    padding: 8,
+    borderWidth: 4,
+    borderColor: &#39;#20232a&#39;,
+    borderRadius: 6,
+    backgroundColor: &#39;#61dafb&#39;,
+    color: &#39;#20232a&#39;,
+    fontSize: 30,
+    fontWeight: &#39;bold&#39;,
+  },
+});
+
+export default StyledComponent;</code></pre></div></div>
+<hr>
+<p>Botão básico que renderiza graciosamente em qualquer plataforma. Tem suporte a customização básica.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">import { Button } from &#39;react-native&#39;;
+
+const MyButton = () =&gt; {
+  return (
+    &lt;Button title=&quot;My button&quot; onPress={() =&gt; console.log(&#39;Button clicked&#39;)} /&gt;
+  );
+};
+
+export default MyButton;</code></pre></div></div>
+<hr>
+<p>Componente utilizado para detectar as diferentes interações de um elemento &quot;clicavel&quot;</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span></div><pre><code class="language-typescript">import { Pressable, Text } from &#39;react-native&#39;;
+
+const MyPressable = () =&gt; {
+  const onPressIn = () =&gt; console.log(&#39;Pressed in&#39;);
+  const onPressOut = () =&gt; console.log(&#39;Pressed out&#39;);
+  const onLongPress = () =&gt; console.log(&#39;Long press&#39;);
+
+  return (
+    &lt;Pressable
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
+      onLongPress={onLongPress}
+    &gt;
+      &lt;Text&gt;I&#39;m clickable&lt;/Text&gt;
+    &lt;/Pressable&gt;
+  );
+};
+
+export default MyPressable;</code></pre></div></div>
+<hr>
+<p>Funciona como o <code>Pressable</code>, adicionando um efeito de animação ao clicar no elemento</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span></div><pre><code class="language-typescript">import { TouchableOpacity, Text } from &#39;react-native&#39;;
+
+const MyTouchableOpacity = () =&gt; {
+  const onPress = () =&gt; console.log(&#39;Pressed in&#39;);
+
+  return (
+    &lt;TouchableOpacity onPress={onPress}&gt;
+      &lt;Text&gt;I&#39;m clickable&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  );
+};
+
+export default MyTouchableOpacity;</code></pre></div></div>
+<hr>
+<p>Uma interface performática para renderizar listas básicas, com recursos práticos como cabeçalho e rodapé, por exemplo.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span></div><pre><code class="language-typescript">import { FlatList, View, Text } from &#39;react-native&#39;;
+
+const DATA = Array.from({ length: 20 }, (x, index) =&gt; {
+  return { id: index, title: `Item ${index}` };
+});
+
+const Item = ({ title }: { title: string }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;{title}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const MyList = () =&gt; {
+  return (
+    &lt;FlatList
+      data={DATA}
+      keyExtractor={(item) =&gt; item.id.toString()}
+      renderItem={({ item }) =&gt; &lt;Item title={item.title} /&gt;}
+    /&gt;
+  );
+};
+
+export default MyList;</code></pre></div></div>
+<hr>
+<p>Quase as mesmas funcionalidades da FlatList, porém é possível criar seções dentro da lista.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span><span class="line-number">43</span><span class="line-number">44</span><span class="line-number">45</span><span class="line-number">46</span><span class="line-number">47</span></div><pre><code class="language-typescript">import { SectionList, View, Text } from &#39;react-native&#39;;
+
+const DATA = [
+  {
+    id: 1,
+    title: &#39;Main Dishes&#39;,
+    data: [&#39;Pizza&#39;, &#39;Burger&#39;, &#39;Risotto&#39;],
+  },
+  {
+    id: 2,
+    title: &#39;Sides&#39;,
+    data: [&#39;French Fries&#39;, &#39;Onion Rings&#39;, &#39;Fried Shrimps&#39;],
+  },
+  {
+    id: 3,
+    title: &#39;Drinks&#39;,
+    data: [&#39;Water&#39;, &#39;Coke&#39;, &#39;Beer&#39;],
+  },
+];
+
+const Header = ({ title }: { title: string }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text style={{ fontWeight: &#39;bold&#39;, fontSize: 36 }}&gt;{title}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const Item = ({ title }: { title: string }) =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;{title}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+const MySectionList = () =&gt; {
+  return (
+    &lt;SectionList
+      sections={DATA}
+      renderSectionHeader={(item) =&gt; &lt;Header title={item.section.title} /&gt;}
+      renderItem={({ item }) =&gt; &lt;Item title={item} /&gt;}
+    /&gt;
+  );
+};
+
+export default MySectionList;</code></pre></div></div>
+<hr>
+<p>Renderiza um indicador de loading.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span></div><pre><code class="language-typescript">import { ActivityIndicator, View, StyleSheet } from &#39;react-native&#39;;
+
+const Loading = () =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;ActivityIndicator size=&quot;large&quot; /&gt;
+      &lt;ActivityIndicator size=&quot;small&quot; color=&quot;#0000ff&quot; /&gt;
+      &lt;ActivityIndicator size=&quot;large&quot; color=&quot;#00ff00&quot; /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: &#39;center&#39;,
+    flexDirection: &#39;row&#39;,
+    padding: 10,
+  },
+});
+
+export default Loading;</code></pre></div></div>
+<hr>
+<p>Mostra um diálogo de alerta que contém um título e uma mensagem.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span></div><pre><code class="language-typescript">import { View, Alert, Button } from &#39;react-native&#39;;
+
+const showDialog = () =&gt; {
+  Alert.alert(&#39;Alert title&#39;, &#39;My alert message&#39;, [
+    {
+      text: &#39;Cancel&#39;,
+      onPress: () =&gt; console.log(&#39;Cancel pressed&#39;),
+      style: &#39;cancel&#39;,
+    },
+    { text: &#39;OK&#39;, onPress: () =&gt; console.log(&#39;OK pressed&#39;) },
+  ]);
+};
+
+const showDestructiveDialog = () =&gt; {
+  Alert.alert(&#39;Alert title&#39;, &#39;My alert message&#39;, [
+    {
+      text: &#39;Cancel&#39;,
+      onPress: () =&gt; console.log(&#39;Cancel pressed&#39;),
+      style: &#39;cancel&#39;,
+    },
+    {
+      text: &#39;Close&#39;,
+      onPress: () =&gt; console.log(&#39;Close pressed&#39;),
+      style: &#39;destructive&#39;,
+    },
+    { text: &#39;OK&#39;, onPress: () =&gt; console.log(&#39;OK pressed&#39;) },
+  ]);
+};
+
+const MyDialog = () =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Button title=&quot;2-Button alert&quot; onPress={showDialog} /&gt;
+      &lt;Button title=&quot;3-Button alert&quot; onPress={showDestructiveDialog} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default MyDialog;</code></pre></div></div>
+<hr>
+<p>Utilizado para realizar animações de forma fluída e simples.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span></div><pre><code class="language-typescript">import { useRef } from &#39;react&#39;;
+import { Animated, Text, View, Button } from &#39;react-native&#39;;
+
+const MyAnimation = () =&gt; {
+  const fadeAnimation = useRef(new Animated.Value(0)).current;
+
+  const fadeIn = () =&gt; {
+    Animated.timing(fadeAnimation, {
+      toValue: 1,
+      duration: 5000,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const fadeOut = () =&gt; {
+    Animated.timing(fadeAnimation, {
+      toValue: 0,
+      duration: 5000,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  return (
+    &lt;View style={{ flex: 1, justifyContent: &#39;center&#39;, alignItems: &#39;center&#39; }}&gt;
+      &lt;Animated.View style={{ opacity: fadeAnimation }}&gt;
+        &lt;Text&gt;Fading view&lt;/Text&gt;
+      &lt;/Animated.View&gt;
+      &lt;View&gt;
+        &lt;Button title=&quot;Fade in text&quot; onPress={fadeIn} /&gt;
+        &lt;Button title=&quot;Fade out text&quot; onPress={fadeOut} /&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default MyAnimation;</code></pre></div></div>
+<hr>
+<p>Componente utilizado para abrir links. Importante ressaltar que abrirá o link da respectiva aplicação, caso haja algum suporte no dispositivo.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span></div><pre><code class="language-typescript">import { useCallback } from &#39;react&#39;;
+import { Alert, Button, Linking, View } from &#39;react-native&#39;;
+
+const supportedURL = &#39;https://google.com&#39;;
+const unsupportedURL = &#39;slack://open?team=123456&#39;;
+
+type ButtonProps = { url: string; title: string };
+
+const OpenURLButton = ({ url, title }: ButtonProps) =&gt; {
+  const handleClick = useCallback(async () =&gt; {
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      Alert.alert(`Don&#39;t know how to handle this URL: ${url}`);
+    }
+  }, [url]);
+
+  return &lt;Button title={title} onPress={handleClick} /&gt;;
+};
+
+const Links = () =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;OpenURLButton title=&quot;Open Supported URL&quot; url={supportedURL} /&gt;
+      &lt;OpenURLButton title=&quot;Open Unsupported URL&quot; url={unsupportedURL} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default Links;</code></pre></div></div>
+<hr>
+<p>Abre o conteúdo por cima do conteúdo atual.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span></div><pre><code class="language-typescript">import { useState } from &#39;react&#39;;
+import { View, Modal, Text, Button, StyleSheet } from &#39;react-native&#39;;
+
+const MyModal = () =&gt; {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const onModalClosed = () =&gt; {
+    setIsVisible(false);
+  };
+
+  return (
+    &lt;View style={styles.centeredView}&gt;
+      &lt;Modal
+        animationType=&quot;slide&quot;
+        transparent={true}
+        visible={isVisible}
+        onRequestClose={onModalClosed}
+      &gt;
+        &lt;View style={[styles.centeredView, styles.modalView]}&gt;
+          &lt;Text style={styles.textStyle}&gt;Hello world!&lt;/Text&gt;
+          &lt;Button title=&quot;Close Modal&quot; onPress={onModalClosed} /&gt;
+        &lt;/View&gt;
+      &lt;/Modal&gt;
+      &lt;Button title=&quot;Show Modal&quot; onPress={() =&gt; setIsVisible(true)} /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default MyModal;</code></pre></div></div>
+<hr>
+<p>Variável <code>styles</code> do slider anterior:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span></div><pre><code class="language-typescript">const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: &#39;center&#39;,
+    alignItems: &#39;center&#39;,
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: &#39;white&#39;,
+    borderRadius: 20,
+    padding: 35,
+    alignItems: &#39;center&#39;,
+    shadowColor: &#39;#000&#39;,
+    shadowOffset: {
+      height: 2,
+      width: 0,
+    },
+  },
+  textStyle: {
+    fontWeight: &#39;bold&#39;,
+    textAlign: &#39;center&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>Componente para descobrir qual a densidade de pixel do dispositivo.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span><span class="line-number">43</span><span class="line-number">44</span><span class="line-number">45</span><span class="line-number">46</span><span class="line-number">47</span><span class="line-number">48</span><span class="line-number">49</span><span class="line-number">50</span><span class="line-number">51</span><span class="line-number">52</span><span class="line-number">53</span><span class="line-number">54</span><span class="line-number">55</span><span class="line-number">56</span></div><pre><code class="language-typescript">import {
+  PixelRatio,
+  Image,
+  ScrollView,
+  Text,
+  View,
+  StyleSheet,
+} from &#39;react-native&#39;;
+
+const size = 50;
+
+const cat = {
+  uri: &#39;https://reactnative.dev/docs/assets/p_cat1.png&#39;,
+  width: size,
+  height: size,
+};
+
+const MyPixelRatio = () =&gt; {
+  return (
+    &lt;ScrollView&gt;
+      &lt;View style={styles.container}&gt;
+        &lt;Text&gt;Current pixel ratio is:&lt;/Text&gt;
+        &lt;Text&gt;{PixelRatio.get()}&lt;/Text&gt;
+      &lt;/View&gt;
+      &lt;View style={styles.container}&gt;
+        &lt;Text&gt;Current font scale is:&lt;/Text&gt;
+        &lt;Text&gt;{PixelRatio.getFontScale()}&lt;/Text&gt;
+      &lt;/View&gt;
+      &lt;View style={styles.container}&gt;
+        &lt;Text&gt;On this device images with a layout width of&lt;/Text&gt;
+        &lt;Text&gt;{size} px&lt;/Text&gt;
+        &lt;Image source={cat} /&gt;
+      &lt;/View&gt;
+      &lt;View style={styles.container}&gt;
+        &lt;Text&gt;requires images with a pixel width of&lt;/Text&gt;
+        &lt;Text&gt;{PixelRatio.getPixelSizeForLayoutSize(size)}&lt;/Text&gt;
+        &lt;Image
+          source={cat}
+          style={{
+            width: PixelRatio.getPixelSizeForLayoutSize(size),
+            height: PixelRatio.getPixelSizeForLayoutSize(size),
+          }}
+        /&gt;
+      &lt;/View&gt;
+    &lt;/ScrollView&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: &#39;center&#39;,
+    alignItems: &#39;center&#39;,
+  },
+});
+
+export default MyPixelRatio;</code></pre></div></div>
+<hr>
+<p>Utilizado dentro de um <code>ScrollView</code> e de um <code>, é responsável por manipular a funcionalidade </code>PullToRefresh`.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span></div><pre><code class="language-typescript">import { useState, useCallback } from &#39;react&#39;;
+import { RefreshControl, ScrollView, StyleSheet, Text } from &#39;react-native&#39;;
+
+const MyRefreshControl = () =&gt; {
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  const onRefresh = useCallback(() =&gt; {
+    setIsRefreshing(true);
+    setTimeout(() =&gt; {
+      setIsRefreshing(false);
+    }, 2000);
+  }, []);
+
+  return (
+    &lt;ScrollView
+      refreshControl={
+        &lt;RefreshControl refreshing={isRefreshing} onRefresh={onRefresh} /&gt;
+      }
+    &gt;
+      &lt;Text&gt;Pull down to see RefreshControl indicator&lt;/Text&gt;
+    &lt;/ScrollView&gt;
+  );
+};
+
+export default MyRefreshControl;</code></pre></div></div>
+<hr>
+<p>Controla a <code>StatusBar</code> do aplicativo. Apesar dela ser do sistema operacional, dentro da sua aplicação pode ter um estilo/comportamento diferente.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span></div><pre><code class="language-typescript">import { useState } from &#39;react&#39;;
+import { Button, View, Text, StatusBar, StatusBarStyle } from &#39;react-native&#39;;
+
+const STYLES: StatusBarStyle[] = [&#39;default&#39;, &#39;light-content&#39;, &#39;dark-content&#39;];
+
+const MyStatusBar = () =&gt; {
+  const [isHidden, setIsHidden] = useState(false);
+  const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);
+
+  const changeStatusBarVisibility = () =&gt; setIsHidden(!isHidden);
+
+  const changeStatusBarStyle = () =&gt; {
+    const styleId = STYLES.indexOf(statusBarStyle) + 1;
+    setStatusBarStyle(styleId === STYLES.length ? STYLES[0] : STYLES[styleId]);
+  };
+
+  return (
+    &lt;View style={{ padding: 20 }}&gt;
+      &lt;StatusBar
+        animated={true}
+        backgroundColor=&quot;#61dafb&quot;
+        barStyle={statusBarStyle}
+        hidden={isHidden}
+      /&gt;
+      &lt;Text&gt;Status Bar Visibility: {isHidden ? &#39;hidden&#39; : &#39;visible&#39;}&lt;/Text&gt;
+      &lt;Text&gt;Status Bar style: {statusBarStyle}&lt;/Text&gt;
+      &lt;View&gt;
+        &lt;Button title=&quot;Toggle status bar&quot; onPress={changeStatusBarVisibility} /&gt;
+        &lt;Button
+          title=&quot;Change status bar style&quot;
+          onPress={changeStatusBarStyle}
+        /&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default MyStatusBar;</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
