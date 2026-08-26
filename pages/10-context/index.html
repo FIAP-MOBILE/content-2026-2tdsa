@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+<p></p>
+
+
+<p>Mobile App Development</p>
+<hr>
+<p></p>
+
+<p><code>Context</code> é um recurso do <code>React</code> onde podemos passar dados entre os componentes sem precisar ficar mandando <code>props</code> toda vez que você precisar manipular esses dados. Ou seja, é uma forma de compartilhar dados de uma forma &quot;global&quot;.</p>
+<hr>
+<p></p>
+
+<ul>
+<li>Tema da aplicação</li>
+<li>Configurações da aplicação</li>
+<li>Autenticação</li>
+<li>Configuração do usuário</li>
+</ul>
+<hr>
+<p></p>
+
+<p>Para criar um contexto, existe a função <code>createContext</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">import { createContext } from &#39;react&#39;;
+
+const ThemeContext = createContext({});</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>O contexto tem um objeto chamado <code>Provider</code>.O objetivo dele é encapsular os componentes e fornecer os valores dentro do seu escopo</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span></div><pre><code class="language-typescript">import React, { PropsWithChildren, createContext, useState } from &#39;react&#39;;
+
+type ThemeType = &#39;light&#39; | &#39;dark&#39;;
+type ThemeContextProps = {
+  theme: ThemeType;
+  setTheme: (
+    previous: ThemeType | ((previous: ThemeType) =&gt; ThemeType),
+  ) =&gt; void;
+};
+
+const ThemeContext = createContext&lt;ThemeContextProps&gt;({} as ThemeContextProps);
+
+const ThemeProvider: React.FC&lt;PropsWithChildren&gt; = ({ children }) =&gt; {
+  const [theme, setTheme] = useState&lt;ThemeType&gt;(&#39;light&#39;);
+
+  return (
+    &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
+      {children}
+    &lt;/ThemeContext.Provider&gt;
+  );
+};
+
+export { ThemeContext, ThemeProvider };</code></pre></div></div>
+<hr>
+<p>Conforme slide anterior, o <code>Provider</code> está encapsulando todo o conteúdo que estiver no <code>children</code>. O <code>Provider</code> tem uma propriedade chamada <code>value</code> que no exemplo é um objeto que tem as propriedades <code>theme</code> e <code>setTheme</code>.</p>
+<hr>
+<p>Uma vez criado o <code>Provider</code>, use ele para encapsular os elementos que usarão o <code>Context</code> que ele fornece</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span></div><pre><code class="language-typescript">export type RootStackParamList = {
+  Login: undefined;
+  Details: undefined;
+};
+
+const Stack = createNativeStackNavigator&lt;RootStackParamList&gt;();
+
+function App(): React.JSX.Element {
+  return (
+    &lt;ThemeProvider&gt;
+      &lt;NavigationContainer&gt;
+        &lt;Stack.Navigator&gt;
+          &lt;Stack.Screen name=&quot;Login&quot; component={Login} /&gt;
+          &lt;Stack.Screen name=&quot;Details&quot; component={Details} /&gt;
+        &lt;/Stack.Navigator&gt;
+      &lt;/NavigationContainer&gt;
+    &lt;/ThemeProvider&gt;
+  );
+}
+
+export default App;</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Dentro do seu componente, você tem duas formas de consumir um contexto.</p>
+<ul>
+<li>Usando o objeto <code>Consumer</code> que o <code>Context</code> possui</li>
+<li>Utilizando o hook <code>useContext</code></li>
+</ul>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<p><strong>:warning: IMPORTANTE</strong>: As duas abordagens consideram que seu componente será renderizado dentro de um <code>Provider</code>. Se você tentar consumir o contexto fora de um <code>Provider</code>, ele sempre vai retornar <code>undefined</code>.</p>
+<hr>
+<p></p>
+
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span></div><pre><code class="language-typescript">const MyComponent = () =&gt; {
+  return (
+    &lt;ThemeContext.Consumer&gt;
+      {(value) =&gt; (
+        &lt;View
+          style={{
+            backgroundColor: value.theme === &#39;light&#39; ? &#39;white&#39; : &#39;black&#39;,
+          }}
+        &gt;
+          &lt;Text style={{ color: value.theme === &#39;dark&#39; ? &#39;white&#39; : &#39;black&#39; }}&gt;
+            Crie sua tarefa
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      )}
+    &lt;/ThemeContext.Consumer&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p></p>
+
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span></div><pre><code class="language-typescript">import { useContext } from &#39;react&#39;;
+
+const MyComponent = () =&gt; {
+  const { theme } = useContext(ThemeContext);
+  return (
+    &lt;View
+      style={{
+        backgroundColor: value.theme === &#39;light&#39; ? &#39;white&#39; : &#39;black&#39;,
+      }}
+    &gt;
+      &lt;Text style={{ color: theme === &#39;dark&#39; ? &#39;white&#39; : &#39;black&#39; }}&gt;
+        Crie sua tarefa
+      &lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
