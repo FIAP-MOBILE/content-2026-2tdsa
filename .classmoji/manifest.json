@@ -74,7 +74,8 @@
   "general": {
     "pages": [
       "requisies-http",
-      "revisitando-o-javascript"
+      "revisitando-o-javascript",
+      "02-revisitando-o-react"
     ],
     "slides": []
   }
