@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+<p></p>
+
+
+<p>Mobile App Development</p>
+<hr>
+<p></p>
+
+<p>Na maioria das aplicações, seja mobile, web ou desktop, em algum momento queremos armazenar dados, ou como se costuma dizer, fazer persistência dos dados. E no <code>React Native</code> existe a biblioteca chamada <code>Async Storage</code></p>
+<hr>
+<p></p>
+
+<p>O <code>Async Storage</code> é uma forma de persistência que funciona de forma assíncrona e guarda os dados usando a estrutura de chave-valor. Ele apenas armazena <code>strings</code>, então se precisar armazenar um dado que não seja desse tipo, é necessário fazer a conversão (serialização) para <code>string</code>.</p>
+<hr>
+<h1 style="background-color: #DDEBF1;">Vantagens</h1>
+<ul>
+<li>Implementação muito simples</li>
+<li>Documentação bem didática</li>
+<li>Simples e fácil de se utilizar quando se manipula dados simples</li>
+</ul>
+<hr>
+<h1 style="background-color: #DDEBF1;">Desvantagens</h1>
+<ul>
+<li>Não tem um bom desempenho quando se utiliza muitos dados.</li>
+<li>Precisa serializar/deserializar sempre que utilizar objetos mais complexos</li>
+<li>É limitado a utilizar apenas 6 MB. Pode ser configurável, mas ainda assim não é recomendado</li>
+<li>Uma chave não pode ter o valor maior que 2 MB de dados</li>
+</ul>
+<hr>
+<p>Para instalar no seu projeto, bastar rodar o comando:<br><code>npm install @react-native-async-storage/async-storage</code></p>
+<hr>
+<p>Uma vez instalada, para utiliza-la basta importar no seu código da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">import AsyncStorage from &#39;@react-native-async-storage/async-storage&#39;;</code></pre></div></div>
+<hr>
+<p>O metódo <code>setItem</code> serve para armazenar um valor no armazenamento local.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">try {
+  await AsyncStorage.setItem(&#39;chave&#39;, &#39;valor&#39;);
+} catch (error) {}</code></pre></div></div>
+<p>Lembrando que se fosse um objeto, seria necessário converter ele pra <code>string</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">try {
+  await AsyncStorage.setItem(&#39;chave&#39;, JSON.stringfy(objeto));
+} catch (error) {}</code></pre></div></div>
+<hr>
+<p>O metódo <code>getItem</code> serve para retornar um valor do armazenamento local.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">try {
+  const value = await AsyncStorage.getItem(&#39;chave&#39;);
+} catch (error) {}</code></pre></div></div>
+<p>Lembrando que se fosse um objeto, seria necessário converter ele pra <code>string</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">try {
+  const value = await AsyncStorage.getItem(&#39;chave&#39;);
+  const data = JSON.parse(value);
+} catch (error) {}</code></pre></div></div>
+<hr>
+<p>O metódo <code>removeItem</code> remove um valor do armazenamento local.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-javascript">try {
+  await AsyncStorage.removeItem(&#39;chave&#39;);
+} catch (error) {}</code></pre></div></div>
+<hr>
+<p>O metódo <code>getAllKeys</code> retorna todas as chaves utilizadas pela sua aplicação.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-javascript">try {
+  const keys = await AsyncStorage.getAllKeys();
+} catch (error) {}</code></pre></div></div>
+<hr>
+<p>O metódo <code>clear</code> remove todas as chaves utilizadas pela sua aplicação.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-javascript">try {
+  await AsyncStorage.clear();
+} catch (error) {}</code></pre></div></div>
+<hr>
+<p>A biblioteca vem com o <code>hook</code> <code>useAsyncStorage</code> que implementa a funcionalidade de leitura, escrita e remoção.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span></div><pre><code class="language-typescript">import React, { useState, useEffect } from &#39;react&#39;;
+import { View, Text, Pressable } from &#39;react-native&#39;;
+import { useAsyncStorage } from &#39;@react-native-async-storage/async-storage&#39;;
+
+export default function App() {
+  const [value, setValue] = useState&lt;string | null&gt;();
+  const { getItem, setItem } = useAsyncStorage(&#39;myValue&#39;);
+
+  const readItemFromStorage = async () =&gt; {
+    const item = await getItem();
+    setValue(item);
+  };
+
+  const writeItemToStorage = async (newValue: string) =&gt; {
+    await setItem(newValue);
+    setValue(newValue);
+  };
+
+  useEffect(() =&gt; {
+    readItemFromStorage();
+  }, []);
+
+  return (
+    &lt;View style={{ margin: 40 }}&gt;
+      &lt;Text&gt;Current value: {value}&lt;/Text&gt;
+      &lt;Pressable onPress={() =&gt; writeItemToStorage(Math.random().toString(32))}&gt;
+        &lt;Text&gt;Click here to update value&lt;/Text&gt;
+      &lt;/Pressable&gt;
+    &lt;/View&gt;
+  );
+}</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
