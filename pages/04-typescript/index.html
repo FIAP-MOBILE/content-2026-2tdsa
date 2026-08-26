@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p><code>TypeScript</code> é uma linguagem de programação que basicamente adiciona tipagem no JavaScript. Nos permite escrever código JavaScript usando seu sistema de tipagem, permitindo identificar possíveis bugs, deixar a estrutura mais clara e ajuda na refatoração do código.<br><code>TypeScript</code> é responsável por adicionar recursos novos no <code>JavaScript</code>, como <code>arrow functions</code> e classes, anos antes destes serem adicionados oficialmente no <code>JavaScript</code>.<br>A <code>Microsoft</code> desenvolveu o <code>TypeScript</code> e lançou publicamente em 2012.</p>
+<hr>
+<p>Para utilizar <code>TypeScript</code> podemos instala-lo de forma global usando o <code>node</code></p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install -g typescript</code></pre></div></div></div>
+<p>Ao instalar desse modo, você terá o comando <code>tsc</code> sempre disponível para ser utilizado</p>
+<br>
+
+<p>Ou, caso você queira configurar apenas em um projeto:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install --save-dev typescript</code></pre></div></div></div>
+<p>Usando desse modo, você também tem o comando <code>tsc</code>, mas deve sempre executa-lo com <code>npx</code>. Exemplo: <code>npx tsc</code></p>
+<p></p>
+
+<hr>
+<p>Uma vez instalado, devemos fazer uma configuração inicial.<br>Isso é bem simples, basta executar o comando</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">tsc --init</code></pre></div></div></div>
+<p>Ao executar este comando, um arquivo chamado <code>tsconfig.json</code> onde é importante destacar algumas chaves:<br><code>compilerOptions -&gt; outDir</code> -&gt; Ao compilar os arquivos, em qual diretório eles serão armazenados<br><code>compilerOptions -&gt; module</code> -&gt; Qual sintaxe o projeto utilizará<br><code>compilerOptions -&gt; target</code> -&gt; Para qual linguagem o projeto será compilado<br><code>include</code> -&gt; A lista de arquivos/diretórios que serão interpretados<br><code>exclude</code> -&gt; A lista de arquivos/diretórios que serão ignorados</p>
+<p>As chaves <code>include</code> e <code>exclude</code> não vem por padrão, mas é importante ressaltar</p>
+<hr>
+<p><code>TypeScript</code> na verdade é só um compilador. Então nos escrevemos nosso código usando sua extensão, que é <code>*.ts</code>, e então compilamos para <code>JavaScript</code><br>Vamos criar um simples arquivo chamado <code>index.ts</code> com o seguinte conteúdo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">console.log(&#39;Hello, world&#39;);</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>Dentro da pasta do seu projeto rode o comando:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">tsc</code></pre></div></div></div>
+<br>
+
+<p>Repare que será criado um arquivo chamado <code>index.js</code><br>Com esse arquivo, basta rodar ele com:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">node index.js</code></pre></div></div></div>
+<hr>
+<p>Quando declaramos variáveis no <code>TypeScript</code>, todas elas possui um tipo especifico. Essa inferência é feita no momento que declaramos a variável</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">let firstName = &#39;Leonardo&#39;; // string
+let isValid = false; // boolean
+let myNumber = 10; // número</code></pre></div></div>
+<p>É importante ressaltar que uma vez a variável tem seu tipo definido, não é possível mudar essa tipagem</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-typescript">let firstName = &#39;Leonardo&#39;;
+firstName = 10; // Compilador irá acusar um erro nesta linha</code></pre></div></div>
+<hr>
+<p>Porém, se for feito da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">let firstName;
+fistName = &#39;Leonardo&#39;;
+firstName = 10;</code></pre></div></div>
+<p>Funciona. E por que isso? Porque no <code>TypeScript</code> existe o tipo <code>any</code>, que como o nome sugere, aceita qualquer valor.</p>
+<hr>
+<p>Podemos criar as variáveis com seu tipo de forma explicíta:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">let firstName: string;
+fistName = &#39;Leonardo&#39;;
+firstName = 10; // Compilador irá acusar erro nesta linha</code></pre></div></div>
+<hr>
+<p>As funções no <code>TypeScript</code> funciona da mesma forma que no <code>JavaScript</code>, mas podemos tipar o seu retorno.<br>Podemos fazer de forma explicíta:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">function isEven(value: number): boolean {
+  const result = value % 2 == 0;
+  return result;
+}</code></pre></div></div>
+<p>Se não estiver explícito na declaração da função, o <code>TypeScript</code> irá inferir a partir do seu retorno qual tipo será utilizado</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">function isEven(value: number) {
+  const result = value % 2 == 0;
+  return result;
+}</code></pre></div></div>
+<hr>
+<p>Caso uma função não tenha retorno, isso pode ser definido de forma explicíta utilizando a palavra <code>void</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">function sayMyName(name: string): void {
+  console.log(`Hello, ${name}`);
+}</code></pre></div></div>
+<p>Neste caso, como a função não tem nenhum retorno, a utilização da palavra <code>void</code> é apenas para deixar mais explicíto a definição da função</p>
+<hr>
+<p>Podemos definir argumentos com um valor pré-definido quando utilizamos parâmetros na função:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">function sayMyName(name = &#39;John Doe&#39;): void {
+  console.log(`Hello, ${name}`);
+}</code></pre></div></div>
+<p>Quando declaramos um parâmetro com seu valor pré-definido, o tipo da variável é inferido pelo <code>TypeScript</code></p>
+<hr>
+<p>Podemos declarar valores opcionais. Para isso, ao definir o parâmetro, basta colocar a <code>?</code> na frente do seu nome.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">function sayMyName(name?: string): void {
+  console.log(`Hello, ${name}`);
+}</code></pre></div></div>
+<hr>
+<p>Podemos definir tipagem nos <code>Arrays</code> de duas formas:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">let fruits: string[] = [&#39;banana&#39;, &#39;apple&#39;];</code></pre></div></div>
+<p>Ou você pode usar <code>Array&lt;T&gt;</code> onde <code>T</code> é o tipo que gostaria de usar:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">let fruits: Array&lt;string&gt; = [&#39;banana&#39;, &#39;apple&#39;];</code></pre></div></div>
+<p>Caso você declare um <code>Array</code> sem definir seu tipo, o <code>TypeScript</code> irá fazer a inferência a partir dos elementos.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">let fruits = [&#39;banana&#39;, &#39;apple&#39;]; // Array de string</code></pre></div></div>
+<hr>
+<p>As <code>tuples</code> são matrizes imutáveis. Ou seja, uma vez definidas, não se muda mais nada nelas.</p>
+<p>Para declarar uma <code>tuple</code>, usando a seguinte sintaxe:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">let myTuple: [string, string, string] = [&#39;arg1&#39;, &#39;arg2&#39;, &#39;arg3&#39;];
+
+let mixedTuple: [string, number, boolean] = [&#39;banana&#39;, 2, true];</code></pre></div></div>
+<p></p>
+
+<hr>
+<p><code>Unions</code> nos permite definir variáveis que podem ter múltiplos tipos.<br>Para isso, usamos o caracter <code>|</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">let item: string | number;
+
+// Pode ser atribuído um número
+item = 1;
+console.log(`my item ${item}`);
+
+// Pode ser atribuído uma string
+item = &#39;my item&#39;;
+console.log(`my item ${item}`);</code></pre></div></div>
+<hr>
+<p>Se por acaso, você tem uma variável que pode ter uma múltipla tipagem,<br>é importante fazer a checagem para lidar com sua devida tipagem.<br>Veja o exemplo a seguir:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">const formatValue = (value: string | number) =&gt; {
+  if (typeof value === &#39;string&#39;) {
+    console.log(value.toLowerCase());
+  }
+  if (typeof value === &#39;number&#39;) {
+    console.log(value.toFixed(2));
+  }
+};
+
+formatValue(&#39;Hiya&#39;);
+formatValue(42);</code></pre></div></div>
+<p>Neste caso, se a variável foi atribuída como <code>string</code>, você consegue chamar os metódos relativos a esse tipo. Assim como se for do tipo <code>number</code>, os metódos desse tipo estarão acessíveis somente quando for definido como tal.</p>
+<hr>
+<p>Usando esse tipo de recurso, é possível definir <code>Arrays</code> com múltipla tipagem também:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">const mixedItems: (string | number)[] = [&#39;Banana&#39;, 20, 30, 40, &#39;Pineapple&#39;];</code></pre></div></div>
+<p>Podemos utilizar a outra forma de declarar <code>Array</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">const mixedItems: Array&lt;string | number&gt; = [&#39;Banana&#39;, 20, 30, 40, &#39;Pineapple&#39;];</code></pre></div></div>
+<hr>
+<p>Além dos tipos primitivos, podemos definir nossos próprios tipos.<br>Para criar seu próprio tipo podemos usar <code>type</code> ou <code>interface</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">type User = {
+  name: string;
+  email: string;
+};</code></pre></div></div>
+<p>O mesmo exemplo, só que usando <code>interface</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">interface User {
+  name: string;
+  email: string;
+}</code></pre></div></div>
+<hr>
+<p>A principal diferença entre <code>type</code> e <code>interface</code> é que <code>interface</code> serve apenas para tipar os objetos. O <code>type</code> possui uma versatilidade maior.<br>O <code>interface</code> é utilizado quando queremos &quot;forçar&quot; o programador a ter uma melhor organização dos tipos.</p>
+<p>Exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span></div><pre><code class="language-typescript">interface Feline {
+  breed: string;
+}
+
+interface Cat {
+  breed: &#39;cat&#39;;
+}
+
+type Siamese = Feline | Cat;
+
+const myCat: Siamese = { breed: &#39;cat&#39; };
+console.log(`my cat ${myCat.breed}`);
+
+const otherCat: Siamese = { breed: &#39;lion&#39; };
+console.log(`other cat ${myOtherCat.breed}`);</code></pre></div></div>
+<p>Onde definimos o tipo <code>Siamese</code>, isso só é possível com o <code>type</code>. Com o <code>interface</code> você não consegue usar o <code>union</code>.</p>
+<hr>
+<p>Um ponto interessante é que a <code>interface</code> é que você consegue redefini-lá</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-typescript">interface Feline {
+  breed: string;
+}
+
+interface Feline {
+  name: string;
+}
+
+const myCat: Feline = { breed: &#39;cat&#39;, name: &#39;Felix&#39; };
+console.log(`my cat breed is ${myCat.breed} and his name ${myCat.name}`);</code></pre></div></div>
+<hr>
+<p>Se fosse com o <code>type</code> o compilador acusaria um erro falando que o tipo já existe</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-typescript">type Feline = {
+  breed: string;
+};
+
+type Feline = {
+  name: string;
+};
+
+const myCat: Feline = { breed: &#39;cat&#39;, name: &#39;Felix&#39; };
+console.log(`my cat breed is ${myCat.breed} and his name ${myCat.name}`);</code></pre></div></div>
+<p>Esse código não será compilado</p>
+<hr>
+<p>Um ponto interessante é que podemos deixar os atributos com um valor pré-definido, caso você tenha necessidade</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-typescript">type User = {
+  name: string;
+  email: string;
+  profile: &#39;admin&#39; | &#39;manager&#39; | &#39;regular&#39;;
+};
+
+const leo = { name: &#39;Leonardo&#39;, email: &#39;email@email&#39;, profile: &#39;regular&#39; };</code></pre></div></div>
+<p>Neste exemplo, a propriedade <code>profile</code> só pode ter 3 possíveis valores: <code>admin</code>, <code>manager</code>, <code>regular</code></p>
+<hr>
+<p>E assim como podemos ter funções com parâmetros opcionais, podemos ter objetos com atributos opcionais</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">type User = {
+  name: string;
+  email: string;
+  profile: &#39;admin&#39; | &#39;manager&#39; | &#39;regular&#39;;
+  age?: number;
+};
+
+const leo = { name: &#39;Leonardo&#39;, email: &#39;email@email&#39;, profile: &#39;regular&#39; };</code></pre></div></div>
+<p>Neste exemplo, o atributo <code>age</code> é opcional</p>
+<hr>
+<p>Quando trabalhamos com classes funciona praticamente da mesma forma que uma tipagem:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">class Person {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  sayName() {
+    console.log(`say my name ${this.name}`);
+  }
+}</code></pre></div></div>
+<p>Podemos definir atributos, como está definido o <code>name</code>, seu devido construtor com o termo <code>constructor</code> e podemos definir seus metódos, que no exemplo é o <code>sayMyName</code></p>
+<hr>
+<p>Quando trabalhamos com classes, faz mais sentido utilizamos <code>interface</code>. Como citado anteriormente, uma <code>interface</code> força a tipagem de um objeto. Quando usamos classes, isso fica mais perceptível. Para uma classe herdar uma <code>interface</code>, utilizamos o termo <code>implements</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span></div><pre><code class="language-typescript">interface IPerson {
+  name: string;
+  email: string;
+  sayName: () =&gt; void;
+}
+
+class Person implements IPerson {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  sayName() {
+    console.log(`say my name ${this.name}`);
+  }
+}</code></pre></div></div>
+<p>Neste exemplo, a <code>interface</code> <code>IPerson</code> tem dois atributos (<code>name</code>, <code>email</code> e um metódo (<code>sayMyName</code>). A classe <code>Person</code> implementa a <code>interface</code>, porém o código não será compilado porque está faltando implementar o atributo <code>email</code>  na classe</p>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
