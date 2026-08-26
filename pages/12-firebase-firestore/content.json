@@ -1095,24 +1095,7 @@
       "children": []
     },
     {
-      "id": "60861cf6-614b-42ff-9524-718886c7ac05",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "/",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "bde3cb18-04ea-4321-b5b0-7f2f7b3caf0f",
+      "id": "2f9b05ef-34b4-48b9-925d-a7154db2993f",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
