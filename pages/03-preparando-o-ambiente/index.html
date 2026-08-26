@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<h1 style="background-color: #DDEBF1;">Usando o Expo</h1>
+<p>Mobile App Development</p>
+<hr>
+<p>Uma das alternativas de criação de aplicativos com o <code>React Native</code> é utilizando o <a href="https://expo.dev/"><code>Expo</code></a>. O <code>Expo</code> é um framework que tem como base o <code>React Native</code> adicionando a camada web no projeto. Ou seja, além de rodar nas plataformas <code>Android</code> e <code>iOS</code>, é possível rodar a aplicação no navegador.</p>
+<hr>
+<p>Para criar um projeto <code>Expo</code>, basta executar o seguinte comando:<br><code>npx create-expo-app demo &lt;nome do projeto&gt; --template blank-typescript</code></p>
+<p>O argumento <code>--template blank-typescript</code> serve para criar um projeto com uma estrutura básica, sem muitos arquivos.</p>
+<hr>
+<p>Para rodar o projeto, existem as seguintes opções:</p>
+<p><code>npm run web</code> - &gt; Para rodar no navegador</p>
+<blockquote>
+<p>Especificamente para rodar no navegador, é necessário instalar os seguintes pacotes:</p>
+<ul>
+<li><code>react-dom</code></li>
+<li>react-native-web<br>Rode o seguinte comando para instala-los:</li>
+</ul>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code>npx expo install react-dom react-native-web</code></pre></div></div>
+<br /></blockquote>
+<p><code>npm run android</code> - &gt; Para rodar em um dispositivo com Android<br><code>npm run ios</code> - &gt; Para rodar em um dispositivo com iOS</p>
+<p></p>
+
+<hr>
+<p>Ao usar o <code>Expo</code>, é interessante notar que num primeiro momento não precisa fazer instalação/configuração do <code>Java</code>, <code>XCode</code> no caso do <code>iOS</code> e até mesmo do <code>Android Studio</code>.<br>Só que vale ressaltar que quando precisar compilar o projeto para ser disponibilizado para a plataforma desejada (<code>iOS</code> ou <code>Android</code>) toda a configuração de ambiente é <strong>necessária</strong>.<br><strong>:warning: RESUMINDO: MAIS CEDO OU MAIS TARDE, SERÁ OBRIGATÓRIO CONFIGURAR O AMBIENTE</strong></p>
+<p>--</p>
+<p>Vale ressaltar outros dois pontos muito importantes:</p>
+<ul>
+<li>Ao instalar pacotes, não se deve utilizar o <code>npm install</code> e sim <code>npx expo install</code>. Isso se deve ao fato de os pacotes para funcionar no <code>Expo</code> são &quot;adaptados&quot; para funcionar dentro do <code>Expo</code>. Por conta disso, nem sempre a versão mais atual do pacote é compatível com um projeto <code>Expo</code></li>
+<li>Muitos recursos do dispositivo, como câmera, geolocalização, permissões e etc. no <code>Expo</code> depende de bibliotecas exclusivas do framework. Exemplo: A biblioteca <code>react-native-maps</code> não tem suporte ao <code>Expo</code>. Então precisa usar alternativas ou fazer uma gambiarra para funcionar.</li>
+</ul>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
