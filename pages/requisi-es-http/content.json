@@ -577,7 +577,13 @@
           "children": []
         },
         {
-          "id": "b6e5b305-14c7-4d17-90ae-726d0bbbaf32",
+          "id": "d21f29c4-0769-48d0-8686-55770aa360fc",
+          "type": "divider",
+          "props": {},
+          "children": []
+        },
+        {
+          "id": "834318ec-7f68-49c7-ad75-22b3869cf24a",
           "type": "paragraph",
           "props": {
             "backgroundColor": "default",
@@ -920,6 +926,36 @@
         },
         {
           "id": "39636c1a-91b9-4fd3-91e8-548f57a74049",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "44530acf-8a17-4b73-86b8-74e38f8a3f7a",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": false
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Interceptors",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c3995383-45ef-4e1e-94be-dbe7697b9b9d",
           "type": "paragraph",
           "props": {
             "backgroundColor": "default",
