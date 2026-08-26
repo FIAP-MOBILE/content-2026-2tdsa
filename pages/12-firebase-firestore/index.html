@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p>Dentro do framework do <code>Firebase</code>, existe um recurso muito interessante chamado <code>Firestore</code>. Esse recurso permite que você utilize um banco de dados bem robusto. Com o <code>Firestore</code>, é possível trabalhar com sua aplicação até mesmo offline, pois a biblioteca tem toda a inteligência de sincronizar os dados assim que uma conexão estiver disponível. E nessa aula iremos aprender a utilizar o <code>Firebase</code> no projeto.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<blockquote>
+<p>:warning: <strong>IMPORTANTE:​ Leve em consideração a configuração já feita anteriormente para ter o Firebase rodando dentro do projeto</strong></p>
+</blockquote>
+<p></p>
+
+<hr>
+<p>Primeiro, acesso o <a href="https://console.firebase.google.com">console</a> do Firebase e no menu lateral esquerdo, expanda o menu <code>Build</code> e dentro dele acesse a opção <code>Cloud Firestore</code></p>
+<p><img src="https://i.imgur.com/X93kzx0.png" alt="menu"></p>
+<p></p>
+
+<hr>
+<p>Irá aparecer a página inicial do Firestore. Nessa página, clique no botão <code>Create database</code><br><img src="https://i.imgur.com/9pHJ0bQ.png" alt="criar database"></p>
+<p></p>
+
+<hr>
+<p>Selecione em qual região seu banco de dados ficará armazenado e clique em concluir<br><img src="https://i.imgur.com/sq3YI3Q.png" alt="Criando o banco de dados"></p>
+<hr>
+<p>Na segunda etapa, será exibido as configurações do seu banco de dados. Pode utilizar o <code>Production Mode</code> e clicar no <code>Next</code><br><img src="https://i.imgur.com/don6b94.png" alt="Configurando o banco de dados"></p>
+<hr>
+<p>Ao final desse processo, será exibido a seguinte tela:<br><img src="https://i.imgur.com/dVqDjSj.png" alt="Tela inicial firestore height:700px"></p>
+<hr>
+<p>Por padrão, o Firestore não deixa habilitado o modo escrita no banco de dados.<br>Para mudar isso, acessa a aba <code>Rules</code><br><img src="https://i.imgur.com/5XSDJ6d.png" alt="configuração padrão height:600px"></p>
+<p></p>
+
+<hr>
+<p>Nessa aba, onde está <code>false</code> mude para <code>true</code> na linha 5. O conteúdo ficará da seguinte forma:<br><img src="https://i.imgur.com/QIW6ihd.png" alt=""></p>
+<hr>
+<p>Uma vez configurado no console do Firebase, adicione a biblioteca no projeto com o seguinte comando:</p>
+<p><code>npm install @react-native-firebase/firestore</code></p>
+<p></p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<p>Para utilizar no código é bem simples. Basta importar a biblioteca <code>firestore</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">import firestore from &#39;@react-native-firebase/firestore&#39;;</code></pre></div></div>
+<hr>
+<p>No <code>Firestore</code>, tudo são coleções. Então para realizar operações CRUD (<code>Create, Read, Update e Delete</code>) com ele, é preciso criar uma coleção.<br>Para isso basta fazer o seguinte:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">const collection = firestore().collection(&#39;todo&#39;);</code></pre></div></div>
+<hr>
+<p>Para adicionar um item na coleção, utilizamos o método <code>add</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">await collection.add({
+  name: &#39;minha tarefa&#39;,
+});</code></pre></div></div>
+<p>O metódo <code>add</code> aceita como argumento um objeto, que pode ter qualquer estrutura que você quiser</p>
+<hr>
+<p>Uma vez adicionado um objeto em uma coleção, é possível consultar no <a href="https://console.firebase.google.com">console</a> os dados<br><img src="https://i.imgur.com/7thdON9.png" alt="dados Firebase"></p>
+<br>
+
+<p>No Firestore, cada registro é considerado um Documento. Como se pode notar, cada documento criado com o metódo <code>add</code>, tem um <code>ID</code> gerado automaticamente pela biblioteca.</p>
+<hr>
+<p>Além do metódo <code>add</code>, também é possível utilizar o metódo <code>set</code>. Com o metódo <code>set</code>, é possível definir qual o <code>ID</code> do Documento</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">await collection.doc(&#39;qBzTlbk3waZ3ryIZsaKr&#39;).set({
+  name: &#39;minha tarefa&#39;,
+});</code></pre></div></div>
+<hr>
+<p>E quando consultado no console:<br><img src="https://i.imgur.com/UAynqpp.png" alt="dados Firebase"></p>
+<br>
+
+<p>:warning: Vale ressaltar que os <code>ID</code> são únicos. Ou seja, se você chamar o metódo <code>set</code> utilizando o mesmo <code>ID</code>, os dados do documento são atualizados</p>
+<hr>
+<p>Para obter os dados de uma coleção, basta utilizar o metódo <code>get</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">const { docs } = collection.get();</code></pre></div></div>
+<br>
+
+<p>Com isso, todos os itens serão obtidos de uma coleção</p>
+<hr>
+<p>Caso deseja obter apenas um item, é possível definir qual documento você gostaria de obter:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-typescript">const item = collection.doc(&#39;qBzTlbk3waZ3ryIZsaKr&#39;).get();
+const data = item.data();</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>É possível aplicar filtros para obter os documentos do <code>Firebase</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">const { docs } = collection.where(&#39;status&#39;, &#39;==&#39;, &#39;pending&#39;).get();</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>Um recurso muito interessante do <code>Firestore</code> é acompanhar as atualizações em tempo real. É possível acompanhar em múltiplos registros ou até mesmo um único registro. Utiliza-se o metódo <code>onSnapshot</code> para acompanhar as modificações feitas</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">useEffect(() =&gt; {
+  const subscriber = collection.onSnapshot((snapshot) =&gt; {
+    setTasks(snapshot.docs);
+  });
+
+  // Stop listening for updates when no longer required
+  return () =&gt; subscriber();
+}, []);</code></pre></div></div>
+<br>
+
+<p>No exemplo, a coleção inteira será observada. Ou seja, a atualização em qualquer documento irá disparar o evento <code>onSnapshot</code></p>
+<hr>
+<p>Pode-se utilizar para observar apenas registros específicos, usando uma <code>query</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">useEffect(() =&gt; {
+  const subscriber = collection
+    .where(&#39;status&#39;, &#39;==&#39;, &#39;pending&#39;)
+    .onSnapshot((snapshot) =&gt; {
+      setTasks(snapshot.docs);
+    });
+  return () =&gt; subscriber();
+}, []);</code></pre></div></div>
+<hr>
+<p>Caso queira acompanhar as atualizações feitas em único objeto, é só informar qual documento gostaria de observar.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-typescript">useEffect(() =&gt; {
+  const subscriber = collection
+    .doc(&#39;5wZV4I2TECWo7fnPVXdH&#39;)
+    .onSnapshot((snapshot) =&gt; {
+      console.log(snapshot.docs);
+    });
+
+  // Stop listening for updates when no longer required
+  return () =&gt; subscriber();
+}, []);</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
