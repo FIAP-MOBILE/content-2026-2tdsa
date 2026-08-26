@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p><code>Firebase</code> é uma biblioteca oferecida pelo Google que faz uma excelente abstração de uma série de recursos que sua aplicação pode precisar. Alguns deles são:</p>
+<ul>
+<li>Autenticação</li>
+<li>Banco de dados</li>
+<li>Mensageria</li>
+<li>Analytics</li>
+</ul>
+<hr>
+<p>Para acessar sua conta gratuita, basta acessar o seguinte endereço com uma conta<br><code>Google</code>:<br><a href="https://firebase.google.com/">https://firebase.google.com/</a></p>
+<p>No topo superior direito tem o link <code>Go To Console</code> que vai te direcionar para o console do <code>Firebase</code>. Se preferir, é possível acessar o console diretamente através do link:<br><a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a></p>
+<hr>
+<p>Ao acessar a página inicial, tem a opção de adicionar um novo projeto:<br><img src="https://i.imgur.com/WkjgSMT.png" alt="novo projeto height:550"></p>
+<hr>
+<p>Ao clicar em Adicionar Projeto, aparecerá uma tela que pede o nome do seu projeto:<br><img src="https://i.imgur.com/nJP4Pou.png" alt="criando o projeto"></p>
+<hr>
+<p>Ao informar o nome do projeto, na segunda etapa ele oferece a opção de utilizar o <code>Google Analytics</code>. Nesse primeiro momento, não será utilizado esse recurso, então desmarque a opção conforme imagem a seguir:<br><img src="https://i.imgur.com/xpjHxMr.png" alt="desabilitando analytics height:550px"></p>
+<p></p>
+
+<hr>
+<p>Ao confirmar a criação do projeto, aparecerá uma tela mostrando que seu projeto está sendo criado<br><img src="https://i.imgur.com/3ia4P5q.png" alt="criando projeto"></p>
+<hr>
+<p>Quando o processo é finalizado, ele te da opção de explorar o projeto:<br><img src="https://i.imgur.com/dkm5Yrk.png" alt="projeto criado"></p>
+<hr>
+<p>Vamos utilizar nesse primeiro momento, a parte de autenticação do <code>Firebase</code>.<br>Para isso, dentro do seu projeto, no menu lateral à esquerda, clique em <code>Build</code> e acesse a opção  <code>Authentication</code></p>
+<p><img src="https://i.imgur.com/aVT0Mdy.png" alt="autenticação height:550px"></p>
+<hr>
+<p>Basta clicar no botão <code>Get Started</code> para configurar a parte de autenticação no seu projeto<br><img src="https://i.imgur.com/iOq7vjj.png" alt="autenticação"></p>
+<hr>
+<p>Uma vez iniciado a configuração, aparecerá uma tela onde se pode selecionar os tipos de  autenticação que serão utilizados. Nesse primeiro momento, utilize o <code>Anonymous</code>.<br><img src="https://i.imgur.com/jle6eWC.png" alt="anonymous"></p>
+<hr>
+<p>Para ativar autenticação anônima, basta selecionar a opção anônima e na sequência ativa-la.<br>Para concluir, clique no botão <code>Save</code><br><img src="https://i.imgur.com/ZZUPj9q.png" alt="ativando anonymous"></p>
+<hr>
+<p>Após essas configurações no Firebase, é necessário configurar a sua aplicação.</p>
+<hr>
+<p>No arquivo <code>build.gradle</code> que fica no caminho <code>android/app/</code> localize a linha do arquivo onde tem escrito <code>applicationId &quot;com.nomedoprojeto&quot;</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">gradle</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span></div><pre><code class="language-gradle">android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
+
+    namespace &quot;com.firebase&quot;
+    defaultConfig {
+        applicationId &quot;com.firebase&quot;
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName &quot;1.0&quot;
+    }
+    ...
+}</code></pre></div></div>
+<p>Copie o conteúdo dentro das aspas. No exemplo deste slide: <code>com.firebase</code></p>
+<hr>
+<p>Volte no console do <code>Firebase</code>. Selecione a sua aplicação e do lado da opção <code>Project Overview</code> tem uma engrenagem do lado direito. Ao clicar nela, selecione a opção <code>Project Settings</code><br><img src="https://i.imgur.com/qIY2bp6.png" alt="configurações do projeto"></p>
+<hr>
+<p>Irá abrir a página inicial do projeto e nela, tem um ícone do Android conforme imagem a seguir.<br><img src="https://i.imgur.com/LH4lgHq.png" alt="configurações android"></p>
+<p>Clique no ícone do Android</p>
+<hr>
+<p>Ao clicar no ícone do Android, aparecerá a tela conforme imagem no slide. Nessa primeira<br>etapa, iremos preencher o nome do pacote do Android, o mesmo que foi copiado<br>anteriormente e depois clicar no botão <code>Register app</code><br><img src="https://i.imgur.com/Y4A5lEq.png" alt="registrando a aplicação height:500px"></p>
+<hr>
+<p>Na segunda etapa, clique para baixar o arquivo <code>google-services.json</code>.<br><img src="https://i.imgur.com/6AVMuc8.png" alt="google services json"></p>
+<hr>
+<p>Salve ele no seguinte caminho do seu projeto: <code>android/app</code><br><img src="https://i.imgur.com/LEMZaHY.png" alt="projeto arquivo"></p>
+<hr>
+<p>Agora é necessário fazer algumas configurações no seu aplicativo.<br>Primeiro, abra o arquivo <code>android/build.gradle</code>. Na seção <code>buildscript</code>, existe a seção<br><code>dependencies</code>. Dentro dela deve ser adicionada a seguinte dependência <code>com.google.gms.google-services</code>:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">gradle</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span></div><pre><code class="language-gradle">buildscript {
+    ext {
+        buildToolsVersion = &#39;34.0.0&#39;
+        minSdkVersion = 23
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+        ndkVersion = &#39;26.1.10909125&#39;
+        kotlinVersion = &#39;1.9.22&#39;
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath(&#39;com.android.tools.build:gradle&#39;)
+        classpath(&#39;com.facebook.react:react-native-gradle-plugin&#39;)
+        classpath(&#39;org.jetbrains.kotlin:kotlin-gradle-plugin&#39;)
+        classpath(&#39;com.google.gms.google-services:4.4.2&#39;)
+    }
+}</code></pre></div></div>
+<hr>
+<p>Agora abra o arquivo <code>android/app/build.gradle</code>. Logo após a primeira linha, adicione a<br>seguinte linha:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">gradle</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-gradle">apply plugin: &quot;com.google.gms.google-services&quot;</code></pre></div></div>
+<p>Depois, na seção <code>dependencies</code> adicione a seguinte dependência:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">gradle</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-gradle">dependencies {
+    // The version of react-native is set by the React Native Gradle Plugin
+    implementation(&#39;com.facebook.react:react-android&#39;)
+
+    if (hermesEnabled.toBoolean()) {
+        implementation(&#39;com.facebook.react:hermes-android&#39;)
+    } else {
+        implementation jscFlavor
+    }
+    implementation platform(&#39;com.google.firebase:firebase-bom:33.1.2&#39;)
+}</code></pre></div></div>
+<hr>
+<p>Para utilizar o Firebase no seu projeto, primeiro deve-se instalar sua respectiva biblioteca.</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install @react-native-firebase/app</code></pre></div></div></div>
+<hr>
+<p>Para utilizar a parte de autenticação, ainda precisa adicionar mais um pacote:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install @react-native-firebase/auth</code></pre></div></div></div>
+<hr>
+<p>Agora, vamos deixar o <code>App.tsx</code> com o seguinte código:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+import auth, { FirebaseAuthTypes } from &#39;@react-native-firebase/auth&#39;;
+import { Text, View, Button } from &#39;react-native&#39;;
+
+const App = () =&gt; {
+  const [user, setUser] = useState&lt;FirebaseAuthTypes.User | null&gt;();
+  const firebaseAuth = auth();
+  const doAnonymousLogin = async () =&gt; {
+    const { user } = await firebaseAuth.signInAnonymously();
+    setUser(user);
+  };
+
+  return (
+    &lt;View&gt;
+      {!user ? (
+        &lt;Button title=&quot;Login Anônimo&quot; onPress={doAnonymousLogin} /&gt;
+      ) : (
+        &lt;Text&gt;User ID: {user.uid}&lt;/Text&gt;
+      )}
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<hr>
+<p>Quando executar a aplicação, ao clicar no botão Login Anônimo, ele autenticara na plataforma do <code>Firebase</code>. No console, é possível verificar os usuários da sua aplicação<br><img src="https://i.imgur.com/rfsZMYw.png" alt="usuários"></p>
+<hr>
+<p>Utilizando o <code>Firebase</code>, podemos utilizar também a autenticação onde é possível utilizar email e senha. Para isso, deve-se adicionar o provedor Email/Senha no console do <code>Firebase</code>. No menu lateral esquerdo, na opção <code>Build</code> tem a sub-opção <code>Authentication</code>. Clique na aba <code>Sign-in method</code>e depois clique no botão <code>Add New Provider</code><br><img src="https://i.imgur.com/CkDLhPQ.png" alt="add new provider"></p>
+<hr>
+<p>Ao clicar no botão, dentro da seção <code>Native Providers</code> basta selecionar <code>Email/Password</code><br><img src="https://i.imgur.com/y71761S.png" alt="email provider"></p>
+<hr>
+<p>Ao selecionar a opção <code>Email/Password</code>, habilite a opção <code>Email/Password</code> e clique no  botão <code>Save</code><br><img src="https://i.imgur.com/U4TkcOf.png" alt="habilitando email"></p>
+<hr>
+<p>Para criar uma conta, existe o método <code>createUserWithEmailAndPassword</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+import auth, { FirebaseAuthTypes } from &#39;@react-native-firebase/auth&#39;;
+import { Text, View, Button, TextInput } from &#39;react-native&#39;;
+
+const App = () =&gt; {
+  const [email, setEmail] = useState(&#39;&#39;);
+  const [password, setPassword] = useState(&#39;&#39;);
+  const [user, setUser] = useState&lt;FirebaseAuthTypes.User | null&gt;();
+  const [error, setError] = useState&lt;any&gt;();
+  const firebaseAuth = auth();
+
+  const createAccount = async () =&gt; {
+    try {
+      setError(undefined);
+      const { user: firebaseUser } =
+        await firebaseAuth.createUserWithEmailAndPassword(email, password);
+      setUser(firebaseUser);
+    } catch (error) {
+      setError(error);
+    }
+  };
+
+  return (
+    &lt;View
+      style={{
+        flex: 1,
+        justifyContent: &#39;center&#39;,
+        alignItems: &#39;center&#39;,
+      }}
+    &gt;
+      &lt;Text&gt;Email&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; onChangeText={setEmail} /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; onChangeText={setPassword} /&gt;
+      &lt;Button title=&quot;Login&quot; onPress={doLogin} /&gt;
+      {error &amp;&amp; &lt;Text&gt;{error?.message}&lt;/Text&gt;}
+      {user &amp;&amp; &lt;Text&gt;{user?.uid}&lt;/Text&gt;}
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<hr>
+<p>Para se autenticar, pode-se invocar o método <code>signInWithEmailAndPassword</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+import auth, { FirebaseAuthTypes } from &#39;@react-native-firebase/auth&#39;;
+import { Text, View, Button, TextInput } from &#39;react-native&#39;;
+
+const App = () =&gt; {
+  const [email, setEmail] = useState(&#39;&#39;);
+  const [password, setPassword] = useState(&#39;&#39;);
+  const [user, setUser] = useState&lt;FirebaseAuthTypes.User | null&gt;();
+  const [error, setError] = useState&lt;any&gt;();
+  const firebaseAuth = auth();
+
+  const doLogin = async () =&gt; {
+    try {
+      setError(undefined);
+      const { user: firebaseUser } =
+        await firebaseAuth.signInWithEmailAndPassword(email, password);
+      setUser(firebaseUser);
+    } catch (error) {
+      setError(error);
+    }
+  };
+
+  return (
+    &lt;View
+      style={{
+        flex: 1,
+        justifyContent: &#39;center&#39;,
+        alignItems: &#39;center&#39;,
+      }}
+    &gt;
+      &lt;Text&gt;Email&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; onChangeText={setEmail} /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; onChangeText={setPassword} /&gt;
+      &lt;Button title=&quot;Login&quot; onPress={doLogin} /&gt;
+      {error &amp;&amp; &lt;Text&gt;{error?.message}&lt;/Text&gt;}
+      {user &amp;&amp; &lt;Text&gt;{user?.uid}&lt;/Text&gt;}
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>Ambos os métodos <code>signInWithEmailAndPassword</code> e <code>createUserWithEmailAndPassword</code> retornam uma propriedade <code>user</code> tem os dados do usuário autenticado. Caso ocorra alguma exceção, o <code>error</code> tem a propriedade <code>message</code> que informa qual foi o erro que ocorreu durante a requisição.</p>
+<hr>
+<p>O método <code>signOut</code> desloga o usuário</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">const signOut = async () =&gt; {
+  await auth().signOut();
+};</code></pre></div></div>
+<hr>
+<p>Alguns recursos interessantes que existe no Firebase são reiniciar senha e validação de<br>email. Para reiniciar a senha podemos utilizar o método <code>sendPasswordResetEmail</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-typescript">const sendPasswordRecover = async () =&gt; {
+  await auth().sendPasswordResetEmail(&#39;email@email.com`)
+}</code></pre></div></div>
+<hr>
+<p>Para validar o email, o objeto user retornado quando o usuário é criado/autenticado, tem o<br>método <code>sendEmailVerification</code>. Um email é enviado para o caixa e email do usuário para qual foi solicitado a verificação</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">const createAccount = async () =&gt; {
+  try {
+    setError(undefined);
+    const { user: firebaseUser } =
+      await firebaseAuth.createUserWithEmailAndPassword(email, password);
+    user.sendEmailVerification();
+    setUser(firebaseUser);
+  } catch (error) {
+    setError(error);
+  }
+};</code></pre></div></div>
+<hr>
+<p>Um metódo que existe na instância <code>auth</code> é o <code>onAuthStateChanged</code>. Com ele é possível saber quando o estado da autenticação foi alterado.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">const onAuthStateChanged = async (user: FirebaseAuthTypes.User | null) =&gt; {
+  console.log(&#39;user changed&#39;, user);
+  setUser(user);
+};
+
+useEffect(() =&gt; {
+  const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+  return subscriber;
+}, []);</code></pre></div></div>
+<hr>
+<p>No console do <code>Firebase</code>, é possível personalizar os emails que são enviados para os usuário.<br>Ainda na tela de <code>Authentication</code>, a aba <code>Templates</code> possui todos os templates que o <code>Firebase</code> envia para o usuário.<br><img src="https://i.imgur.com/k6XGKH9.png" alt="firebase templates height:500px"></p>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
