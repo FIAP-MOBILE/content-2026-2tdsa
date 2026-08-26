@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+<p></p>
+
+
+<p>Mobile App Development</p>
+<hr>
+<p></p>
+
+<p>Como já vimos na aula de navegação, é possível você criar telas onde o usuário irá interagir na sua aplicação, tendo uma comunicação entre as telas através de passagem de dados para melhor sua experiência.<br>Nesta aula iremos ver como customizar algumas funcionalidades e como utilizar outros tipos de <code>Stacks</code> de navegação.</p>
+<hr>
+<p></p>
+
+<p>A <code>HeaderBar</code> é a barra que fica no topo de cada tela que é exibida na sua aplicação. Nela,<br>contém um título e pode ser adicionado botões de ação. A seguir, uma imagem de uma <code>HeaderBar</code> sem nenhuma customização<br><img src="https://i.imgur.com/wqhgZYb.png" alt="headerbar"></p>
+<hr>
+<p>A <code>Stack.Screen</code> possui uma propriedade chamada <code>options</code>. Com essa propriedade que podemos alterar algumas propriedades da <code>HeaderBar</code>.<br>É possível alterar o título que aparece na <code>HeaderBar</code>. Por padrão, o título exibido quando se define <code>name</code> de um <code>Stack.Screen</code>. Para alterar o título, podemos fazer da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{ headerTitle: &#39;Autores&#39; }}
+/&gt;;</code></pre></div></div>
+<hr>
+<p>Para alterar a cor de fundo da <code>HeaderBar</code>, utiliza-se a propriedade <code>headerStyle</code> que possue apenas o <code>backgroundColor</code> como opção</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerTitle: &#39;Autores&#39;,
+    headerStyle: {
+      backgroundColor: &#39;#4444ff&#39;,
+    },
+  }}
+/&gt;;</code></pre></div></div>
+<hr>
+<p>Para alterar a cor do texto da <code>HeaderBar</code>, utiliza-se a propriedade <code>headerTintColor</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerTitle: &#39;Autores&#39;,
+    headerTintColor: &#39;#a1a1a1&#39;,
+    headerStyle: {
+      backgroundColor: &#39;#4444ff&#39;,
+    },
+  }}
+/&gt;;</code></pre></div></div>
+<hr>
+<p>A propriedade <code>headerTitle</code> permite além de passar um <code>string</code>, passar um componente para renderizar no título da barra. Então levando em consideração o seguinte componente:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">const HeaderTitle = ({ children }: any) =&gt; {
+  return (
+    &lt;View style={{ flexDirection: &#39;row&#39; }}&gt;
+      &lt;Text style={{ fontSize: 36, color: &#39;#ff4444&#39; }}&gt;{children}&lt;/Text&gt;
+      &lt;Image
+        style={{ width: 50, height: 50 }}
+        source={{ uri: &#39;https://reactnative.dev/img/tiny_logo.png&#39; }}
+      /&gt;
+    &lt;/View&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p>No <code>options</code> do <code>Stack.Screen</code>, basta passar da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerTitle: (props) =&gt; &lt;HeaderTitle {...props} /&gt;,
+    headerTintColor: &#39;#a1a1a1&#39;,
+    headerStyle: {
+      backgroundColor: &#39;#4444ff&#39;,
+    },
+  }}
+/&gt;;</code></pre></div></div>
+<hr>
+<p>É possível adicionar botões que ficam alinhados à direita de uma <code>HeaderBar</code>. Para isso, utiliza-se a propriedade <code>headerRight</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerRight: () =&gt; (
+      &lt;TouchableOpacity onPress=(() =&gt; alert(&#39;Some relevant info&#39;))&gt;
+        &lt;Text&gt;Info&lt;/Text&gt;
+      &lt;/TouchableOpacity&gt;
+    )
+  }}
+/&gt;</code></pre></div></div>
+<hr>
+<p>É possível customizar o botão que fica alinhado à esquerda de uma <code>HeaderBar</code>. Para isso, utiliza-se a propriedade <code>headerLeft</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerLeft: () =&gt; (
+      &lt;TouchableOpacity onPress=(() =&gt; alert(&#39;Some relevant info&#39;))&gt;
+        &lt;Text&gt;Info&lt;/Text&gt;
+      &lt;/TouchableOpacity&gt;
+    )
+  }}
+/&gt;</code></pre></div></div>
+<hr>
+<p>Caso queira ocultar o <code>headerLeft</code>, basta utilizar a opção <code>headerBackVisible</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerBackVisible: false,
+  }}
+/&gt;;</code></pre></div></div>
+<hr>
+<p>Se na sua aplicação em algum momento é necessário ocultar a <code>HeaderBar</code>, é possível atráves da propriedade <code>headerShown</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-typescript">&lt;Stack.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    headerShown: false,
+    headerTitle: &#39;Autores&#39;,
+    headerTintColor: &#39;#a1a1a1&#39;,
+    headerStyle: {
+      backgroundColor: &#39;#4444ff&#39;,
+    },
+  }}
+/&gt;;</code></pre></div></div>
+<hr>
+<p>Caso queira deixar a <code>HeaderBar</code> configurada de forma global, ao invés de usar a propriedade <code>options</code> do <code>Stack.Screen</code> existe a propriedade <code>screenOptions</code> do <code>Stack.Navigator</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">&lt;Stack.Navigator
+  screenOptions={{
+    headerTitle: (props) =&gt; &lt;HeaderTitle {...props} /&gt;,
+    headerTintColor: &#39;#a1a1a1&#39;,
+    headerStyle: {
+      backgroundColor: &#39;#4444ff&#39;,
+    },
+  }}
+&gt;
+  ...
+&lt;/Stack.Navigator&gt;;</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Além da navegação utilizada com o <code>createNativeStackNavigator</code>, é possível utilizar outros tipos de navegação. São elas:</p>
+<ul>
+<li><code>Drawer</code></li>
+<li><code>Bottom Tabs</code></li>
+<li><code>Material Top Tabs</code></li>
+</ul>
+<hr>
+<p></p>
+
+<p>É um tipo de navegação onde se utiliza as abas localizadas na parte inferior da tela. Para utiliza-la, é necessário instalar o pacote <code>@react-navigation/bottom-tabs</code> com o seguinte comando:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install @react-navigation/bottom-tabs</code></pre></div></div></div>
+<p>Com o <code>Expo</code>:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install @react-navigation/bottom-tabs</code></pre></div></div></div>
+<hr>
+<p>Assim que a biblioteca estiver instalada, pode-se utilizar a navegação por abas da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-typescript">import { createBottomTabNavigator } from &#39;@react-navigation/bottom-tabs&#39;;
+
+const Tab = createBottomTabNavigator();
+
+const Tabs = () =&gt; {
+  return (
+    &lt;Tab.Navigator&gt;
+      &lt;Tab.Screen name=&quot;authors&quot; component={Authors} /&gt;
+      &lt;Tab.Screen name=&quot;books&quot; component={Books} /&gt;
+    &lt;/Tab.Navigator&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p>Na navegação por abas existem propriedades que podem ser utilizadas, como:<br><code>backBehavior</code>-&gt; Define qual o comportamento de voltar da aplicação. O padrão é <code>firstRoute</code>. Ainda tem as opções <code>initialRoute</code>, <code>order</code>, <code>history</code> e <code>none</code><br><code>tabBar</code>-&gt; É possível customizar como a barra de navegação por abas pode ser renderizada</p>
+<hr>
+<p>Na navegação por abas, é possível utilizar a propriedade screenOptions assim como na navegação convencional. Existem outras propriedades que podem ser utilizadas, como:</p>
+<p><code>tabBarActiveTintColor</code>-&gt; Define a cor do ícone/texto da aba ativa<br><code>tabBarInactiveTintColor</code>-&gt; Define a cor do ícone/texto das abas inativas<br><code>tabBarActiveBackgroundColor</code>-&gt; Define a cor de fundo da aba ativa<br><code>tabBarActiveBackgroundColor</code>-&gt; Define a cor de fundo das abas inativas</p>
+<hr>
+<p>O componente <code>Screen</code> gerado a partir de um <code>createBottomTabNavigator</code> tem algumas propriedades adicionais serão listadas nos próximos.</p>
+<hr>
+<p>A propriedade <code>title</code> define qual texto será exibido no botão da aba.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">&lt;Tab.Screen name=&quot;authors&quot; component={List} options={{ title: &#39;Autores&#39; }} /&gt;;</code></pre></div></div>
+<hr>
+<p>Caso queira ocultar o texto, pode-se utilizar a propriedade <code>tabBarShowLabel</code>, que aceita <code>true</code> ou <code>false</code> como valores</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">&lt;Tab.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    title: &#39;Autores&#39;
+    tabBarShowLabel: false
+  }}
+/&gt;</code></pre></div></div>
+<hr>
+<p>A propriedade <code>tabBarIcon</code> define como será renderizado o ícone da sua aba.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">import { FontAwesomeIcon } from &#39;@fortawesome/react-native-fontawesome&#39;;
+import { faUser } from &quot;@fortawesome/free-solid-svg-icons&quot;;
+
+&lt;Tab.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    title: &#39;Autores&#39;
+    tabBarIcon: () =&gt; &lt;FontAwesomeIcon icon={faUser} /&gt;
+  }}
+/&gt;</code></pre></div></div>
+<p>Foi utilizado nesse exemplo a biblioteca <code>FontAwesome</code>.<br>Para mais informações, acesse:</p>
+<p><a href="https://docs.fontawesome.com/web/use-with/react-native">https://docs.fontawesome.com/web/use-with/react-native</a></p>
+<hr>
+<p>A propriedade <code>tabBarBadge</code> define um texto/número que será exibido no canto superior direito do ícone da aba.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">&lt;Tab.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    title: &#39;Autores&#39;
+    tabBarBadge: 5
+  }}
+/&gt;</code></pre></div></div>
+<hr>
+<p>A propriedade <code>tabBarBadgeStyle</code> permite customizar o <code>tabBarBadge</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-typescript">&lt;Tab.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    title: &#39;Autores&#39;
+    tabBarBadge: 5,
+    tabBarBadgeStyle:{
+      backgroundColor: &#39;#00ff00&#39;,
+      color: &#39;#fff&#39;
+    },
+  }}
+/&gt;</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Esse tipo de navegação é feita atráves de um menu lateral que é acessível ao fazer o gesto de deslizar para a direita no canto esquerdo da aplicação.<br>Para utiliza-lo, precisa instalar as seguintes bibliotecas:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install @react-navigation/drawer react-native-gesture-handler react-native-reanimated react-native-worklets</code></pre></div></div></div>
+<p>Com o <code>Expo</code>:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated react-native-worklets</code></pre></div></div></div>
+<hr>
+<p>Após isso, deve ser feito um import no começo do <code>App.tsx</code>.Deve ser a primeira linha do seu arquivo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">import &#39;react-native-gesture-handler&#39;;</code></pre></div></div>
+<hr>
+<p>E para se certificar que vai dar tudo certo, roda novamente sua aplicação da seguinte forma:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm start -- --reset-cache</code></pre></div></div></div>
+<hr>
+<p>Para utiliza-lo, é bem similar aos outros modos de navegação</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-typescript">import { createDrawerNavigator } from &#39;@react-navigation/drawer&#39;;
+
+const Drawer = createDrawerNavigator();
+
+const Home = () =&gt; {
+  return (
+    &lt;Drawer.Navigator&gt;
+      &lt;Drawer.Screen name=&quot;authors&quot; component={Authors} /&gt;
+      &lt;Drawer.Screen name=&quot;books&quot; component={Books} /&gt;
+    &lt;/Drawer.Navigator&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p>No componente <code>Screen</code> podemos customizar alguns elementos da opção que será exibida no menu do <code>Drawer</code>, utilizando a propriedade <code>options</code>.<br><code>drawerLabel</code> -&gt; Como será exibido o elemento no menu. Pode ser um texto ou um c omponente<br><code>drawerIcon</code> -&gt; Renderiza um componente que será exibido a esquerda do texto<br><code>drawerActiveTintColor</code>-&gt; Cor do ícone/texto quando a opção estiver ativa<br><code>drawerInactiveTintColor</code>-&gt; Cor do ícone/texto quando a opção estiver inativa.<br><code>drawerActiveBackgroundColor</code>-&gt; Cor de fundo quando o item está ativo.<br><code>drawerInactiveBackgroundColor</code>-&gt; Cor de fundo quando o item está inativo.</p>
+<hr>
+<p>Exemplo de um <code>Screen</code> com texto e ícones alterados</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">import { FontAwesomeIcon } from &#39;@fortawesome/react-native-fontawesome&#39;;
+import { faUser } from &quot;@fortawesome/free-solid-svg-icons&quot;;
+
+&lt;Drawer.Screen
+  name=&quot;authors&quot;
+  component={List}
+  options={{
+    drawerLabel: &#39;Autores&#39;
+    drawerIcon: () =&gt; &lt;FontAwesomeIcon icon={faUser} /&gt;
+  }}
+/&gt;</code></pre></div></div>
+<hr>
+<p>Para customizar o menu lateral, deve-se utilizar o componente <code>DrawerContentScrollView</code>. Dentro dele, deve-se ter <code>DrawerItem</code> ou até mesmo um <code>DrawerItemList</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span></div><pre><code class="language-typescript">import { DrawerContentComponentProps } from &#39;@react-navigation/drawer&#39;;
+
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from &#39;@react-navigation/drawer&#39;;
+
+import { FontAwesomeIcon } from &#39;@fortawesome/react-native-fontawesome&#39;;
+import { faQuestionCircle } from &#39;@fortawesome/free-solid-svg-icons&#39;;
+
+const MyDrawer = (props: DrawerContentComponentProps) =&gt; {
+  return (
+    &lt;DrawerContentScrollView&gt;
+      &lt;DrawerItemList {...props} /&gt;
+      &lt;DrawerItem
+        label=&quot;Help&quot;
+        icon={() =&gt; &lt;FontAwesomeIcon icon={faSmile} /&gt;}
+        onPress={() =&gt; console.log(&#39;Somebody help me&#39;)}
+      /&gt;
+    &lt;/DrawerContentScrollView&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p>Então quando for renderizar o <code>Drawer.Navigator</code>, utilize a propriedade <code>drawerContent</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">import { createDrawerNavigator } from &quot;@react-navigation/drawer&quot;;
+const Drawer = createDrawerNavigator();
+
+const Home = () =&gt; {
+  return (
+    &lt;Drawer.Navigator drawerContent={props =&gt; &lt;MyDrawer {..props} /&gt;}&gt;
+      &lt;Drawer.Screen name=&quot;authors&quot; component={Authors} /&gt;
+      &lt;Drawer.Screen name=&quot;books&quot; component={Books} /&gt;
+    &lt;/Drawer.Navigator&gt;
+  );
+};</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Funciona exatamente como o <code>BottomTabs</code>, só que com um detalhe a mais que tem nesse tipo de navegação, é que você pode utilizar gestos para alternar entre as abas, deslizando para a direita/esquerda.<br>Para utiliza-lo, precisa instalar pacotes adicionais conforme comando a seguir:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npm install @react-navigation/material-top-tabs react-native-tab-view react-native-pager-view</code></pre></div></div></div>
+<p>Com o <code>Expo</code>:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install @react-navigation/material-top-tabs react-native-tab-view react-native-pager-view</code></pre></div></div></div>
+<hr>
+<p>No código, basta fazer uma implementação similar aos outros navegadores:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span></div><pre><code class="language-typescript">import { createMaterialBottomTabNavigator } from &#39;@react-navigation/material-top-tabs&#39;;
+
+const Tab = createMaterialTopTabNavigator();
+
+function App(): React.JSX.Element {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Tab.Navigator&gt;
+        &lt;Tab.Screen name=&quot;Login&quot; component={Login} /&gt;
+        &lt;Tab.Screen name=&quot;Details&quot; component={Details} /&gt;
+      &lt;/Tab.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}</code></pre></div></div>
+<hr>
+<p>Toda a parte de customização do componente funciona exatamente igual ao <code>BottomTabs</code>. Ou seja:</p>
+<ul>
+<li>Pode-se utilizar o <code>screenOptions</code> no componente <code>Navigator</code>.</li>
+<li>Pode-se utilizar o <code>options</code> para definir <code>tabBarIcon</code>, <code>tabBarBadge</code>, etc. no componente <code>Screen</code></li>
+</ul>
+<hr>
+<p></p>
+
+<p>Todas as navegações é possível utilizar o metódo <code>navigate</code> do seu modo de navegação, mas não é possível utilizar o <code>push</code>.<br>Tenha isso em mente durante o desenvolvimento do seu aplicativo</p>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
