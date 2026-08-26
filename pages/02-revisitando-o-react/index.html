@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p>Criado em 2013 pela Meta (anteriormente Facebook), é uma biblioteca de código aberto utilizada para agilizar o desenvolvimento de interfaces de usuários através da criação de componentes.</p>
+<hr>
+<ul>
+<li>Utilização de <code>JSX</code> (Javascript XML)</li>
+<li>Single Page Application (SPA)</li>
+<li>Virtual DOM (VDOM)</li>
+<li>Simplicidade</li>
+<li>One-way Data Binding</li>
+</ul>
+<hr>
+<p>Para desenvolver em <code>React</code>, pode-se utilizar duas alternativas</p>
+<ul>
+<li>Apenas usando arquivos estáticos</li>
+<li>Utilizando o Node (recomendado)</li>
+</ul>
+<hr>
+<p>Apenas usando arquivos estáticos</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">HTML</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span></div><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+
+    &lt;title&gt;Hello React&lt;/title&gt;
+
+    &lt;script src=&quot;https://unpkg.com/react@^16/umd/react.production.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/react-dom@^16.13.0/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/babel-standalone@^6.26.0/babel.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+      // Código React vai aqui
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div>
+<hr>
+<p>Apenas usando arquivos estáticos</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">HTML</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span></div><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+
+    &lt;title&gt;Hello React&lt;/title&gt;
+
+    &lt;script src=&quot;https://unpkg.com/react@^16/umd/react.production.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/react-dom@^16.13.0/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/babel-standalone@^6.26.0/babel.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+      class App extends React.Component (
+          render() {
+              return &lt;h1&gt;Hello World&lt;/h1&gt;
+          }
+      );
+
+      ReactDOM.render(&lt;App /&gt;, document.getElementById(&quot;root&quot;));
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div>
+<hr>
+<p>Ao usar o Node, temos duas opções para criar o projeto. A Meta recomenda usar algum framework como o <code>[Nextjs](https://nextjs.org/)</code> ou o <code>[Expo](https://expo.dev/)</code><br>Criando com o <code>Expo</code><br><code>npx create-expo-app@latest &lt;nome do projeto&gt;</code></p>
+<p></p>
+
+<hr>
+<p>Rodando a aplicação<br>Execute o comando a seguir dentro da pasta do projeto</p>
+<p><code>npm start</code></p>
+<hr>
+<p>Quase tudo no React é consistido de componentes.<br>Existem duas abordagens de se criar componentes:</p>
+<ul>
+<li>Classes</li>
+<li>Funcional</li>
+</ul>
+<hr>
+<p>A ideia de classe pode ser descrita como um modelo que define quais seus atributos e comportamentos para manipular os dados.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span></div><pre><code class="language-javascript">import React, { Component } from &#39;react&#39;;
+
+class Table extendes Component {
+    render() {
+        return (
+            &lt;table&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Name&lt;/th&gt;
+                        &lt;th&gt;Job&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Charlie&lt;/td&gt;
+                        &lt;td&gt;Janitor&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Mac&lt;/td&gt;
+                        &lt;td&gt;Bouncer&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        )
+    }
+}
+
+export default Table;</code></pre></div></div>
+<hr>
+<p>Métodos mais importantes:<br><code>render</code> - Define o que deverá ser exibido na tela. Implementação obrigatória<br><code>componentDidMount</code> - Executado quando o elemento será exibido pela primeira vez<br><code>setState</code> - Usado para atualizar o estado do componente</p>
+<hr>
+<p>É a abordagem recomendada pelo próprio <code>React</code>. É a forma mais simples de se criar um componente, tendo em vista que é necessário apenas escrever uma<br>função. Para controlar o estado do componente, se utiliza o hook <code>useState</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span></div><pre><code class="language-javascript">import React from &#39;react&#39;;
+
+const Table = () =&gt; {
+  return (
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Job&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Charlie&lt;/td&gt;
+          &lt;td&gt;Janitor&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Mac&lt;/td&gt;
+          &lt;td&gt;Bouncer&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  );
+};
+
+export default Table;</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
