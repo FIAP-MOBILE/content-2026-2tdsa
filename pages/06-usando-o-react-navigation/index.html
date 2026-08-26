@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+<p></p>
+
+
+<p>Mobile App Development</p>
+<hr>
+<p></p>
+
+<p>Toda aplicação tem múltiplas telas a serem exibidas. E para isso, é utilizado o recurso de<br>navegação.<br>No <code>React Native</code> existe a biblioteca <code>React Navigation</code> que atende esse próposito.<br>É uma biblioteca de terceiros, ou seja, não foi criada pelo time do <code>React</code>, mas é <a href="https://reactnative.dev/docs/navigation">oficialmente sugerida por eles</a>. Eles também sugerem a <code>React Native Navigation</code>, mas é recomendada para casos mais avançados de uso.</p>
+<hr>
+<p></p>
+
+<p>Para instalar a React Navigation, dentro do diretório do seu projeto basta rodar o<br>comando:<br><code>npm install @react-navigation/native</code></p>
+<p>Para funcionar corretamente no Android, deve-se instalar mais duas bibliotecas:<br><code>npm install react-native-screens react-native-safe-area-context</code></p>
+<p>Se é um projeto feito com o Expo:<br><code>npx expo install react-native-screens react-native-safe-area-context</code></p>
+<hr>
+<p>Para a navegação funcionar no iOS, rode o seguinte comando dentro da pasta do projeto:<br><code>npx pod-install ios</code><br>Ele vai realizar a instalação de componentes necessários dentro da estrutura do projeto do iOS que o <code>React Navigation</code> necessita para funcionar corretamente.</p>
+<hr>
+<p>No Android, ainda é necessário alterar um arquivo Java para funcionar corretamente.<br>Na estrutura do seu projeto, localize o arquivo no caminho:<br><code>android/app/src/main/java/com/&lt;nome do seu projeto&gt;/MainActivity.kt</code><br>Dentro desse arquivo, a primeira deve ser algo do tipo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Java</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-java">package com.exemplo;</code></pre></div></div>
+<p>Após essa linha, coloque a linha:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Java</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-java">import android.os.Bundle;</code></pre></div></div>
+<hr>
+<p>Ainda no arquivo <code>MainActivity.kt</code>, dentro da classe MainActivity vai ter um metódo chamado <code>getMainComponentName</code>. Após esse metódo, adicionar o metódo <code>onCreate</code>, ficando igual conforme código a seguir:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">kotlin</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span></div><pre><code class="language-kotlin">class MainActivity : ReactActivity() {
+
+  /**
+   * Returns the name of the main component registered from JavaScript. This is used to schedule
+   * rendering of the component.
+   */
+  override fun getMainComponentName(): String = &quot;myapp&quot;
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(null)
+  }
+  ...
+}</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Feito todos os procedimentos, sua aplicação está pronta para utilizar a biblioteca. O seu arquivo <code>App.tsx</code> deverá importar o <code>NavigationContainer</code> e englobar toda sua aplicação dentro dele. Exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span></div><pre><code class="language-typescript">import React from &#39;react&#39;;
+
+import { NavigationContainer } from &#39;@react-navigation/native&#39;;
+
+function App(): React.JSX.Element {
+  return (
+    &lt;NavigationContainer&gt;
+      {/* Código da sua aplicação vai aqui dentro */}
+    &lt;/NavigationContainer&gt;
+  );
+}
+
+export default App;</code></pre></div></div>
+<hr>
+<p>Por fim, adicione mais uma biblioteca para conseguir criar uma pilha de navegação:<br><code>npm install @react-navigation/native-stack</code></p>
+<hr>
+<p>Ainda seguindo a estrutura anterior, dentro do seu <code>NavigationContainer</code>, deve-se criar seu <code>Stack</code> (pilha) de navegação. Para isso, precisa realizar o <code>import</code> do<br><code>createNativeStackNavigator</code>. E dentro dele, basta adicionar as telas.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span></div><pre><code class="language-typescript">import { createNativeStackNavigator } from &#39;@react-navigation/native-stack&#39;;
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator&gt;
+        &lt;Stack.Screen name=&quot;home&quot; component={Home} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}</code></pre></div></div>
+<hr>
+<p>Cada <code>Stack.Screen</code> é uma tela que sua aplicação vai conter e pode ser utilizada na sua pilha de navegação. A propriedade <code>name</code> é uma identificação única, que é utilizada para chamar a tela. A propriedade <code>component</code> determina o que vai ser renderizado.<br>A ordem de um <code>Stack.Screen</code> é relevante apenas para determinar qual será a primeira tela exibida quando o <code>Stack.Navigator</code> for renderizado. Tirando isso, a ordem das telas pode ser aleatória, visto que pelo código que você controla a navegação.</p>
+<hr>
+<p>E como navegamos de uma tela para outra?<br>Supondo que sua aplicação tenha uma tela de <code>Login</code> que vai pra uma tela de detalhes.<br>O componente de <code>Login</code> tem o seguinte código:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span></div><pre><code class="language-typescript">import { Button, Text, TextInput, ScrollView } from &#39;react-native&#39;;
+
+const Login = () =&gt; {
+  return (
+    &lt;ScrollView&gt;
+      &lt;Text&gt;User&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; keyboardType=&quot;email-address&quot; /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; secureTextEntry={true} /&gt;
+      &lt;Button title=&quot;Login&quot; /&gt;
+    &lt;/ScrollView&gt;
+  );
+};
+
+export default Login;</code></pre></div></div>
+<hr>
+<p>Tela de detalhes:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-typescript">import { View, Text, Button } from &#39;react-native&#39;;
+
+const Details = () =&gt; {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Details&lt;/Text&gt;
+      &lt;Button title=&quot;Go to details&quot; /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default Details;</code></pre></div></div>
+<hr>
+<p>Dessa forma, o <code>Stack.Navigator</code> fica assim:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span></div><pre><code class="language-typescript">import React from &#39;react&#39;;
+
+import { NavigationContainer } from &#39;@react-navigation/native&#39;;
+import { createNativeStackNavigator } from &#39;@react-navigation/native-stack&#39;;
+import Login from &#39;./Screens/Login&#39;;
+import Details from &#39;./Screens/Details&#39;;
+
+export type RootStackParamList = {
+  Login: undefined;
+  Details: undefined;
+};
+
+const Stack = createNativeStackNavigator&lt;RootStackParamList&gt;();
+
+function App(): React.JSX.Element {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator&gt;
+        &lt;Stack.Screen name=&quot;Login&quot; component={Login} /&gt;
+        &lt;Stack.Screen name=&quot;Details&quot; component={Details} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}
+
+export default App;</code></pre></div></div>
+<hr>
+<p>Como se pode notar, foi criado um <code>type</code> chamado <code>RootStackParamList</code> e utilizado no momento de criação do <code>Stack</code>, sendo passado como argumento genérico do <code>createNativeStackNavigator</code>. Com isso, durante a definição das telas que o aplicativo possui, só podem ser considerados apenas os atributos dentro do <code>type</code> <code>RootStackParamList</code></p>
+<hr>
+<p>Isso é o suficiente? Não! Eu apenas coloquei minhas telas no Stack, porém eu não realizo nenhuma navegação entre elas.<br>O <code>Stack.Screen</code> passa para o componente um objeto <code>navigation</code>, que pode ser recuperado do <code>props</code>. Sendo assim, o componente de <code>Login</code> fica da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span></div><pre><code class="language-typescript">import { Button, Text, TextInput, ScrollView } from &#39;react-native&#39;;
+import { NativeStackScreenProps } from &#39;@react-navigation/native-stack&#39;;
+import { RootStackParamList } from &#39;../App&#39;;
+
+const Login = (props: NativeStackScreenProps&lt;RootStackParamList&gt;) =&gt; {
+  const { navigation } = props;
+  return (
+    &lt;ScrollView&gt;
+      &lt;Text&gt;User&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; keyboardType=&quot;email-address&quot; /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; secureTextEntry={true} /&gt;
+      &lt;Button title=&quot;Login&quot; onPress={() =&gt; navigation.navigate(&#39;Details&#39;)} /&gt;
+    &lt;/ScrollView&gt;
+  );
+};
+
+export default Login;</code></pre></div></div>
+<hr>
+<p>Olhando melhor o código do componente <code>Login</code>, nota-se que no <code>onPress</code> do <code>Button</code>, é utilizado o objeto <code>navigation</code>, que possui o metódo <code>navigate</code>, onde eu passo o nome da tela para qual a aplicação deve navegar.</p>
+<hr>
+<p>É possível passar dados de uma tela para outra.<br>Primeiro, deve-se alterar o <code>type</code> <code>RootStackParamList</code> para ficar da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">export type RootStackParamList = {
+  Login: undefined;
+  Details: { id: number };
+};</code></pre></div></div>
+<hr>
+<p>Ao chamar o metódo <code>navigate</code>, basta passar o objeto no segundo paramêtro, por exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">navigation.navigate(&#39;Details&#39;, { id: Math.random() });</code></pre></div></div>
+<p>Na tela de destino, dentro do <code>props</code> existe além do navigation, o objeto <code>route</code>. Exemplo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span></div><pre><code class="language-typescript">import { NativeStackScreenProps } from &#39;@react-navigation/native-stack&#39;;
+import { View, Text, Button } from &#39;react-native&#39;;
+import { RootStackParamList } from &#39;../App&#39;;
+
+const Details = (
+  props: NativeStackScreenProps&lt;RootStackParamList, &#39;Details&#39;&gt;,
+) =&gt; {
+  const { route } = props;
+  const { id } = route.params;
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Details {id.toString()}&lt;/Text&gt;
+      &lt;Button title=&quot;Go to details&quot; /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default Details;</code></pre></div></div>
+<hr>
+<p>Caso a passagem de dados para outra tela seja opcional, basta mudar o <code>type</code> com suas telas para ficar da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-typescript">export type RootStackParamList = {
+  Login: undefined;
+  Details?: { id: number };
+};</code></pre></div></div>
+<p>Dessa forma, agora é possível navegar para outra tela onde a passagem de dados é opcional:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-typescript">// Passando dados
+navigation.navigate(&#39;Details&#39;, { id: Math.random() });
+
+// Sem passar dados
+navigation.navigate(&#39;Details&#39;);</code></pre></div></div>
+<hr>
+<p>Além do método <code>navigate</code>, também existe o método <code>push</code> para navegar entre telas.<br>Qual a diferença entre eles?</p>
+<ul>
+<li><code>navigate</code> -&gt; você abre a tela uma única vez. Ou seja, seguindo o exemplo dos slides, se eu estiver na tela de details e chamar o <code>navigate</code> para details<br>novamente, nada vai acontecer.</li>
+<li><code>push</code> -&gt; você coloca a tela no <code>Stack</code> de navegação quantas vezes quiser. Ou seja, se eu estiver na tela de details e chamar o <code>push</code> para details, ele vai adicionar mais uma tela de details no <code>Stack</code>.</li>
+</ul>
+<hr>
+<p>Além dos métodos para ir para uma tela, é possível utilizar o <code>navigate</code> para tirar telas da pilha de navegação.</p>
+<ul>
+<li><code>pop</code> -&gt; é um metódo para fechar a tela atual. Aceita um argumento númerico opcional para determinar, quantas telas devem ser tiradas da pilha</li>
+</ul>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-typescript">// Fecha apenas a tela atual
+navigation.pop();
+
+// Fecha a tela atual e remove mais 2 telas da pilha da navegação
+navigation.pop(3);</code></pre></div></div>
+<hr>
+<ul>
+<li><code>popToTop</code> -&gt; é um metódo para fechar a tela atual voltar para a primeira tela da pilha de navegação. Exemplo: se durante a navegação, você tem uma tela inicial <code>Home</code> que chama uma tela de Detalhes de Usuário, que dessa tela você pode abrir uma nova tela de Detalhes e assim sucessivamente, você pode voltar para a tela <code>Home</code> da seguinte forma:</li>
+</ul>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-typescript">// Fecha apenas a tela atual
+navigation.popToTop();</code></pre></div></div>
+<hr>
+<p>No <code>React Navigation</code> existem dois hooks que são bem úteis: <code>useNavigation</code> e o <code>useRoute</code></p>
+<p><code>useNavigation</code> -&gt; Permite trabalhar com a atual navegação da sua aplicação<br><code>useRoute</code> -&gt; Permite trabalhar com os dados passados para tela atual </p>
+<hr>
+<p>Exemplo de utilização do <code>useNavigation</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span></div><pre><code class="language-typescript">import { Button, Text, TextInput, ScrollView } from &#39;react-native&#39;;
+import { RootStackParamList } from &#39;../App&#39;;
+import { useNavigation } from &#39;@react-navigation/native&#39;;
+import { NativeStackNavigationProp } from &#39;@react-navigation/native-stack&#39;;
+
+const Login = () =&gt; {
+  const navigation =
+    useNavigation&lt;NativeStackNavigationProp&lt;RootStackParamList&gt;&gt;();
+
+  return (
+    &lt;ScrollView&gt;
+      &lt;Text&gt;User&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; keyboardType=&quot;email-address&quot; /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; secureTextEntry={true} /&gt;
+      &lt;Button title=&quot;Login&quot; onPress={() =&gt; navigation.navigate(&#39;Details&#39;)} /&gt;
+    &lt;/ScrollView&gt;
+  );
+};
+
+export default Login;</code></pre></div></div>
+<hr>
+<p>Exemplo de utilização do <code>useRoute</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span></div><pre><code class="language-typescript">import { View, Text, Button } from &#39;react-native&#39;;
+import { RootStackParamList } from &#39;../App&#39;;
+import { RouteProp, useRoute } from &#39;@react-navigation/native&#39;;
+
+const Details = () =&gt; {
+  const { params } = useRoute&lt;RouteProp&lt;RootStackParamList, &#39;Details&#39;&gt;&gt;();
+  const { id } = params;
+
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Details {id.toString()}&lt;/Text&gt;
+      &lt;Button title=&quot;Go to details&quot; /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default Details;</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
