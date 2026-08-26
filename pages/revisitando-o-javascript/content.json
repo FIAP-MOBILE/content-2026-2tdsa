@@ -2,297 +2,309 @@
   "blocks": [
     {
       "id": "5c16153f-b445-47b7-ad2e-65ffbc93fe22",
-      "type": "paragraph",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [],
-      "children": []
-    },
-    {
-      "id": "00081928-cff9-4d12-9fb6-5c2acd684c3c",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Linguagem Interpretada",
+          "text": "Características",
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "decb4482-f473-4833-9ded-36d5dd71d8fc",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "text",
-          "text": "Tipagem dinâmica fraca",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "e3d266fb-26ff-43de-b3f8-fe3ab389a546",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Multi-paradigma",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "087fdaca-51cd-4c2e-8252-30f49114b621",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Inicialmente projetada para Web",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "d345347e-9039-425f-ba21-ba37daf57463",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Pode ser usada como Client-side & Server-side",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "287f3fd0-7599-4d8f-859c-4143771e5025",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Linguagem mais popular nos dias de hoje.\nFonte: ",
-          "styles": {}
-        },
-        {
-          "type": "link",
-          "href": "https://survey.stackoverflow.co/2023/#most-popular-technologies-language",
+          "id": "78d7a642-508f-4293-9d37-34a0efed7f96",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
           "content": [
             {
               "type": "text",
-              "text": "https://survey.stackoverflow.co/2023/#most-popular-technologies-language",
+              "text": "Tipagem dinâmica fraca",
               "styles": {}
             }
-          ]
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "f51334eb-54b4-4304-b7b3-ecd6bf22c57e",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Linguagem criada em 1995 por Brendan Eich (Netscape)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "318c601f-f4ee-48e6-bd39-fb7d0aada7ec",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "c91250d3-0aad-4bf0-ab98-fcbd39d633df",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Multi-paradigma",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Possui o nome JavaScript como forma de aproveitar a fama da linguagem Java na época de seu lançamento",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "56c0ab2f-d05f-4aa3-b2fb-a4ff4c15ec59",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "73dd72e2-9143-43ce-9790-5b92fefe82d9",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Inicialmente projetada para Web",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "No Internet Explorer 3, iniciou-se uma implementação modificada chamada JScript",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "96b2f5ff-469f-4e50-8cb1-500492355b8a",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "9f877809-77a8-428e-8e57-86cd0d4dad09",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Pode ser usada como Client-side & Server-side",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Enviada para a European Computer Manufacturers Association para padronização da linguagem em 1997",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "06d9a266-9f6d-4022-99fa-cb712c2f18c5",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "13dc8479-9b08-466f-b752-b322b2e08bfd",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Linguagem mais popular nos dias de hoje.\nFonte: ",
+              "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://survey.stackoverflow.co/2023/#most-popular-technologies-language",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "https://survey.stackoverflow.co/2023/#most-popular-technologies-language",
+                  "styles": {}
+                }
+              ]
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Sintaxe semelhante com outras linguagens baseadas em C",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "b23d4172-bad7-4d08-bf3b-681255c014ad",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "3beee10a-b491-4a3a-ae96-c789d851726d",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Linguagem criada em 1995 por Brendan Eich (Netscape)",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "ECMAScript é a especificação de linguagens scripts padronizada, onde engloba o Javascript",
-          "styles": {}
+          "id": "32f63b5e-e5dd-4d5d-95f0-0ccbad3a835d",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Possui o nome JavaScript como forma de aproveitar a fama da linguagem Java na época de seu lançamento",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a8b7b6fb-775e-4d68-9e39-c3594390be80",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No Internet Explorer 3, iniciou-se uma implementação modificada chamada JScript",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "16e4519e-0cf8-40c1-87f3-90ac28d44e7d",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Enviada para a European Computer Manufacturers Association para padronização da linguagem em 1997",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ddbdcd86-811d-4668-8c73-8b5ce91f484a",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Sintaxe semelhante com outras linguagens baseadas em C",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0dbb2f11-66a6-4147-a308-a8c51070313c",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "ECMAScript é a especificação de linguagens scripts padronizada, onde engloba o Javascript",
+              "styles": {}
+            }
+          ],
+          "children": []
         }
-      ],
-      "children": []
+      ]
     },
     {
       "id": "c8052c2f-6376-483e-9e4e-075e412fe555",
-      "type": "bulletListItem",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Usada no desenvolvimento WEB (Client-side)",
+          "text": "Aplicação",
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "c1cbc98b-3ed4-40a3-8813-c61c7c79c1ae",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "text",
-          "text": "Usada no desenvolvimento WEB (Server-side / Node.JS)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "1030eafe-3e00-44e2-91d5-01f76227a5d3",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "05cf5d81-63cc-40ad-81b1-78757db1e6fe",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Usada no desenvolvimento WEB (Client-side)",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Usada no desenvolvimento Desktop (Electron)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "31a65710-09d6-465f-8c58-752b1f5a7dfc",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "eb4a03d9-e464-4994-af77-53f0f98c40ff",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Usada no desenvolvimento WEB (Server-side / Node.JS)",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Usada no desenvolvimento Mobile (Cordova, PhoneGap, Ionic, React-Native)",
-          "styles": {}
+          "id": "e6055643-7df0-474d-94b5-1dcf80dd2042",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Usada no desenvolvimento Desktop (Electron)",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7424a8cf-85ce-4851-a53b-5f022ca91a4f",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Usada no desenvolvimento Mobile (Cordova, PhoneGap, Ionic, React-Native)",
+              "styles": {}
+            }
+          ],
+          "children": []
         }
-      ],
-      "children": []
+      ]
     },
     {
       "id": "e7778ec0-475c-46b6-b5c5-cc83fecf2d5e",
