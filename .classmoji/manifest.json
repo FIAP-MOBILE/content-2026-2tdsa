@@ -73,7 +73,8 @@
   },
   "general": {
     "pages": [
-      "requisies-http"
+      "requisies-http",
+      "revisitando-o-javascript"
     ],
     "slides": []
   }
