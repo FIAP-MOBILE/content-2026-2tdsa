@@ -1,0 +1,1601 @@
+{
+  "blocks": [
+    {
+      "id": "e3ce7778-da96-4d9c-bea3-b2ebc4c87315",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é uma biblioteca oferecida pelo Google que faz uma excelente abstração de uma série de recursos que sua aplicação pode precisar. Alguns deles são:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "60eef41f-b816-43c0-9a4a-de3833b95068",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Autenticação",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6bc24d6c-2c4e-4140-a87f-9fdb100edd84",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Banco de dados",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "509b5243-ad23-43c2-ba1a-952969d3c6cc",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Mensageria",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f2f2ee77-d46f-486a-ac89-9103e96427f9",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Analytics",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "000bd2e4-f1a7-4f79-b762-038ed5bb9513",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para acessar sua conta gratuita, basta acessar o seguinte endereço com uma conta",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Google",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ":\n",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://firebase.google.com/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://firebase.google.com/",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "590b4e6d-2f54-4052-90e9-d40931924eee",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "No topo superior direito tem o link ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Go To Console",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que vai te direcionar para o console do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Se preferir, é possível acessar o console diretamente através do link:\n",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://console.firebase.google.com/",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://console.firebase.google.com/",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ee1b2155-4612-4543-b054-c5de28a8eb00",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao acessar a página inicial, tem a opção de adicionar um novo projeto:\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "808b677c-98c2-400c-87d1-fc4eca5629bb",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao clicar em Adicionar Projeto, aparecerá uma tela que pede o nome do seu projeto:\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1e2af9da-4220-4135-a61b-4cae3fd92da8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao informar o nome do projeto, na segunda etapa ele oferece a opção de utilizar o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Google Analytics",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Nesse primeiro momento, não será utilizado esse recurso, então desmarque a opção conforme imagem a seguir:\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "15b3463b-71c0-435d-a069-9e3991f9a251",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao confirmar a criação do projeto, aparecerá uma tela mostrando que seu projeto está sendo criado\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "722a55bb-588a-4a65-80c8-42dd81f69f60",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando o processo é finalizado, ele te da opção de explorar o projeto:\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "097702fc-601c-4694-9133-c5e89e12eaf8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vamos utilizar nesse primeiro momento, a parte de autenticação do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".\nPara isso, dentro do seu projeto, no menu lateral à esquerda, clique em ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Build",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e acesse a opção  ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Authentication",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "702f37cd-dc8b-4aa6-8ebf-1b76fca77f01",
+      "type": "image",
+      "props": {
+        "textAlignment": "left",
+        "backgroundColor": "default",
+        "name": "",
+        "url": "https://i.imgur.com/aVT0Mdy.png",
+        "caption": "",
+        "showPreview": true,
+        "previewWidth": 512
+      },
+      "children": []
+    },
+    {
+      "id": "52a769f6-2b3a-4271-9354-5b52b039d148",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Basta clicar no botão ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Get Started",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " para configurar a parte de autenticação no seu projeto\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9283b164-676a-454b-9a38-7f08a3da930e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma vez iniciado a configuração, aparecerá uma tela onde se pode selecionar os tipos de  autenticação que serão utilizados. Nesse primeiro momento, utilize o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Anonymous",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a95bc244-822b-49e6-9ce2-e108963c70d0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para ativar autenticação anônima, basta selecionar a opção anônima e na sequência ativa-la.\nPara concluir, clique no botão ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Save\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "97aaa246-102f-4df1-911f-30e82b366e09",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Após essas configurações no Firebase, é necessário configurar a sua aplicação.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c8661e28-1883-4b85-a564-74f399e787d7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "No arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "build.gradle",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que fica no caminho ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "android/app/",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " localize a linha do arquivo onde tem escrito ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "applicationId \"com.nomedoprojeto\"",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e2cc18ca-ba2d-4d2c-8854-16df9226a231",
+      "type": "codeBlock",
+      "props": {
+        "language": "gradle"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "android {\n    ndkVersion rootProject.ext.ndkVersion\n    buildToolsVersion rootProject.ext.buildToolsVersion\n    compileSdk rootProject.ext.compileSdkVersion\n\n    namespace \"com.firebase\"\n    defaultConfig {\n        applicationId \"com.firebase\"\n        minSdkVersion rootProject.ext.minSdkVersion\n        targetSdkVersion rootProject.ext.targetSdkVersion\n        versionCode 1\n        versionName \"1.0\"\n    }\n    ...\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1b2f67ac-6355-46e0-867d-a72603fc77dc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Copie o conteúdo dentro das aspas. No exemplo deste slide: ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "com.firebase",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "982f1e13-632d-45e6-a62f-88d3e8cfc61d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Volte no console do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Selecione a sua aplicação e do lado da opção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Project Overview",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " tem uma engrenagem do lado direito. Ao clicar nela, selecione a opção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Project Settings\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b5249e1d-e7ec-415a-8f37-877db3d687f4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Irá abrir a página inicial do projeto e nela, tem um ícone do Android conforme imagem a seguir.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "60472a72-df13-44a0-9a4c-237aa971c1c5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique no ícone do Android",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a2592af8-c265-4ebe-8553-ca715a7a9d4f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao clicar no ícone do Android, aparecerá a tela conforme imagem no slide. Nessa primeira\netapa, iremos preencher o nome do pacote do Android, o mesmo que foi copiado\nanteriormente e depois clicar no botão ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Register app\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3707d509-2510-430c-b493-7e77a2f01759",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Na segunda etapa, clique para baixar o arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "google-services.json",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0b203e3a-5fda-4b97-883b-76a278235083",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Salve ele no seguinte caminho do seu projeto: ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "android/app\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f8fa4aeb-6d3f-48a5-9de9-9ac2ad136c06",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Agora é necessário fazer algumas configurações no seu aplicativo.\nPrimeiro, abra o arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "android/build.gradle",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Na seção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "buildscript",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", existe a seção\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dependencies",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Dentro dela deve ser adicionada a seguinte dependência ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "com.google.gms.google-services",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ":",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b84caa34-bffe-4a5f-bdbf-94b426ee22b4",
+      "type": "codeBlock",
+      "props": {
+        "language": "gradle"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "buildscript {\n    ext {\n        buildToolsVersion = '34.0.0'\n        minSdkVersion = 23\n        compileSdkVersion = 34\n        targetSdkVersion = 34\n        ndkVersion = '26.1.10909125'\n        kotlinVersion = '1.9.22'\n    }\n    repositories {\n        google()\n        mavenCentral()\n    }\n    dependencies {\n        classpath('com.android.tools.build:gradle')\n        classpath('com.facebook.react:react-native-gradle-plugin')\n        classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')\n        classpath('com.google.gms.google-services:4.4.2')\n    }\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f0c346b4-36fe-4331-a369-a4b6ab3c7eca",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Agora abra o arquivo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "android/app/build.gradle",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Logo após a primeira linha, adicione a\nseguinte linha:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bee12363-ce09-45ad-aa0d-6fe8ffec3232",
+      "type": "codeBlock",
+      "props": {
+        "language": "gradle"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "apply plugin: \"com.google.gms.google-services\"",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "003a643a-f3d3-41d4-8447-900175016907",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Depois, na seção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dependencies",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " adicione a seguinte dependência:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "341e5d5b-153c-4940-8933-d2f28a3f9c03",
+      "type": "codeBlock",
+      "props": {
+        "language": "gradle"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "dependencies {\n    // The version of react-native is set by the React Native Gradle Plugin\n    implementation('com.facebook.react:react-android')\n\n    if (hermesEnabled.toBoolean()) {\n        implementation('com.facebook.react:hermes-android')\n    } else {\n        implementation jscFlavor\n    }\n    implementation platform('com.google.firebase:firebase-bom:33.1.2')\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4e3f67bf-1c83-4d53-923a-d0af247794d0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para utilizar o Firebase no seu projeto, primeiro deve-se instalar sua respectiva biblioteca.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "be73e06b-a1c0-470f-8330-83cf22dea034",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2861616c-efba-4c02-ae6f-8018c9cfce18",
+      "type": "terminal",
+      "props": {
+        "code": "npm install @react-native-firebase/app",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "ed047f10-e44e-428a-b97b-fcb66509ba88",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para utilizar a parte de autenticação, ainda precisa adicionar mais um pacote:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "15ed848a-13d3-4f53-a49f-0460f504f6f5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "828293d9-db72-47da-a129-4a891f4d2b09",
+      "type": "terminal",
+      "props": {
+        "code": "npm install @react-native-firebase/auth",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "1d04f44c-d3e2-4f11-8d70-1b59828a1c61",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Agora, vamos deixar o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "App.tsx",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " com o seguinte código:",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bf1cee2e-9668-492a-973f-6662461eb553",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import React, { useState } from 'react';\nimport auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';\nimport { Text, View, Button } from 'react-native';\n\nconst App = () => {\n  const [user, setUser] = useState<FirebaseAuthTypes.User | null>();\n  const firebaseAuth = auth();\n  const doAnonymousLogin = async () => {\n    const { user } = await firebaseAuth.signInAnonymously();\n    setUser(user);\n  };\n\n  return (\n    <View>\n      {!user ? (\n        <Button title=\"Login Anônimo\" onPress={doAnonymousLogin} />\n      ) : (\n        <Text>User ID: {user.uid}</Text>\n      )}\n    </View>\n  );\n};\n\nexport default App;",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "56ea5898-8829-4b56-86ce-aeaa4e43bcd0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando executar a aplicação, ao clicar no botão Login Anônimo, ele autenticara na plataforma do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". No console, é possível verificar os usuários da sua aplicação\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b0aafd78-be85-4b69-9e3f-e427366e3c0c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Utilizando o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", podemos utilizar também a autenticação onde é possível utilizar email e senha. Para isso, deve-se adicionar o provedor Email/Senha no console do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". No menu lateral esquerdo, na opção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Build",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " tem a sub-opção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Authentication",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Clique na aba ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Sign-in method",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "e depois clique no botão ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Add New Provider\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "99f91958-0f5a-436e-910e-d0c9c1624a20",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao clicar no botão, dentro da seção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Native Providers",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " basta selecionar ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Email/Password\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6db2f18f-8a0b-472e-ba3f-1e2c00fd074d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao selecionar a opção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Email/Password",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", habilite a opção ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Email/Password",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e clique no  botão ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Save\n",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9c96e21c-7310-406b-9d96-ede77818894b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para criar uma conta, existe o método ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "createUserWithEmailAndPassword",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e73b5472-f2b9-4be9-8c07-c1fb63be0daf",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import React, { useState } from 'react';\nimport auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';\nimport { Text, View, Button, TextInput } from 'react-native';\n\nconst App = () => {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [user, setUser] = useState<FirebaseAuthTypes.User | null>();\n  const [error, setError] = useState<any>();\n  const firebaseAuth = auth();\n\n  const createAccount = async () => {\n    try {\n      setError(undefined);\n      const { user: firebaseUser } =\n        await firebaseAuth.createUserWithEmailAndPassword(email, password);\n      setUser(firebaseUser);\n    } catch (error) {\n      setError(error);\n    }\n  };\n\n  return (\n    <View\n      style={{\n        flex: 1,\n        justifyContent: 'center',\n        alignItems: 'center',\n      }}\n    >\n      <Text>Email</Text>\n      <TextInput placeholder=\"email\" onChangeText={setEmail} />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" onChangeText={setPassword} />\n      <Button title=\"Login\" onPress={doLogin} />\n      {error && <Text>{error?.message}</Text>}\n      {user && <Text>{user?.uid}</Text>}\n    </View>\n  );\n};\n\nexport default App;",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "be57f8c8-8759-49f9-9dfd-e9a8f3063d34",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para se autenticar, pode-se invocar o método ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "signInWithEmailAndPassword",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c03f883d-8ca5-4011-b29e-3f8c64aa6c0e",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import React, { useState } from 'react';\nimport auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';\nimport { Text, View, Button, TextInput } from 'react-native';\n\nconst App = () => {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [user, setUser] = useState<FirebaseAuthTypes.User | null>();\n  const [error, setError] = useState<any>();\n  const firebaseAuth = auth();\n\n  const doLogin = async () => {\n    try {\n      setError(undefined);\n      const { user: firebaseUser } =\n        await firebaseAuth.signInWithEmailAndPassword(email, password);\n      setUser(firebaseUser);\n    } catch (error) {\n      setError(error);\n    }\n  };\n\n  return (\n    <View\n      style={{\n        flex: 1,\n        justifyContent: 'center',\n        alignItems: 'center',\n      }}\n    >\n      <Text>Email</Text>\n      <TextInput placeholder=\"email\" onChangeText={setEmail} />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" onChangeText={setPassword} />\n      <Button title=\"Login\" onPress={doLogin} />\n      {error && <Text>{error?.message}</Text>}\n      {user && <Text>{user?.uid}</Text>}\n    </View>\n  );\n};\n\nexport default App;",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fe79f697-4106-4f47-9c69-50ac507b192e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ambos os métodos ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "signInWithEmailAndPassword",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " e ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "createUserWithEmailAndPassword",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " retornam uma propriedade ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "user",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " tem os dados do usuário autenticado. Caso ocorra alguma exceção, o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "error",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " tem a propriedade ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "message",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que informa qual foi o erro que ocorreu durante a requisição.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fe7800cd-f4f1-4541-9730-d45b6fc97fe2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "O método ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "signOut",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " desloga o usuário",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f6321ddb-96b9-41e8-b6b0-9440e3b04a89",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const signOut = async () => {\n  await auth().signOut();\n};",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bdd75f39-3081-40ab-89c8-7938e166f1f8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Alguns recursos interessantes que existe no Firebase são reiniciar senha e validação de\nemail. Para reiniciar a senha podemos utilizar o método ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sendPasswordResetEmail",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "902a208b-0026-4bf3-9333-68d26747321f",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const sendPasswordRecover = async () => {\n  await auth().sendPasswordResetEmail('email@email.com`)\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "05de858f-a0f8-4bcf-8434-151d07d9e7fe",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Para validar o email, o objeto user retornado quando o usuário é criado/autenticado, tem o\nmétodo ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sendEmailVerification",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Um email é enviado para o caixa e email do usuário para qual foi solicitado a verificação",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f529e172-d156-4e1d-8bc6-8420af96480a",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const createAccount = async () => {\n  try {\n    setError(undefined);\n    const { user: firebaseUser } =\n      await firebaseAuth.createUserWithEmailAndPassword(email, password);\n    user.sendEmailVerification();\n    setUser(firebaseUser);\n  } catch (error) {\n    setError(error);\n  }\n};",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0bdc770c-d318-4f06-8422-11b314bce7a5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Um metódo que existe na instância ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "auth",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " é o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "onAuthStateChanged",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Com ele é possível saber quando o estado da autenticação foi alterado.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d18136d0-b1dd-4512-9497-44dcf4185bb5",
+      "type": "codeBlock",
+      "props": {
+        "language": "typescript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "const onAuthStateChanged = async (user: FirebaseAuthTypes.User | null) => {\n  console.log('user changed', user);\n  setUser(user);\n};\n\nuseEffect(() => {\n  const subscriber = auth().onAuthStateChanged(onAuthStateChanged);\n  return subscriber;\n}, []);",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "403b1adf-80db-4a51-9f23-39258c636b4c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "No console do ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", é possível personalizar os emails que são enviados para os usuário.\nAinda na tela de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Authentication",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", a aba ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Templates",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " possui todos os templates que o ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Firebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " envia para o usuário.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4f7be5a8-7084-4974-918e-9ff648b10f63",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
