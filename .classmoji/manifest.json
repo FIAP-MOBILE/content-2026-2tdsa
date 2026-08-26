@@ -75,12 +75,13 @@
     "pages": [
       "03-preparando-o-ambiente",
       "requisies-http",
-      "revisitando-o-javascript",
       "04-typescript",
       "05-componentes-do-react-native",
       "06-usando-o-react-navigation",
+      "revisitando-o-javascript",
       "08-react-navigation-ii",
-      "02-revisitando-o-react"
+      "02-revisitando-o-react",
+      "09-async-storage"
     ],
     "slides": []
   }
