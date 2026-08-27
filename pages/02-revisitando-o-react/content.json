@@ -700,6 +700,101 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "777bbe89-8640-4aab-b2da-20d4fcddcb1d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Alguns dos principais hooks que o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " já disponibiliza:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4bbc433d-103c-441b-8ccc-de9a347a0cd0",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useEffect",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "e6b59951-2ea6-4efc-902e-54d71c1a4299",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Sua função é executar um trecho de código toda vez que alguma alteração de estado ocorrer.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "b09b6d6d-21af-4ab5-b0f5-1e92e67dbe3e",
+              "type": "codeBlock",
+              "props": {
+                "language": "typescript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "const ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "MyComponent",
+                  "styles": {
+                    "textColor": "rgb(121, 184, 255)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " = () => {\n  const [message, setMessage] = useState<string>();\n  useEffect(() => {\n     setMessage(\"Bem vindo\");\n  }, []);\n  return <div>{message}<div>\n}",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            }
+          ]
         }
       ]
     },
