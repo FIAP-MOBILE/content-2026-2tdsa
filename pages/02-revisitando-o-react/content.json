@@ -666,7 +666,42 @@
           "styles": {}
         }
       ],
-      "children": []
+      "children": [
+        {
+          "id": "f4bb3105-bb10-41d7-a2e6-19d3c14affd0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Nos componentes de classe, caso você queira fazer uma implementação especifíca, você pode criar um metódo. Mas e nos componentes funcionais, como isso é resolvido? Com a criação de hooks.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e30ed810-1f08-4abd-b619-3d090ff9624f",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "A ideia é criar funções que podem ser reutilizadas em diversos componentes, parecido com uma herança de classes na orientação a objetos.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
     },
     {
       "id": "eb588866-cb15-4ef5-bb8d-a5df1a55fe44",
