@@ -307,174 +307,216 @@
       ]
     },
     {
-      "id": "e7778ec0-475c-46b6-b5c5-cc83fecf2d5e",
-      "type": "bulletListItem",
+      "id": "586448a3-4ef8-467c-ad0e-3b36e971f89d",
+      "type": "paragraph",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
         "textAlignment": "left"
       },
-      "content": [
-        {
-          "type": "text",
-          "text": "Constants",
-          "styles": {}
-        }
-      ],
+      "content": [],
       "children": []
     },
     {
-      "id": "813eda0d-6c7c-4d1c-ad65-0757e01be6b8",
-      "type": "bulletListItem",
+      "id": "01da019b-8156-4346-827b-2f12b28c570d",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Block Scope",
+          "text": "Recursos",
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "02f9fdb2-8dd0-48dd-a625-077c7c9372cb",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "text",
-          "text": "Arrow Functions",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "aedc11ad-5ca5-40d8-bb60-394199cff1c7",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "10d531b1-779e-4883-bead-90e122773701",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Constants",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Template Literals",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "bf96b17d-ffa9-4b8c-92db-d04ecc1a775b",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "df4269f0-50ef-4310-86c7-5a781b0450c2",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Block Scope",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "De-structuring",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "060a42c6-dccf-4c65-b62d-8140af9e4353",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "f3f6160a-3347-4ca2-8603-9108d56c6f7d",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Arrow Functions",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Modules",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "ce0c73c5-d57c-4a14-948a-3846581c008e",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "10a7ca68-7e17-4413-a04d-0ae4be072cd9",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Template Literals",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Classes",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "432749db-3fc3-41f4-b23a-28df1717a7f1",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "ca325d00-1d15-427e-b2e6-1376c3cc613d",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "De-structuring",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Iterators",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "b84717cf-9790-4d89-9249-ee9e68770d63",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "1720fc8a-806c-4577-a2ab-a69af4fc5c30",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Modules",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Collections",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "65cb0675-0c5c-4f67-b4d6-6955d9d29269",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "ccf7fd71-d57b-4b3b-91f1-bbe04350b1c4",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Classes",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Promises",
-          "styles": {}
+          "id": "78d93f9d-eb9a-4f96-af79-416a99183e04",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Iterators",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1555a792-377b-4e0c-b175-f174801d9591",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Collections",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1490506d-5445-4bc0-9614-05e0eabe46ab",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Promises",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "458c914f-35f1-4129-9a87-ce7854109480",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
         }
-      ],
-      "children": []
+      ]
     },
     {
       "id": "07d7c3c2-4bad-44db-918c-4cf20c1a473c",
