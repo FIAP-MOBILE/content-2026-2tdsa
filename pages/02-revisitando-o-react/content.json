@@ -2,518 +2,655 @@
   "blocks": [
     {
       "id": "12bb4744-4716-4399-b9ed-c3382ffba692",
-      "type": "paragraph",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Criado em 2013 pela Meta (anteriormente Facebook), é uma biblioteca de código aberto utilizada para agilizar o desenvolvimento de interfaces de usuários através da criação de componentes.",
+          "text": "Sobre",
           "styles": {}
         }
       ],
-      "children": []
+      "children": [
+        {
+          "id": "479f3393-5092-4a4d-b474-fe17a2d20e54",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Criado em 2013 pela Meta (anteriormente Facebook), é uma biblioteca de código aberto utilizada para agilizar o desenvolvimento de interfaces de usuários através da criação de componentes.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
     },
     {
-      "id": "495dc3b9-a832-4512-8a3e-63df0f038f88",
-      "type": "bulletListItem",
+      "id": "f4cece58-9c08-4661-a27a-50a8f0e28b46",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Utilização de ",
+          "text": "Características",
           "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "caa2de4e-5aa6-4ab7-8319-b9124d8df987",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Utilização de ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "JSX",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " (Javascript XML)",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": "JSX",
-          "styles": {
-            "code": true
-          }
+          "id": "2fbfe190-5125-4c62-bbb0-c378bab6532f",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Single Page Application (SPA)",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": " (Javascript XML)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "0a5aea23-a146-437c-b02c-4a21c0c35461",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Single Page Application (SPA)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "c2f0bebd-5621-4be4-93f7-202262c65690",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Virtual DOM (VDOM)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "acf51d00-bf0d-4064-ab20-753ad098146d",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Simplicidade",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "da48dcbd-b54b-4f14-b734-ecf4d40e4842",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "One-way Data Binding",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "189b1c5d-28e7-49b1-a495-88a61095bb19",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Para desenvolver em ",
-          "styles": {}
+          "id": "917bf67c-291c-4c03-8a86-55141fa7c22d",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Virtual DOM (VDOM)",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": "React",
-          "styles": {
-            "code": true
-          }
+          "id": "11d16216-4e57-42b1-a3fd-e3028f150aeb",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Simplicidade",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": ", pode-se utilizar duas alternativas",
-          "styles": {}
+          "id": "5b6fb2a4-8ea9-4f48-a32d-41b6e40f407c",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "One-way Data Binding",
+              "styles": {}
+            }
+          ],
+          "children": []
         }
-      ],
-      "children": []
+      ]
     },
     {
-      "id": "3aafa2e7-b37c-43f2-918d-802836e0a5c5",
-      "type": "bulletListItem",
+      "id": "e3af95d0-c95b-46af-a4d5-4a21f11b3597",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Apenas usando arquivos estáticos",
+          "text": "Desenvolvimento",
           "styles": {}
         }
       ],
-      "children": []
+      "children": [
+        {
+          "id": "d34e974b-73d1-424a-82d8-75eb1d749a29",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para desenvolver em ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", pode-se utilizar duas alternativas",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b3d353ab-dc6a-4bc0-8c57-ae9c653370aa",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Apenas usando arquivos estáticos",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7bcce157-533d-4813-92cb-549eb174bb80",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Utilizando o Node (recomendado)",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "db4fe038-28f5-436a-a732-8a8e7f909184",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Arquivo estáticos",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "ea970149-9c80-4142-a33e-4d89d0fd6833",
+              "type": "codeBlock",
+              "props": {
+                "language": "html"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n\n    <title>Hello React</title>\n\n    <script src=\"https://unpkg.com/react@^16/umd/react.production.min.js\"></script>\n    <script src=\"https://unpkg.com/react-dom@^16.13.0/umd/react-dom.production.min.js\"></script>\n    <script src=\"https://unpkg.com/babel-standalone@^6.26.0/babel.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"text/babel\">\n      // Código React vai aqui\n    </script>\n  </body>\n</html>",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "efa0bff5-4e04-437c-9b6a-ee4d77a39258",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [],
+              "children": []
+            },
+            {
+              "id": "97acafe7-1e83-44a5-a9fa-41d57f91e85e",
+              "type": "codeBlock",
+              "props": {
+                "language": "html"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n\n    <title>Hello React</title>\n\n    <script src=\"https://unpkg.com/react@^16/umd/react.production.min.js\"></script>\n    <script src=\"https://unpkg.com/react-dom@^16.13.0/umd/react-dom.production.min.js\"></script>\n    <script src=\"https://unpkg.com/babel-standalone@^6.26.0/babel.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"text/babel\">\n      class App extends React.Component (\n          render() {\n              return <h1>Hello World</h1>\n          }\n      );\n\n      ReactDOM.render(<App />, document.getElementById(\"root\"));\n    </script>\n  </body>\n</html>",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "c1733ac3-b136-47cd-86af-5aa151965e8b",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Node",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "29676490-b059-4558-8845-762da241c4b2",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Ao usar o Node, temos duas opções para criar o projeto. A Meta recomenda usar algum framework como o ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "[Nextjs](https://nextjs.org/)",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " ou o ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "[Expo](https://expo.dev/)\n",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Criando com o ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "Expo\nnpx create-expo-app@latest <nome do projeto>",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "e110f0f8-e81f-4261-bb77-4abb20d90f2f",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Rodando a aplicação\nExecute o comando a seguir dentro da pasta do projeto",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "31374b40-5790-42d4-a79c-7803c5dcb50b",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "npm start",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "3e63896c-c4d0-48fe-8ebe-ce45a7844632",
-      "type": "bulletListItem",
+      "id": "61c12dac-44b9-49c7-b27a-57d082abe66c",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Utilizando o Node (recomendado)",
+          "text": "Componentes",
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "5dc18759-e96d-404b-85c8-900a35900bbe",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "text",
-          "text": "Apenas usando arquivos estáticos",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "5ee396da-3367-42a1-a739-35439d9293b1",
-      "type": "codeBlock",
-      "props": {
-        "language": "html"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n\n    <title>Hello React</title>\n\n    <script src=\"https://unpkg.com/react@^16/umd/react.production.min.js\"></script>\n    <script src=\"https://unpkg.com/react-dom@^16.13.0/umd/react-dom.production.min.js\"></script>\n    <script src=\"https://unpkg.com/babel-standalone@^6.26.0/babel.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"text/babel\">\n      // Código React vai aqui\n    </script>\n  </body>\n</html>",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "f9c43f9f-c4cc-4f2f-927e-25c0b2fd7aba",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Apenas usando arquivos estáticos",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "11b6bac6-9fae-413a-a3f2-652c64c57c72",
-      "type": "codeBlock",
-      "props": {
-        "language": "html"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n\n    <title>Hello React</title>\n\n    <script src=\"https://unpkg.com/react@^16/umd/react.production.min.js\"></script>\n    <script src=\"https://unpkg.com/react-dom@^16.13.0/umd/react-dom.production.min.js\"></script>\n    <script src=\"https://unpkg.com/babel-standalone@^6.26.0/babel.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"text/babel\">\n      class App extends React.Component (\n          render() {\n              return <h1>Hello World</h1>\n          }\n      );\n\n      ReactDOM.render(<App />, document.getElementById(\"root\"));\n    </script>\n  </body>\n</html>",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "3f207841-74a0-4f58-8500-669740675754",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Ao usar o Node, temos duas opções para criar o projeto. A Meta recomenda usar algum framework como o ",
-          "styles": {}
+          "id": "4b1e5943-791a-49b6-8be2-94784a6fa002",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quase tudo no React é consistido de componentes.\nExistem duas abordagens de se criar componentes:",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": "[Nextjs](https://nextjs.org/)",
-          "styles": {
-            "code": true
-          }
+          "id": "4235d289-822f-42e5-8223-cfe4c9c441fe",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Classes",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": " ou o ",
-          "styles": {}
+          "id": "427a5c47-5f0b-4f62-bef9-69fd332b4022",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Funcional",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": "[Expo](https://expo.dev/)\n",
-          "styles": {
-            "code": true
-          }
+          "id": "73c88aec-cf99-4e0a-b5b2-6ca57179b47a",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Classes",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "e0d209c6-54f0-45c4-9b96-4325a14cf0e4",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A ideia de classe pode ser descrita como um modelo que define quais seus atributos e comportamentos para manipular os dados.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "2220dead-4517-4930-95de-9006d796ad5f",
+              "type": "codeBlock",
+              "props": {
+                "language": "javascript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "import React, { Component } from 'react';\n\nclass Table extendes Component {\n    render() {\n        return (\n            <table>\n                <thead>\n                    <tr>\n                        <th>Name</th>\n                        <th>Job</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Charlie</td>\n                        <td>Janitor</td>\n                    </tr>\n                    <tr>\n                        <td>Mac</td>\n                        <td>Bouncer</td>\n                    </tr>\n                </tbody>\n            </table>\n        )\n    }\n}\n\nexport default Table;",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "1da3a815-43d8-4eb7-aff5-47f3eb44117d",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Métodos mais importantes:\n",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "render",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Define o que deverá ser exibido na tela. Implementação obrigatória\n",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "componentDidMount",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Executado quando o elemento será exibido pela primeira vez\n",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "setState",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Usado para atualizar o estado do componente",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            }
+          ]
         },
         {
-          "type": "text",
-          "text": "Criando com o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Expo\nnpx create-expo-app@latest <nome do projeto>",
-          "styles": {
-            "code": true
-          }
+          "id": "661d8ea5-8efb-4336-a3fb-6e872c8ac8e3",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Funcional",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "87dfddec-f1db-4648-aef4-94f5a0130616",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "É a abordagem recomendada pelo próprio ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "React",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ". É a forma mais simples de se criar um componente, tendo em vista que é necessário apenas escrever uma\nfunção. Para controlar o estado do componente, se utiliza o hook ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "useState",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "741977f6-0066-46fa-a851-fe5c2392aa28",
+              "type": "codeBlock",
+              "props": {
+                "language": "javascript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "import React from 'react';\n\nconst Table = () => {\n  return (\n    <table>\n      <thead>\n        <tr>\n          <th>Name</th>\n          <th>Job</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>Charlie</td>\n          <td>Janitor</td>\n        </tr>\n        <tr>\n          <td>Mac</td>\n          <td>Bouncer</td>\n        </tr>\n      </tbody>\n    </table>\n  );\n};\n\nexport default Table;",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            }
+          ]
         }
-      ],
-      "children": []
+      ]
     },
     {
-      "id": "f194fe65-7e05-4e83-af07-6fe847b2a05c",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Rodando a aplicação\nExecute o comando a seguir dentro da pasta do projeto",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "921a4549-054f-40aa-a026-cf04a9b756ae",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "npm start",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "fa9d1ba9-12c1-44dd-aff1-4d74475de22b",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Quase tudo no React é consistido de componentes.\nExistem duas abordagens de se criar componentes:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "35dfac29-9d3e-4922-8de4-a67d262fc534",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Classes",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "87641722-8bff-4858-b8c4-9338e288f1fc",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Funcional",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "6ebfe4fd-9f70-4aca-b3a2-b10956c087fd",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "A ideia de classe pode ser descrita como um modelo que define quais seus atributos e comportamentos para manipular os dados.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "19b3fabc-c400-4662-b4b2-97e9fef1e32a",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "import React, { Component } from 'react';\n\nclass Table extendes Component {\n    render() {\n        return (\n            <table>\n                <thead>\n                    <tr>\n                        <th>Name</th>\n                        <th>Job</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Charlie</td>\n                        <td>Janitor</td>\n                    </tr>\n                    <tr>\n                        <td>Mac</td>\n                        <td>Bouncer</td>\n                    </tr>\n                </tbody>\n            </table>\n        )\n    }\n}\n\nexport default Table;",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "1f6f6313-6b8f-44c6-a916-c7dd3e85f9e6",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Métodos mais importantes:\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "render",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " - Define o que deverá ser exibido na tela. Implementação obrigatória\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "componentDidMount",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " - Executado quando o elemento será exibido pela primeira vez\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "setState",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " - Usado para atualizar o estado do componente",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "6e850d29-fd0d-4aa8-b162-08d2c09cdd0d",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "É a abordagem recomendada pelo próprio ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "React",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ". É a forma mais simples de se criar um componente, tendo em vista que é necessário apenas escrever uma\nfunção. Para controlar o estado do componente, se utiliza o hook ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "useState",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "bdf1fb16-b823-4a19-a10f-990460b099da",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "import React from 'react';\n\nconst Table = () => {\n  return (\n    <table>\n      <thead>\n        <tr>\n          <th>Name</th>\n          <th>Job</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>Charlie</td>\n          <td>Janitor</td>\n        </tr>\n        <tr>\n          <td>Mac</td>\n          <td>Bouncer</td>\n        </tr>\n      </tbody>\n    </table>\n  );\n};\n\nexport default Table;",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "4d543caa-9846-4e35-b506-96ef2f6fabd8",
+      "id": "238ae353-a1a1-4fb3-958f-edabc711122d",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
