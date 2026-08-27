@@ -87,7 +87,7 @@
         "backgroundColor": "default",
         "textColor": "default",
         "textAlignment": "left",
-        "level": 2,
+        "level": 1,
         "isToggleable": true
       },
       "content": [
@@ -476,7 +476,7 @@
         "backgroundColor": "default",
         "textColor": "default",
         "textAlignment": "left",
-        "level": 2,
+        "level": 1,
         "isToggleable": true
       },
       "content": [
@@ -943,7 +943,7 @@
             "textColor": "default",
             "textAlignment": "left",
             "level": 2,
-            "isToggleable": false
+            "isToggleable": true
           },
           "content": [
             {
@@ -952,311 +952,301 @@
               "styles": {}
             }
           ],
-          "children": []
-        },
-        {
-          "id": "c3995383-45ef-4e1e-94be-dbe7697b9b9d",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
+          "children": [
             {
-              "type": "text",
-              "text": "Outro recurso muito interessante do ",
-              "styles": {}
+              "id": "896a05e7-8e33-4bb1-84b5-a541ad2cd86a",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Outro recurso muito interessante do ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "axios",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " são os ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptors",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ". Como o nome sugere, é possível interceptar uma requisição ou uma resposta.",
+                  "styles": {}
+                }
+              ],
+              "children": []
             },
             {
-              "type": "text",
-              "text": "axios",
-              "styles": {
-                "code": true
-              }
+              "id": "378144c2-7ccc-478c-8208-8eec739c3b64",
+              "type": "codeBlock",
+              "props": {
+                "language": "typescript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "// Antes do request\naxios.interceptors.request.use(\n  (config) => {\n    // Coloque qualquer código aqui para executar antes da requisição ser feita\n    return config;\n  },\n  (error) => {\n    // Faça o tratamento de erro caso a requisição tenha dado errado\n    return Promise.reject(error);\n  },\n);\n\n// Quando se recebe a resposta\naxios.interceptors.response.use(\n  (response) => {\n    // Esse código só é executado quando o status é 2xx\n    // Trate a resposta como achar conveniente\n    return response;\n  },\n  (error) => {\n    // Faça o tratamento de erro caso o status da resposta seja diferente de 2xx\n    return Promise.reject(error);\n  },\n);",
+                  "styles": {}
+                }
+              ],
+              "children": []
             },
             {
-              "type": "text",
-              "text": " são os ",
-              "styles": {}
+              "id": "16977c35-8ad6-433c-b970-403258a0ff7d",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Vale ressaltar dois pontos sobre ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptors",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
             },
             {
-              "type": "text",
-              "text": "interceptors",
-              "styles": {
-                "code": true
-              }
+              "id": "7f474425-6885-4673-88a5-7c90b7ceb490",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Quando se configura um ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptor",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " para ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "request",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", deve obrigatoriamente retornar o ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "config",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " que é passado como paramêtro.",
+                  "styles": {}
+                }
+              ],
+              "children": []
             },
             {
-              "type": "text",
-              "text": ". Como o nome sugere, é possível interceptar uma requisição ou uma resposta.",
-              "styles": {}
+              "id": "0362d146-c661-4265-8e02-7d2f7f33a1a5",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não tem limitação de quantos ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptors",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " podem ser executados. A ordem de execução dos ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptors",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " vai depender da ordem em que eles foram adicionados.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "be7af025-402a-41d5-8fe0-cab09045a81a",
+              "type": "codeBlock",
+              "props": {
+                "language": "typescript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "axios.interceptors.request.use((config) => {\n  console.log('Segundo interceptor');\n  return config;\n});\n\naxios.interceptors.request.use((config) => {\n  console.log('Primeiro interceptor');\n  return config;\n});\n\naxios.interceptors.response.use((config) => {\n  console.log('Primeiro interceptor');\n  return config;\n});\n\naxios.interceptors.response.use((config) => {\n  console.log('Segundo interceptor');\n  return config;\n});",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "e3b59c2f-7587-436a-ba89-25064197bc42",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Seguindo a premissa de que se lê o código de cima pra baixo:",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "a784e2f4-8aea-4b84-a3f8-cf7f3218ce2f",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No caso de um ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptor",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " de ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "request",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", o primeiro a ser executado é último a ser declarado, ou seja, na ordem de baixo pra cima",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "88925a00-3eba-4433-8a89-bdab3c10246c",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No caso de um ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "interceptor",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " de ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "response",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", o primeiro a ser executado é o primeiro a ser declarado, ou seja, na ordem de cima pra baixo",
+                  "styles": {}
+                }
+              ],
+              "children": []
             }
-          ],
-          "children": []
-        },
-        {
-          "id": "77c6a79f-0085-47fe-93d1-72320a661c43",
-          "type": "codeBlock",
-          "props": {
-            "language": "typescript"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "// Antes do request\naxios.interceptors.request.use(\n  (config) => {\n    // Coloque qualquer código aqui para executar antes da requisição ser feita\n    return config;\n  },\n  (error) => {\n    // Faça o tratamento de erro caso a requisição tenha dado errado\n    return Promise.reject(error);\n  },\n);\n\n// Quando se recebe a resposta\naxios.interceptors.response.use(\n  (response) => {\n    // Esse código só é executado quando o status é 2xx\n    // Trate a resposta como achar conveniente\n    return response;\n  },\n  (error) => {\n    // Faça o tratamento de erro caso o status da resposta seja diferente de 2xx\n    return Promise.reject(error);\n  },\n);",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "3f144466-e687-4c34-969c-d53e6c4721dc",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Vale ressaltar dois pontos sobre ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "interceptors",
-              "styles": {
-                "code": true
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "19440e46-a954-4573-87d3-320b272211d7",
-          "type": "bulletListItem",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Quando se configura um ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "interceptor",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " para ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "request",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ", deve obrigatoriamente retornar o ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "config",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " que é passado como paramêtro.",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "c86990ef-9cb4-4966-88c4-db810d6c618c",
-          "type": "bulletListItem",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Não tem limitação de quantos ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "interceptors",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " podem ser executados. A ordem de execução dos ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "interceptors",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " vai depender da ordem em que eles foram adicionados.",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "c76ac2a3-a2ac-494d-822b-e3f9f2405323",
-          "type": "codeBlock",
-          "props": {
-            "language": "typescript"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "axios.interceptors.request.use((config) => {\n  console.log('Segundo interceptor');\n  return config;\n});\n\naxios.interceptors.request.use((config) => {\n  console.log('Primeiro interceptor');\n  return config;\n});\n\naxios.interceptors.response.use((config) => {\n  console.log('Primeiro interceptor');\n  return config;\n});\n\naxios.interceptors.response.use((config) => {\n  console.log('Segundo interceptor');\n  return config;\n});",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "392d6779-10be-484c-86e2-eb0940781d67",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Seguindo a premissa de que se lê o código de cima pra baixo:",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "615fbd2a-0e43-4db6-a044-286553bc0027",
-          "type": "bulletListItem",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "No caso de um ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "interceptor",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " de ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "request",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ", o primeiro a ser executado é último a ser declarado, ou seja, na ordem de baixo pra cima",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "b81deefa-8632-4033-9661-a922d2468572",
-          "type": "bulletListItem",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "No caso de um ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "interceptor",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " de ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "response",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ", o primeiro a ser executado é o primeiro a ser declarado, ou seja, na ordem de cima pra baixo",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "3ad7abf8-b8ce-4aeb-9816-7574dcbd2154",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [],
-          "children": []
+          ]
         }
       ]
     },
     {
-      "id": "f8514f49-c9c7-4324-ae77-162f189aaf05",
+      "id": "31538de9-069f-4cf4-8c7b-050125e18e17",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
