@@ -651,6 +651,25 @@
     },
     {
       "id": "238ae353-a1a1-4fb3-958f-edabc711122d",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Hooks",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "eb588866-cb15-4ef5-bb8d-a5df1a55fe44",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
