@@ -520,71 +520,97 @@
     },
     {
       "id": "07d7c3c2-4bad-44db-918c-4cf20c1a473c",
-      "type": "paragraph",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Escolha de IDE",
+          "text": "IDE",
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "847ec2f2-bf5a-407d-8362-a455f4375af3",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "link",
-          "href": "https://code.visualstudio.com/",
+          "id": "12162763-d658-4e5b-9ce5-41f32d738f16",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
           "content": [
             {
+              "type": "link",
+              "href": "https://code.visualstudio.com/",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "https://code.visualstudio.com/",
+                  "styles": {}
+                }
+              ]
+            },
+            {
               "type": "text",
-              "text": "https://code.visualstudio.com/",
+              "text": " (Recomendado)",
               "styles": {}
             }
-          ]
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": " (Recomendado)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "df3977c2-c2cd-4805-983d-d8395f88b020",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "link",
-          "href": "http://brackets.io/",
+          "id": "c8cb5bc4-372a-4027-a33c-468ba122e6b8",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
           "content": [
             {
-              "type": "text",
-              "text": "http://brackets.io/",
-              "styles": {}
+              "type": "link",
+              "href": "http://brackets.io/",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "http://brackets.io",
+                  "styles": {}
+                }
+              ]
             }
-          ]
+          ],
+          "children": []
+        },
+        {
+          "id": "9fba78c2-fc87-401e-9565-379fa463a502",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "link",
+              "href": "https://zed.dev",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "https://zed.dev",
+                  "styles": {}
+                }
+              ]
+            }
+          ],
+          "children": []
         }
-      ],
-      "children": []
+      ]
     },
     {
       "id": "6557e584-ac05-4cbe-8449-a8cb39a0fa73",
@@ -594,102 +620,104 @@
         "textColor": "default",
         "textAlignment": "left"
       },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "7ef53563-ba05-463b-84e0-ab0abbd07311",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
       "content": [
         {
           "type": "text",
-          "text": "Vamos inicialmente utilizar o NodeJS para aprendizado.\nDeve-se instalar a última versão estável.\n",
+          "text": "Instalação",
           "styles": {}
-        },
+        }
+      ],
+      "children": [
         {
-          "type": "link",
-          "href": "https://nodejs.org/en/",
+          "id": "87ece6a2-ae9c-44d0-a712-bee3fbc18e90",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
           "content": [
             {
               "type": "text",
-              "text": "https://nodejs.org/en/",
+              "text": "Vamos inicialmente utilizar o NodeJS para aprendizado.\nDeve-se instalar a última versão estável.\n",
               "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://nodejs.org/en/",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "https://nodejs.org/en/",
+                  "styles": {}
+                }
+              ]
             }
-          ]
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "62859027-ad75-4f62-b969-e2bd5fd91af2",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "\n\n",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "4c0f0ec2-9a23-4f6c-8428-a3499aace873",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": ":warning: IMPORTANTE",
-          "styles": {
-            "bold": true
-          }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": ": É recomendado utilizar a versão LTS (Long Term Support)",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "853febaf-4657-457f-8d97-8b68d8f69f21",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+          "id": "0dfd3e03-5009-4402-bc8f-f668decb740f",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "⚠️ ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": " IMPORTANTE",
+              "styles": {
+                "bold": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ": É recomendado utilizar a versão LTS (Long Term Support)\n\nApós o NodeJS ser instalado, vamos usar o terminal (cmd, prompt, etc) para confirmar a versão instalada com o seguinte comando.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
         {
-          "type": "text",
-          "text": "Após o NodeJS ser instalado, vamos usar o terminal (cmd, prompt, etc) para confirmar a versão instalada com o seguinte comando.",
-          "styles": {}
+          "id": "b2e6a121-a450-4702-89bc-c6c67b21945e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "node --version",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
         }
-      ],
-      "children": []
-    },
-    {
-      "id": "01a9a33c-4a87-4f1d-aec2-7646f3ce0bcf",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "node --version",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
+      ]
     },
     {
       "id": "74fa4cf5-863b-4a15-a115-fae51dc6b28b",
@@ -699,219 +727,344 @@
         "textColor": "default",
         "textAlignment": "left"
       },
-      "content": [
-        {
-          "type": "text",
-          "text": "Após tudo instalado, vamos criar nosso primeiro projeto em NodeJS. Quando instalado, uma ferramenta\nchamada ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "NPM",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " é instalada automaticamente.O ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "NPM",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " funciona como um gerenciador de pacotes para NodeJS, ou seja, através dele é possível adicionar bibliotecas de terceiros em seu projeto.Crie uma pasta em seu computador chamada ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "HelloWorld",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ".",
-          "styles": {}
-        }
-      ],
+      "content": [],
       "children": []
     },
     {
-      "id": "272e8b2b-2764-4999-af6f-e307ab41e858",
+      "id": "47bc2f6c-fccc-4249-926e-15137cafc225",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ambiente",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "fb79d221-9572-4194-b8ad-fad3453b06e0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Após tudo instalado, vamos criar nosso primeiro projeto em NodeJS. Quando instalado, uma ferramenta\nchamada ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "NPM",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é instalada automaticamente.O ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "NPM",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " funciona como um gerenciador de pacotes para NodeJS, ou seja, através dele é possível adicionar bibliotecas de terceiros em seu projeto.Crie uma pasta em seu computador chamada ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "HelloWorld",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8ed3dc2b-9312-44b2-998a-acdc07dabd8d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Abra o terminal, vá até a pasta HelloWorld criada e digite o seguinte comando:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npm init -y",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8e7dd20f-cd2f-4dec-8555-efb1175f8d63",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Abra a pasta do projeto em seu editor preferido e crie um arquivo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "index.js",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " com o seguinte conteúdo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "00551a4f-00c2-412e-a12e-834a40ec794a",
+          "type": "codeBlock",
+          "props": {
+            "language": "javascript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "console.log('Hello World');",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "bb2c2edf-f658-4fe7-8b03-4640cb303507",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Execute o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "index.js",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " através do comando no terminal:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "node index.js",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "4abc5f0e-482b-41dc-8afc-5e7d44f65f7b",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
         "textAlignment": "left"
       },
-      "content": [
-        {
-          "type": "text",
-          "text": "Abra o terminal, vá até a pasta HelloWorld criada e digite o seguinte comando:\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "npm init -y",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
+      "content": [],
       "children": []
     },
     {
-      "id": "968f010e-95cf-43b1-8568-0463ed4c3b1e",
+      "id": "98dafff0-cbf8-44bc-b06d-a4a65932b06c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Declaração de variáveis",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "2efae904-cb5b-4ebd-b17c-0d739dbb7b34",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Existem 3 formas de declarar variável:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5d4189ee-a401-4329-a51f-09539b157b84",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " => Escopo apenas dentro do bloco utilizado, porém uma vez inicializada, não permite alteração de valor\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "let",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " => Escopo apenas dentro do bloco utilizado. Permite alteração de valor\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "var",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " => Escopo global ou dentro da função onde foi declarado. Permite alterar seu valor. NÃO RECOMENDADO",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "bee2afc1-7dc2-4635-bc39-6e052d1c0ba0",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
         "textAlignment": "left"
       },
-      "content": [
-        {
-          "type": "text",
-          "text": "Abra a pasta do projeto em seu editor preferido e crie um arquivo ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "index.js",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " com o seguinte conteúdo:",
-          "styles": {}
-        }
-      ],
+      "content": [],
       "children": []
     },
     {
-      "id": "24f4e054-32ba-4e19-ad8f-ae900b5ed771",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "console.log('Hello World');",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "1aba213e-ed3c-4c56-85bc-9a73c94dda06",
-      "type": "paragraph",
+      "id": "46bac3ea-90e0-4f80-bb58-ae24db4dfaf2",
+      "type": "heading",
       "props": {
         "backgroundColor": "default",
         "textColor": "default",
-        "textAlignment": "left"
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
       },
       "content": [
         {
           "type": "text",
-          "text": "Execute o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "index.js",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " através do comando no terminal:\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "node index.js",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "16e32c08-0759-4d5e-ad5c-697031074bbc",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Existem 3 formas de declarar variável:",
+          "text": "Template string",
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "8fd35949-103d-495c-b9b6-51beb5d25608",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "text",
-          "text": "const",
-          "styles": {
-            "code": true
-          }
+          "id": "6b756388-3fa3-4865-851e-dcede1a6d702",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Também conhecido como interpolação de string. Facilita para\nconcatenar (juntar) strings",
+              "styles": {}
+            }
+          ],
+          "children": []
         },
         {
-          "type": "text",
-          "text": " => Escopo apenas dentro do bloco utilizado, porém uma vez inicializada, não permite alteração de valor\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "let",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " => Escopo apenas dentro do bloco utilizado. Permite alteração de valor\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "var",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " => Escopo global ou dentro da função onde foi declarado. Permite alterar seu valor. NÃO RECOMENDADO",
-          "styles": {}
+          "id": "210ca2d7-e945-4e9a-9b4d-5e55523e182f",
+          "type": "codeBlock",
+          "props": {
+            "language": "javascript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const a = 10;\nconst b = 20;\n\n// Sem template string\nconst msg = 'A = ' + a + 'B = ' + B;\nconsole.log(msg2);\n\n// Com template string\nconst msg2 = `A = ${a} B = ${b}`;\nconsole.log(msg2);",
+              "styles": {}
+            }
+          ],
+          "children": []
         }
-      ],
-      "children": []
+      ]
     },
     {
       "id": "523b4b5a-3afb-4ade-a8d2-ceaa34b71300",
@@ -921,28 +1074,7 @@
         "textColor": "default",
         "textAlignment": "left"
       },
-      "content": [
-        {
-          "type": "text",
-          "text": "Também conhecido como interpolação de string. Facilita para\nconcatenar (juntar) strings",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "d40227dc-52e3-4236-949b-8eafeccce9de",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "const a = 10;\nconst b = 20;\n\n// Sem template string\nconst msg = 'A = ' + a + 'B = ' + B;\nconsole.log(msg2);\n\n// Com template string\nconst msg2 = `A = ${a} B = ${b}`;\nconsole.log(msg2);",
-          "styles": {}
-        }
-      ],
+      "content": [],
       "children": []
     },
     {
