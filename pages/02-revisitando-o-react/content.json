@@ -731,6 +731,71 @@
           "children": []
         },
         {
+          "id": "c64a0afb-1d83-4657-8c9f-df03e9d45972",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useState",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "8a7102c0-72ea-42b1-a5d1-2443b33c16a1",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Utilizado para armazenar e controlar estado. Toda vez que um estado é alterado, dispara um evento para que as suas dependências sejam atualizadas e re-renderiza o componente.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "e1195fe8-b9a5-448a-8249-41c4a53b2b41",
+              "type": "codeBlock",
+              "props": {
+                "language": "typescript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "import {useState} from 'react';\n\nconst MyComponent = () => {\n  const [message, setMessage] = useState<string>();\n  return <div>{message}</div>\n}\n",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "42e1f3e2-90df-44ee-a60d-8b0ea12c5681",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [],
+              "children": []
+            }
+          ]
+        },
+        {
           "id": "4bbc433d-103c-441b-8ccc-de9a347a0cd0",
           "type": "heading",
           "props": {
@@ -788,7 +853,7 @@
                 },
                 {
                   "type": "text",
-                  "text": " = () => {\n  const [message, setMessage] = useState<string>();\n  useEffect(() => {\n     setMessage(\"Bem vindo\");\n  }, []);\n  return <div>{message}<div>\n}",
+                  "text": " = () => {\n  const [message, setMessage] = useState<string>();\n  useEffect(() => {\n     setMessage(\"Bem vindo\");\n  }, []);\n  return <div>{message}</div>\n}",
                   "styles": {}
                 }
               ],
