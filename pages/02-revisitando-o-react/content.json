@@ -329,11 +329,15 @@
                   "styles": {}
                 },
                 {
-                  "type": "text",
-                  "text": "Nextjs",
-                  "styles": {
-                    "code": true
-                  }
+                  "type": "link",
+                  "href": "https://nextjs.org",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Nextjs",
+                      "styles": {}
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -341,11 +345,15 @@
                   "styles": {}
                 },
                 {
-                  "type": "text",
-                  "text": "Expo\n",
-                  "styles": {
-                    "code": true
-                  }
+                  "type": "link",
+                  "href": "https://expo.dev",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Expo\n",
+                      "styles": {}
+                    }
+                  ]
                 },
                 {
                   "type": "text",
