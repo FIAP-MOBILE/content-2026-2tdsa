@@ -833,7 +833,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "import {useState} from 'react';\n\nconst MyComponent = () => {\n  const [message, setMessage] = useState<string>();\n  return <div>{message}</div>\n}\n",
+                  "text": "import {useState} from 'react';\n\nconst MyComponent = () => {\n  const [count, setCount] = useState<int>(0);\n\n  return <div>\n    <button onClick={() => setCount(count + 1)}>Click Me</button>\n    <p>Total clicks:{count}</p>\n  </div>\n}\n",
                   "styles": {}
                 }
               ],
