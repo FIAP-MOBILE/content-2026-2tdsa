@@ -1,0 +1,2489 @@
+{
+  "blocks": [
+    {
+      "id": "463f85e7-3731-4723-965c-6a166f4f05c1",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Introdução",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "a3de7754-fd9d-41ba-897b-b713615d5ab1",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é uma linguagem de programação que basicamente adiciona tipagem no JavaScript. Nos permite escrever código JavaScript usando seu sistema de tipagem, permitindo identificar possíveis bugs, deixar a estrutura mais clara e ajuda na refatoração do código.\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é responsável por adicionar recursos novos no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "JavaScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", como ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "arrow functions",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e classes, anos antes destes serem adicionados oficialmente no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "JavaScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ".\nA ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Microsoft",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " desenvolveu o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e lançou publicamente em 2012.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d6bf14e1-36e8-48ba-9820-081f21867e0a",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Configuração",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "ea2dd46b-af75-42f8-b6c6-798db6550452",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para utilizar ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " podemos instala-lo de forma global usando o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "node",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c328b1f0-652d-4c1f-a553-63c722583956",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Terminal",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9794c69b-56de-41cc-b9d9-7f1962a0c31e",
+          "type": "terminal",
+          "props": {
+            "code": "npm install -g typescript",
+            "title": "Terminal"
+          },
+          "children": []
+        },
+        {
+          "id": "66748a39-3509-43f2-8894-b4664c9d7bb6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao instalar desse modo, você terá o comando ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "tsc",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " sempre disponível para ser utilizado",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "98884aad-22fb-44cf-81ee-88589765463a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ou, caso você queira configurar apenas em um projeto:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2ff3c6d5-8be3-4c16-b1cb-ff7861916226",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Terminal",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7cc0226f-34c3-4e6b-bf0e-c24dff283364",
+          "type": "terminal",
+          "props": {
+            "code": "npm install --save-dev typescript",
+            "title": "Terminal"
+          },
+          "children": []
+        },
+        {
+          "id": "a2272d83-6e04-4d74-9a91-a56a24da824e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Usando desse modo, você também tem o comando ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "tsc",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", mas deve sempre executa-lo com ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npx",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Exemplo: ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npx tsc",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d23594e9-db75-4678-9e43-02fadc598f0d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma vez instalado, devemos fazer uma configuração inicial.\nIsso é bem simples, basta executar o comando",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cf57cdfd-8191-47b4-a67f-e87f8c024bca",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Terminal",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d5b9de04-c96d-4179-8ce4-c2dfc6808253",
+          "type": "terminal",
+          "props": {
+            "code": "tsc --init",
+            "title": "Terminal"
+          },
+          "children": []
+        },
+        {
+          "id": "e7abd850-8b03-4b61-9de6-a63420306385",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao executar este comando, um arquivo chamado ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "tsconfig.json",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " onde é importante destacar algumas chaves:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "compilerOptions -> outDir",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> Ao compilar os arquivos, em qual diretório eles serão armazenados\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "compilerOptions -> module",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> Qual sintaxe o projeto utilizará\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "compilerOptions -> target",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> Para qual linguagem o projeto será compilado\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "include",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> A lista de arquivos/diretórios que serão interpretados\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "exclude",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> A lista de arquivos/diretórios que serão ignorados",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "abd82676-9d53-476c-837b-326a04062542",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "As chaves ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "include",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "exclude",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " não vem por padrão, mas é importante ressaltar",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "bd231e33-78e0-4c62-ae11-93d66ea089ff",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " na verdade é só um compilador. Então nos escrevemos nosso código usando sua extensão, que é ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "*.ts",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", e então compilamos para ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "JavaScript\n",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "Vamos criar um simples arquivo chamado ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "index.ts",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " com o seguinte conteúdo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9109189c-df1b-4acd-a731-eda7746d881b",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "console.log('Hello, world');",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "95c28d72-a1c3-45c1-b03d-e74f5396ccb4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Dentro da pasta do seu projeto rode o comando:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ec9db885-b618-4e92-9799-7f0afc940249",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Terminal",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c517420e-e6d8-46ec-8380-409f6fdf1faa",
+          "type": "terminal",
+          "props": {
+            "code": "tsc",
+            "title": "Terminal"
+          },
+          "children": []
+        },
+        {
+          "id": "7ad48366-713a-40e1-9426-1baac3a83d91",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Repare que será criado um arquivo chamado ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "index.js\n",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "Com esse arquivo, basta rodar ele com:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3ec3b0ba-b0d0-4c6a-97e9-63eff67cf114",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Terminal",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4aa94135-5b81-4247-b33c-f47575751535",
+          "type": "terminal",
+          "props": {
+            "code": "node index.js",
+            "title": "Terminal"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ee5b73cf-d334-4b48-b8e9-2b2f3ab5978b",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Declaração",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "2769cead-7a92-4e21-8795-0498e1f77879",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando declaramos variáveis no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", todas elas possui um tipo especifico. Essa inferência é feita no momento que declaramos a variável",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5454f428-2ca3-4a8b-aade-9713302e9048",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let firstName = 'Leonardo'; // string\nlet isValid = false; // boolean\nlet myNumber = 10; // número",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f20d0149-75b8-4562-af2a-56a229117db4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É importante ressaltar que uma vez a variável tem seu tipo definido, não é possível mudar essa tipagem",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9c3a028e-21a7-4c42-b761-ce11966b2523",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let firstName = 'Leonardo';\nfirstName = 10; // Compilador irá acusar um erro nesta linha",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5c49d728-b44d-45d5-9c0d-2ef2d7127447",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Porém, se for feito da seguinte forma:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6e035501-8976-45c8-bf03-c19e30e6ee07",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let firstName;\nfistName = 'Leonardo';\nfirstName = 10;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "fd3e1708-454d-417f-ba67-cbdc83cc8bda",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Funciona. E por que isso? Porque no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " existe o tipo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "any",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", que como o nome sugere, aceita qualquer valor.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1dda581d-1943-4c23-b757-10a09cc6405a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Podemos criar as variáveis com seu tipo de forma explicíta:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e92af5a4-371a-4f99-afff-39052656edf3",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let firstName: string;\nfistName = 'Leonardo';\nfirstName = 10; // Compilador irá acusar erro nesta linha",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "1295e892-a192-4ef1-84a0-0b8716d29a97",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Funções",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "e8ad8d45-adf3-4d46-b483-72a102687cad",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "As funções no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " funciona da mesma forma que no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "JavaScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", mas podemos tipar o seu retorno.\nPodemos fazer de forma explicíta:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3a4ba170-9d4b-4ce3-a4ad-6a2f923a2131",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "function isEven(value: number): boolean {\n  const result = value % 2 == 0;\n  return result;\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "be4153d3-7a7c-44bb-9b49-0d858e7f757b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Se não estiver explícito na declaração da função, o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " irá inferir a partir do seu retorno qual tipo será utilizado",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8008a49f-ab04-4b86-b659-7591d6583cb2",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "function isEven(value: number) {\n  const result = value % 2 == 0;\n  return result;\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "858956bc-0fc8-48b3-90a5-5af09c4551dc",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso uma função não tenha retorno, isso pode ser definido de forma explicíta utilizando a palavra ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "void",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "efdb80d1-7c96-4da2-8f7a-acbef5853d59",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "function sayMyName(name: string): void {\n  console.log(`Hello, ${name}`);\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8f7e28c5-0884-4833-9fba-2a5e64fce9e9",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Neste caso, como a função não tem nenhum retorno, a utilização da palavra ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "void",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é apenas para deixar mais explicíto a definição da função",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e3f15e56-595d-4ecf-81bb-19d33665d17b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Podemos definir argumentos com um valor pré-definido quando utilizamos parâmetros na função:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b573213b-430f-427b-8e58-6b274d1b6eff",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "function sayMyName(name = 'John Doe'): void {\n  console.log(`Hello, ${name}`);\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cc642087-22e0-4bbd-a1be-a288f9b87f1c",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando declaramos um parâmetro com seu valor pré-definido, o tipo da variável é inferido pelo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "faf1238c-3416-4e23-8801-8f6d8d52c2b6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Podemos declarar valores opcionais. Para isso, ao definir o parâmetro, basta colocar a ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "?",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " na frente do seu nome.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "88623d6d-a565-4017-8233-47be5283477b",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "function sayMyName(name?: string): void {\n  console.log(`Hello, ${name}`);\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7918ebfe-9498-4900-abf5-10355c032cb0",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Arrays",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "e4410628-7b03-479d-8737-b968a9453be2",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Podemos definir tipagem nos ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Arrays",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " de duas formas:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f22be7c7-282c-4018-a9a0-0a87bd85c9c6",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let fruits: string[] = ['banana', 'apple'];",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "09d34f41-229f-45fc-bcd7-048d2c7422b1",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ou você pode usar ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Array<T>",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " onde ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "T",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é o tipo que gostaria de usar:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a2564a2f-a65d-4736-97b1-e2797a5f612f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let fruits: Array<string> = ['banana', 'apple'];",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "402d59ac-512e-44bc-b89b-93f1295bf3f4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso você declare um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Array",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " sem definir seu tipo, o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "TypeScript",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " irá fazer a inferência a partir dos elementos.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "eb9b8f2a-fca2-4775-b497-99fbc5e44239",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let fruits = ['banana', 'apple']; // Array de string",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "86d382fa-5d21-4df5-b71b-929c7cda9044",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Tuplas",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "10d833cf-c8c3-4b9c-a20e-7f08615aeab6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "As ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "tuples",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " são matrizes imutáveis. Ou seja, uma vez definidas, não se muda mais nada nelas.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "82570027-bfaa-450c-afd3-cccc184da0d4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para declarar uma ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "tuple",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", usando a seguinte sintaxe:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c96c68fc-8a07-4017-81ef-0f21309ae6a7",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let myTuple: [string, string, string] = ['arg1', 'arg2', 'arg3'];\n\nlet mixedTuple: [string, number, boolean] = ['banana', 2, true];",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "6f0d53ff-bc07-40e9-83a5-0e2bd53ff7ac",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Union Types",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "b24d109c-5261-4f88-8f30-bcfbfde3e882",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Unions",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " nos permite definir variáveis que podem ter múltiplos tipos.\nPara isso, usamos o caracter ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "|",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ead580bd-b0a4-4df1-8732-6cea9c88c4f2",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "let item: string | number;\n\n// Pode ser atribuído um número\nitem = 1;\nconsole.log(`my item ${item}`);\n\n// Pode ser atribuído uma string\nitem = 'my item';\nconsole.log(`my item ${item}`);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a507370e-280f-4f53-af71-5507f84c723d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Se por acaso, você tem uma variável que pode ter uma múltipla tipagem,\né importante fazer a checagem para lidar com sua devida tipagem.\nVeja o exemplo a seguir:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "68a15592-e442-481f-a9ef-7b2c274a3086",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const formatValue = (value: string | number) => {\n  if (typeof value === 'string') {\n    console.log(value.toLowerCase());\n  }\n  if (typeof value === 'number') {\n    console.log(value.toFixed(2));\n  }\n};\n\nformatValue('Hiya');\nformatValue(42);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b251dbfa-03ec-48dc-b375-7bb721328dd0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Neste caso, se a variável foi atribuída como ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "string",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", você consegue chamar os metódos relativos a esse tipo. Assim como se for do tipo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "number",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", os metódos desse tipo estarão acessíveis somente quando for definido como tal.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1cdc3f16-c8d6-4ee0-ba6c-ad3921b403b4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Usando esse tipo de recurso, é possível definir ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Arrays",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " com múltipla tipagem também:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "64babd0a-25de-4cef-a0e9-4c10dd5f93b4",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const mixedItems: (string | number)[] = ['Banana', 20, 30, 40, 'Pineapple'];",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9e6478b0-e56a-43d1-b047-c2fc8c177cf0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Podemos utilizar outra forma de declarar ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Array",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d8df5cf5-490b-43b2-bfa5-3699892c5615",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const mixedItems: Array<string | number> = ['Banana', 20, 30, 40, 'Pineapple'];",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "f34537c3-1242-4f1e-8c1e-259d87641d3c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Types e Interfaces",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "f8790bb8-142f-4b50-9566-f720d38472f8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Além dos tipos primitivos, podemos definir nossos próprios tipos.\nPara criar seu próprio tipo podemos usar ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " ou ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ce6b9652-fc4d-46c7-9c53-dc9288d43f23",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "type User = {\n  name: string;\n  email: string;\n};",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "24aaa026-1950-4c70-9f60-0c114b28cc38",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "O mesmo exemplo, só que usando ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "df648f37-7881-41e2-9f56-c73f19da73dc",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "interface User {\n  name: string;\n  email: string;\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "67d0221a-5fe4-4cc3-804e-855eb6b2c1f9",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "A principal diferença entre ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é que ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " serve apenas para tipar os objetos. O ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " possui uma versatilidade maior.\nO ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é utilizado quando queremos \"forçar\" o programador a ter uma melhor organização dos tipos.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c7c534aa-9418-4901-b5fb-79a52e58e2e1",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Exemplo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "08c0abf8-eef0-4bee-af76-f5d864a8678f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "interface Feline {\n  breed: string;\n}\n\ninterface Cat {\n  breed: 'cat';\n}\n\ntype Siamese = Feline | Cat;\n\nconst myCat: Siamese = { breed: 'cat' };\nconsole.log(`my cat ${myCat.breed}`);\n\nconst otherCat: Siamese = { breed: 'lion' };\nconsole.log(`other cat ${myOtherCat.breed}`);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "56c25ef7-e71c-472a-8a67-9d069d3dffc2",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Onde definimos o tipo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Siamese",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", isso só é possível com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " você não consegue usar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "union",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ab2dc89b-2eb5-4b2a-84f9-8dfd6121010c",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Um ponto interessante é que a ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é que você consegue redefini-lá",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "65355c27-8265-40e6-8eb0-015a790de2ae",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "interface Feline {\n  breed: string;\n}\n\ninterface Feline {\n  name: string;\n}\n\nconst myCat: Feline = { breed: 'cat', name: 'Felix' };\nconsole.log(`my cat breed is ${myCat.breed} and his name ${myCat.name}`);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7dcef010-6515-40ae-8f4a-daa13fbdb57a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Se fosse com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " o compilador acusaria um erro falando que o tipo já existe",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "42635988-4722-4414-bc12-4faee9e4c2e2",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "type Feline = {\n  breed: string;\n};\n\ntype Feline = {\n  name: string;\n};\n\nconst myCat: Feline = { breed: 'cat', name: 'Felix' };\nconsole.log(`my cat breed is ${myCat.breed} and his name ${myCat.name}`);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "19fd8e5f-d156-4b72-bded-6a950ab92375",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Esse código não será compilado",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cd43e2bd-476b-433d-ae55-57f41a2f381e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Um ponto interessante é que podemos deixar os atributos com um valor pré-definido, caso você tenha necessidade",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f7795389-5fe1-4d7f-a707-334cded56cfb",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "type User = {\n  name: string;\n  email: string;\n  profile: 'admin' | 'manager' | 'regular';\n};\n\nconst leo = { name: 'Leonardo', email: 'email@email', profile: 'regular' };",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "aaa66fe8-708b-492e-ac9f-f7557be84698",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Neste exemplo, a propriedade ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "profile",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " só pode ter 3 possíveis valores: ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "admin",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "manager",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "regular",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5585938d-0d7d-404b-b0fb-2e922dec3eb5",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "E assim como podemos ter funções com parâmetros opcionais, podemos ter objetos com atributos opcionais",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "34860c44-d8e3-4bba-9c9f-9120ad13aebe",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "type User = {\n  name: string;\n  email: string;\n  profile: 'admin' | 'manager' | 'regular';\n  age?: number;\n};\n\nconst leo = { name: 'Leonardo', email: 'email@email', profile: 'regular' };",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cb9971ab-a1ca-4017-adb5-f014c522bcb8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Neste exemplo, o atributo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "age",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é opcional",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "315488e6-e306-4f4b-b6ff-ef2e19de6ddf",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Classes e Interfaces",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "ab49e5dd-98c5-40f1-8d2f-d0ab76fcfbb4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando trabalhamos com classes funciona praticamente da mesma forma que uma tipagem:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "36c9dd9b-876e-40ce-9d79-261dbbe3b6d3",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "class Person {\n  name: string;\n\n  constructor(name: string) {\n    this.name = name;\n  }\n\n  sayName() {\n    console.log(`say my name ${this.name}`);\n  }\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7a066b61-7055-48bf-9581-817913abda92",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Podemos definir atributos, como está definido o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "name",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", seu devido construtor com o termo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "constructor",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e podemos definir seus metódos, que no exemplo é o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "sayMyName",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1586dc0c-7164-46d5-b97e-4074934c88a7",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando trabalhamos com classes, faz mais sentido utilizamos ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Como citado anteriormente, uma ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " força a tipagem de um objeto. Quando usamos classes, isso fica mais perceptível. Para uma classe herdar uma ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", utilizamos o termo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "implements",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2e28b1ac-0e60-4d68-9b3d-f4d9259e8106",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "interface IPerson {\n  name: string;\n  email: string;\n  sayName: () => void;\n}\n\nclass Person implements IPerson {\n  name: string;\n\n  constructor(name: string) {\n    this.name = name;\n  }\n\n  sayName() {\n    console.log(`say my name ${this.name}`);\n  }\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7e97c1e1-6b70-4309-b8f2-d554149c5987",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Neste exemplo, a ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "IPerson",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " tem dois atributos (",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "name",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "email",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e um metódo (",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "sayMyName",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "). A classe ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Person",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " implementa a ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "interface",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", porém o código não será compilado porque está faltando implementar o atributo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "email",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "  na classe",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7d68bd7b-04c2-440d-aab1-5cf02cd265bb",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
