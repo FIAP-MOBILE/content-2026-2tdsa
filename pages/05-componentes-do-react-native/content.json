@@ -1,0 +1,1105 @@
+{
+  "blocks": [
+    {
+      "id": "a1bcb285-a1fc-4a44-90c8-7a3b25b8c58c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Introdução",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "e55d9c44-9fa1-44ae-8ffa-7e9ccc1f83cb",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quase tudo que é exibido na tela é considerado um componente.\nExistem componentes utilizados para ajudar a exibir ou manusear outros componentes.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "75b59b0e-899a-4e42-92fa-ecdc70147c6b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Neste documento é listado os componentes básicos do React Native",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "fbbe2818-a8dc-4e93-9112-af6e218034cc",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "View",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "d3d8b56d-097b-48dd-a6ff-8ce9a7d570f3",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "O mais básico de todos, ele nada mais é que um recipiente para agrupar elementos.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "29293d2f-ae6a-40cb-b02a-4235e97ce1e1",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import React from 'react';\n\nimport { View, Text } from 'react-native';\n\nconst ViewBoxesWithColorAndText = () => {\n  return (\n    <View style={{ flexDirection: 'row', height: 100, padding: 20 }}>\n      <View style={{ backgroundColor: 'blue', flex: 0.3 }} />\n      <View style={{ backgroundColor: 'red', flex: 0.5 }} />\n      <Text>Hello World!</Text>\n    </View>\n  );\n};\n\nexport default ViewBoxesWithColorAndText;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "6d3718eb-5df5-45db-9334-2c12df27a186",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Text",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "7f72be22-5f24-42aa-a085-e49699b240ec",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Sua função é exibir um texto. Tem suporte a estilização, aninhamento e manuseamento de toque.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f3f962f7-0589-45dd-850f-06c4b363b4d0",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import React, { useState } from 'react';\n\nimport { Text } from 'react-native';\n\nconst TextInANest = () => {\n  const [titleText, setTitleText] = useState(`Bird's Nest`);\n  const bodyText = `This is not really a bird nest`;\n\n  const onPressTitle = () => {\n    setTitleText(`Bird's Nest [pressed]`);\n  };\n\n  return (\n    <Text style={{ fontFamily: 'Cochin' }}>\n      <Text style={{ fontSize: 20, fontWeight: 'bold' }} onPress={onPressTitle}>\n        {titleText}\n        {'\\n'}\n        {'\\n'}\n      </Text>\n      <Text numberOfLines={5}>{bodyText}</Text>\n    </Text>\n  );\n};\n\nexport default TextInANest;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "4ef37fc9-7474-4621-9ec1-666491e536a7",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Image",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "9281223a-077c-4b88-8580-a93f494f7133",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Componente de imagem, com suporte a diversos formatos, inclusive selecionar imagens tiradas pela camera.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5be911e2-32b0-4bd0-963b-55003643b98d",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import React from 'react';\n\nimport { View, Image } from 'react-native';\n\nconst DisplayImage = () => {\n  return (\n    <View style={{ paddingTop: 50 }}>\n      <Image\n        style={{ width: 50, height: 50 }}\n        source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}\n      />\n      <Image\n        style={{ width: 66, height: 58 }}\n        source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}\n      />\n    </View>\n  );\n};\n\nexport default DisplayImage;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "548f26f3-a7b5-4a25-8580-30e46bc4b574",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "TextInput",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "48ca8968-6ff4-4b7c-b546-d0accc322092",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Utilizado para realizar entradas de texto. Oferece uma série de configurações como correção automática, diferentes tipos de teclado, auto capitalização e etc.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "67fbbdfb-02d7-42d9-9d4c-1d8310cc836e",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import React from 'react';\n\nimport { View, TextInput, Text } from 'react-native';\n\nconst TextInputExample = () => {\n  const [text, onChangeText] = React.useState('Useless text');\n  const [number, onChangeNumber] = React.useState('');\n  return (\n    <View>\n      <TextInput\n        style={{ height: 40, margin: 12, borderWidth: 1 }}\n        onChangeText={onChangeText}\n        value={text}\n      />\n      <Text>Text: {text}</Text>\n      <TextInput\n        style={{ height: 40, margin: 12, borderWidth: 1 }}\n        onChangeText={onChangeNumber}\n        value={number}\n        placeholder=\"useless placeholder\"\n        keyboardType=\"numeric\"\n      />\n      <Text>Number: {number}</Text>\n    </View>\n  );\n};\n\nexport default TextInputExample;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d0424088-05c9-494c-9372-94dbcb1daf34",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "ScrollView",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "d6207cf2-a7bd-4c2c-b575-33deb0fd3bbf",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Componente que encobre todos os elementos dentro dele, sendo possível rolar a tela.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5b1be568-1d08-41c9-9364-9ec1d55ea739",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { ScrollView, Text } from 'react-native';\n\nconst ScrollExample = () => {\n  return (\n    <ScrollView style={{ flex: 1, marginHorizontal: 20 }}>\n      <Text>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ipsum\n        enim, ultrices at facilisis at, commodo et eros. Integer sit amet\n        ultrices leo, eget vehicula ipsum. Phasellus magna elit, aliquam sed ex\n        nec, pulvinar convallis augue. Aliquam eu quam turpis. Vestibulum id sem\n        tempus, dignissim mauris sed, mollis ipsum. Suspendisse dolor est,\n        feugiat ac dictum ac, pretium id turpis. Aliquam luctus nulla risus, et\n        rutrum massa maximus varius. Nulla id tristique libero, in lacinia nisi.\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at massa\n        lorem. Etiam vel pulvinar lectus. Sed iaculis rutrum sem, nec pharetra\n        arcu pharetra sit amet. Proin molestie vulputate quam, a congue ligula\n        tincidunt ac. Aenean ipsum purus, sagittis id libero ut, ultrices dictum\n        lacus. Donec id diam id lorem aliquam mattis. Vivamus sed urna ornare,\n        fringilla sem non, fermentum leo. Duis imperdiet vestibulum ornare. In\n        venenatis lorem eu cursus dignissim. Aliquam scelerisque, purus sed\n        imperdiet egestas, nisl augue finibus risus, et tristique enim nisl id\n        odio. Morbi aliquet tempus tortor, et fermentum nulla posuere et. Cras\n        ante justo, porttitor blandit nisi nec, vulputate tempor nisi. Curabitur\n        at nisl eu quam consectetur auctor eget nec diam. Aliquam sagittis purus\n        nec tristique interdum. Praesent facilisis eros ipsum, ac ullamcorper\n        turpis finibus non. Nam maximus est ut elit eleifend, in tempus arcu\n        sollicitudin. Suspendisse maximus neque eget hendrerit tempus. Aenean\n        finibus est nulla, vel tempor mauris interdum at. Aenean fringilla\n        finibus mauris vitae cursus. Sed pulvinar accumsan justo. Quisque\n        vehicula erat arcu, sit amet rhoncus augue bibendum nec. Class aptent\n        taciti sociosqu ad litora torquent per conubia nostra, per inceptos\n        himenaeos. Nunc convallis eget nisi et euismod. Sed euismod aliquet\n        interdum. Nulla aliquam at ipsum condimentum porttitor. Curabitur\n        sagittis ipsum nec odio fermentum feugiat. Vestibulum id lorem\n        sollicitudin, tempor leo sodales, elementum dui. Morbi scelerisque erat\n        dolor, at accumsan mi rhoncus id. Suspendisse at faucibus purus. Aenean\n        ac lectus molestie, tincidunt quam at, imperdiet arcu. Duis dictum\n        feugiat tortor eget volutpat. Aliquam erat volutpat. Quisque eleifend\n        congue lorem, ut tempor dui fermentum vel. Duis vitae venenatis tortor.\n        Sed molestie mauris eget tempus tincidunt. Donec varius nunc vel ante\n        vehicula, sit amet mollis est sollicitudin. Pellentesque felis sapien,\n        pulvinar et aliquet volutpat, pretium sit amet orci. Nulla et fermentum\n        nisl. Ut maximus urna sed rhoncus scelerisque. Etiam faucibus tempus\n        arcu, non bibendum leo. Nullam ac dui dapibus, posuere orci et, tempus\n        enim. Nam velit nibh, imperdiet ac est in, dictum viverra justo. Aliquam\n        eu molestie ligula. Nulla vitae est quis felis facilisis pharetra. Nulla\n        ut dolor tempus, pellentesque arcu vitae, efficitur nibh. Proin sed\n        pharetra orci. Integer sit amet odio ut arcu malesuada maximus id non\n        lorem. Fusce imperdiet cursus ligula, at tristique nulla vehicula nec.\n        Fusce rhoncus neque quam, vitae consequat odio pellentesque finibus.\n        Curabitur dapibus dolor a lobortis faucibus. Curabitur cursus, augue a\n        varius porta, diam metus gravida urna, id pellentesque neque lectus in\n        nunc. Vivamus fermentum porttitor cursus. Nunc magna neque, dignissim et\n        malesuada vitae, convallis maximus nunc. Ut facilisis, mi vitae dapibus\n        convallis, sem dolor fringilla neque, a rutrum odio tellus dictum\n        ligula. Nulla quis consequat nunc, in molestie eros. Curabitur nec\n        pulvinar nisl, pellentesque dapibus mauris.\n      </Text>\n    </ScrollView>\n  );\n};\n\nexport default ScrollExample;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "f0196036-e13f-41f7-963f-4522ad912488",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "StyleSheet",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "fdfad700-df66-412f-bfd3-f19daa1227df",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É uma abstração de CSS dentro do ReactNative.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6c78cdcc-502c-404e-97b1-7d1b23a72f9e",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { StyleSheet, Text, View } from 'react-native';\n\nconst StyledComponent = () => {\n  return (\n    <View style={styles.container}>\n      <Text style={styles.title}>React Native</Text>\n    </View>\n  );\n};\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    padding: 24,\n    backgroundColor: '#eaeaea',\n  },\n  title: {\n    textAlign: 'center',\n    padding: 8,\n    borderWidth: 4,\n    borderColor: '#20232a',\n    borderRadius: 6,\n    backgroundColor: '#61dafb',\n    color: '#20232a',\n    fontSize: 30,\n    fontWeight: 'bold',\n  },\n});\n\nexport default StyledComponent;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d4e91527-5516-4ff8-9dc4-d713911d730e",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Button",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "d0f536f0-d0d7-441a-a911-26848cf9cbe8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Botão básico que renderiza graciosamente em qualquer plataforma. Tem suporte a customização básica.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "10d08df8-153d-46fa-813c-3e7fa5ba8a08",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { Button } from 'react-native';\n\nconst MyButton = () => {\n  return (\n    <Button title=\"My button\" onPress={() => console.log('Button clicked')} />\n  );\n};\n\nexport default MyButton;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "37d71750-e32a-4ce3-bc59-00c7c87d9906",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pressable",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "81f8d65f-9290-4378-8eb7-f9575e56d9d9",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Componente utilizado para detectar as diferentes interações de um elemento \"clicavel\"",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "111a3d9b-72ff-49dd-976f-1b4f398a88fc",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { Pressable, Text } from 'react-native';\n\nconst MyPressable = () => {\n  const onPressIn = () => console.log('Pressed in');\n  const onPressOut = () => console.log('Pressed out');\n  const onLongPress = () => console.log('Long press');\n\n  return (\n    <Pressable\n      onPressIn={onPressIn}\n      onPressOut={onPressOut}\n      onLongPress={onLongPress}\n    >\n      <Text>I'm clickable</Text>\n    </Pressable>\n  );\n};\n\nexport default MyPressable;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "dbd4d9bb-b847-4c9c-b451-041a1b6b03b8",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "TouchableOpacity",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "2252dc34-c2ff-488d-96e7-40c83ce57b83",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Funciona como o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Pressable",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", adicionando um efeito de animação ao clicar no elemento",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "88d3170c-65e5-46d3-a5c2-0fe9eaf2092b",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { TouchableOpacity, Text } from 'react-native';\n\nconst MyTouchableOpacity = () => {\n  const onPress = () => console.log('Pressed in');\n\n  return (\n    <TouchableOpacity onPress={onPress}>\n      <Text>I'm clickable</Text>\n    </TouchableOpacity>\n  );\n};\n\nexport default MyTouchableOpacity;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "4e24959e-eaed-4fdc-b690-97a7874996ba",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "FlatList",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "5f2f017e-9208-4096-9016-9b52252c929a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma interface performática para renderizar listas básicas, com recursos práticos como cabeçalho e rodapé, por exemplo.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "305569ba-99f9-4b1c-a133-ca7a8c85d5dd",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { FlatList, View, Text } from 'react-native';\n\nconst DATA = Array.from({ length: 20 }, (x, index) => {\n  return { id: index, title: `Item ${index}` };\n});\n\nconst Item = ({ title }: { title: string }) => {\n  return (\n    <View>\n      <Text>{title}</Text>\n    </View>\n  );\n};\n\nconst MyList = () => {\n  return (\n    <FlatList\n      data={DATA}\n      keyExtractor={(item) => item.id.toString()}\n      renderItem={({ item }) => <Item title={item.title} />}\n    />\n  );\n};\n\nexport default MyList;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "9a392d0c-4e69-4429-8d1d-f589fa3d364d",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "SectionList",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "4ea8f9ec-8f42-47a8-bf22-700c040b32f9",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Quase as mesmas funcionalidades da FlatList, porém é possível criar seções dentro da lista.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "73414d5d-74f3-4a46-8826-f5e04b889711",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { SectionList, View, Text } from 'react-native';\n\nconst DATA = [\n  {\n    id: 1,\n    title: 'Main Dishes',\n    data: ['Pizza', 'Burger', 'Risotto'],\n  },\n  {\n    id: 2,\n    title: 'Sides',\n    data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],\n  },\n  {\n    id: 3,\n    title: 'Drinks',\n    data: ['Water', 'Coke', 'Beer'],\n  },\n];\n\nconst Header = ({ title }: { title: string }) => {\n  return (\n    <View>\n      <Text style={{ fontWeight: 'bold', fontSize: 36 }}>{title}</Text>\n    </View>\n  );\n};\n\nconst Item = ({ title }: { title: string }) => {\n  return (\n    <View>\n      <Text>{title}</Text>\n    </View>\n  );\n};\n\nconst MySectionList = () => {\n  return (\n    <SectionList\n      sections={DATA}\n      renderSectionHeader={(item) => <Header title={item.section.title} />}\n      renderItem={({ item }) => <Item title={item} />}\n    />\n  );\n};\n\nexport default MySectionList;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "8a2f8838-7387-4401-8271-66e69d205f20",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "ActivityIndicator",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "e694310b-c347-4e5d-bbd3-1ceb8ae65965",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Renderiza um indicador de loading.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b122579f-3559-4d3a-a9cb-c396616d81f8",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { ActivityIndicator, View, StyleSheet } from 'react-native';\n\nconst Loading = () => {\n  return (\n    <View style={styles.container}>\n      <ActivityIndicator size=\"large\" />\n      <ActivityIndicator size=\"small\" color=\"#0000ff\" />\n      <ActivityIndicator size=\"large\" color=\"#00ff00\" />\n    </View>\n  );\n};\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    justifyContent: 'center',\n    flexDirection: 'row',\n    padding: 10,\n  },\n});\n\nexport default Loading;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "8fb2f780-00db-4c16-8293-e6a794713077",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Alert",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "cd827cb9-67f7-42b5-904e-d5f0fe41d694",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Mostra um diálogo de alerta que contém um título e uma mensagem.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f475a371-ead2-4487-854a-65ed0869270f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { View, Alert, Button } from 'react-native';\n\nconst showDialog = () => {\n  Alert.alert('Alert title', 'My alert message', [\n    {\n      text: 'Cancel',\n      onPress: () => console.log('Cancel pressed'),\n      style: 'cancel',\n    },\n    { text: 'OK', onPress: () => console.log('OK pressed') },\n  ]);\n};\n\nconst showDestructiveDialog = () => {\n  Alert.alert('Alert title', 'My alert message', [\n    {\n      text: 'Cancel',\n      onPress: () => console.log('Cancel pressed'),\n      style: 'cancel',\n    },\n    {\n      text: 'Close',\n      onPress: () => console.log('Close pressed'),\n      style: 'destructive',\n    },\n    { text: 'OK', onPress: () => console.log('OK pressed') },\n  ]);\n};\n\nconst MyDialog = () => {\n  return (\n    <View>\n      <Button title=\"2-Button alert\" onPress={showDialog} />\n      <Button title=\"3-Button alert\" onPress={showDestructiveDialog} />\n    </View>\n  );\n};\n\nexport default MyDialog;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "817538ab-1b4c-4590-ac5f-71c3404f6754",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Animated",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "fd9353e5-7296-4d65-956a-1dabb2702417",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Utilizado para realizar animações de forma fluída e simples.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a3c028ef-d6b6-40d9-92e9-cbabbcad7d8d",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { useRef } from 'react';\nimport { Animated, Text, View, Button } from 'react-native';\n\nconst MyAnimation = () => {\n  const fadeAnimation = useRef(new Animated.Value(0)).current;\n\n  const fadeIn = () => {\n    Animated.timing(fadeAnimation, {\n      toValue: 1,\n      duration: 5000,\n      useNativeDriver: true,\n    }).start();\n  };\n\n  const fadeOut = () => {\n    Animated.timing(fadeAnimation, {\n      toValue: 0,\n      duration: 5000,\n      useNativeDriver: true,\n    }).start();\n  };\n\n  return (\n    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>\n      <Animated.View style={{ opacity: fadeAnimation }}>\n        <Text>Fading view</Text>\n      </Animated.View>\n      <View>\n        <Button title=\"Fade in text\" onPress={fadeIn} />\n        <Button title=\"Fade out text\" onPress={fadeOut} />\n      </View>\n    </View>\n  );\n};\n\nexport default MyAnimation;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "5978069e-9159-406c-897a-7406faa70129",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Linking",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "1c9539e1-7bc0-4f9f-9919-06751dbb15f8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Componente utilizado para abrir links. Importante ressaltar que abrirá o link da respectiva aplicação, caso haja algum suporte no dispositivo.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2d084874-0607-458d-b1cb-2a76c5525dcc",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { useCallback } from 'react';\nimport { Alert, Button, Linking, View } from 'react-native';\n\nconst supportedURL = 'https://google.com';\nconst unsupportedURL = 'slack://open?team=123456';\n\ntype ButtonProps = { url: string; title: string };\n\nconst OpenURLButton = ({ url, title }: ButtonProps) => {\n  const handleClick = useCallback(async () => {\n    const supported = await Linking.canOpenURL(url);\n    if (supported) {\n      await Linking.openURL(url);\n    } else {\n      Alert.alert(`Don't know how to handle this URL: ${url}`);\n    }\n  }, [url]);\n\n  return <Button title={title} onPress={handleClick} />;\n};\n\nconst Links = () => {\n  return (\n    <View>\n      <OpenURLButton title=\"Open Supported URL\" url={supportedURL} />\n      <OpenURLButton title=\"Open Unsupported URL\" url={unsupportedURL} />\n    </View>\n  );\n};\n\nexport default Links;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "14587538-e4d0-442d-83a9-fec61d908cad",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Modal",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "ee2049a8-e07c-4259-a94e-1cc280c3a2d8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Abre o conteúdo por cima do conteúdo atual.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dd098751-a216-4eef-94e8-4f2b720d48a5",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { useState } from 'react';\nimport { View, Modal, Text, Button, StyleSheet } from 'react-native';\n\nconst MyModal = () => {\n  const [isVisible, setIsVisible] = useState(false);\n\n  const onModalClosed = () => {\n    setIsVisible(false);\n  };\n\n  return (\n    <View style={styles.centeredView}>\n      <Modal\n        animationType=\"slide\"\n        transparent={true}\n        visible={isVisible}\n        onRequestClose={onModalClosed}\n      >\n        <View style={[styles.centeredView, styles.modalView]}>\n          <Text style={styles.textStyle}>Hello world!</Text>\n          <Button title=\"Close Modal\" onPress={onModalClosed} />\n        </View>\n      </Modal>\n      <Button title=\"Show Modal\" onPress={() => setIsVisible(true)} />\n    </View>\n  );\n};\n\nconst styles = StyleSheet.create({\n  centeredView: {\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center',\n    marginTop: 22,\n  },\n  modalView: {\n    margin: 20,\n    backgroundColor: 'white',\n    borderRadius: 20,\n    padding: 35,\n    alignItems: 'center',\n    shadowColor: '#000',\n    shadowOffset: {\n      height: 2,\n      width: 0,\n    },\n  },\n  textStyle: {\n    fontWeight: 'bold',\n    textAlign: 'center',\n  },\n});\nexport default MyModal;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "165b84dd-e3e2-4387-92fe-1c1018b6ca45",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "PixelRatio",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "b375455e-5eed-45ef-9912-7020c105db6a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Componente para descobrir qual a densidade de pixel do dispositivo.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c208806d-e5be-4ab6-942d-577e869d378f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import {\n  PixelRatio,\n  Image,\n  ScrollView,\n  Text,\n  View,\n  StyleSheet,\n} from 'react-native';\n\nconst size = 50;\n\nconst cat = {\n  uri: 'https://reactnative.dev/docs/assets/p_cat1.png',\n  width: size,\n  height: size,\n};\n\nconst MyPixelRatio = () => {\n  return (\n    <ScrollView>\n      <View style={styles.container}>\n        <Text>Current pixel ratio is:</Text>\n        <Text>{PixelRatio.get()}</Text>\n      </View>\n      <View style={styles.container}>\n        <Text>Current font scale is:</Text>\n        <Text>{PixelRatio.getFontScale()}</Text>\n      </View>\n      <View style={styles.container}>\n        <Text>On this device images with a layout width of</Text>\n        <Text>{size} px</Text>\n        <Image source={cat} />\n      </View>\n      <View style={styles.container}>\n        <Text>requires images with a pixel width of</Text>\n        <Text>{PixelRatio.getPixelSizeForLayoutSize(size)}</Text>\n        <Image\n          source={cat}\n          style={{\n            width: PixelRatio.getPixelSizeForLayoutSize(size),\n            height: PixelRatio.getPixelSizeForLayoutSize(size),\n          }}\n        />\n      </View>\n    </ScrollView>\n  );\n};\n\nconst styles = StyleSheet.create({\n  container: {\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n});\n\nexport default MyPixelRatio;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "bc366d39-05f3-4571-ad61-2fd96a53c277",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "RefreshControl",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "cd27245d-0616-43e9-8e52-48afaeb76e69",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Utilizado dentro de um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "ScrollView",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e de um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": ", é responsável por manipular a funcionalidade ",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "PullToRefresh`.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ba650650-e990-4bc1-919d-d4be6ee1ecd8",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { useState, useCallback } from 'react';\nimport { RefreshControl, ScrollView, StyleSheet, Text } from 'react-native';\n\nconst MyRefreshControl = () => {\n  const [isRefreshing, setIsRefreshing] = useState(false);\n\n  const onRefresh = useCallback(() => {\n    setIsRefreshing(true);\n    setTimeout(() => {\n      setIsRefreshing(false);\n    }, 2000);\n  }, []);\n\n  return (\n    <ScrollView\n      refreshControl={\n        <RefreshControl refreshing={isRefreshing} onRefresh={onRefresh} />\n      }\n    >\n      <Text>Pull down to see RefreshControl indicator</Text>\n    </ScrollView>\n  );\n};\n\nexport default MyRefreshControl;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d323eeaf-2cee-40ac-965b-eff418cba9ac",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "StatusBar",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "6d4df373-0fee-48d3-8e3c-37f2153b3ce3",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Controla a ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "StatusBar",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " do aplicativo. Apesar dela ser do sistema operacional, dentro da sua aplicação pode ter um estilo/comportamento diferente.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "eaf75f19-1006-4bc2-a14f-503230284311",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { useState } from 'react';\nimport { Button, View, Text, StatusBar, StatusBarStyle } from 'react-native';\n\nconst STYLES: StatusBarStyle[] = ['default', 'light-content', 'dark-content'];\n\nconst MyStatusBar = () => {\n  const [isHidden, setIsHidden] = useState(false);\n  const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);\n\n  const changeStatusBarVisibility = () => setIsHidden(!isHidden);\n\n  const changeStatusBarStyle = () => {\n    const styleId = STYLES.indexOf(statusBarStyle) + 1;\n    setStatusBarStyle(styleId === STYLES.length ? STYLES[0] : STYLES[styleId]);\n  };\n\n  return (\n    <View style={{ padding: 20 }}>\n      <StatusBar\n        animated={true}\n        backgroundColor=\"#61dafb\"\n        barStyle={statusBarStyle}\n        hidden={isHidden}\n      />\n      <Text>Status Bar Visibility: {isHidden ? 'hidden' : 'visible'}</Text>\n      <Text>Status Bar style: {statusBarStyle}</Text>\n      <View>\n        <Button title=\"Toggle status bar\" onPress={changeStatusBarVisibility} />\n        <Button\n          title=\"Change status bar style\"\n          onPress={changeStatusBarStyle}\n        />\n      </View>\n    </View>\n  );\n};\n\nexport default MyStatusBar;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d19ce9ef-7064-4bc8-977b-666013f5721c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
