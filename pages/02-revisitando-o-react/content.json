@@ -330,7 +330,7 @@
                 },
                 {
                   "type": "text",
-                  "text": "[Nextjs](https://nextjs.org/)",
+                  "text": "Nextjs",
                   "styles": {
                     "code": true
                   }
@@ -342,7 +342,7 @@
                 },
                 {
                   "type": "text",
-                  "text": "[Expo](https://expo.dev/)\n",
+                  "text": "Expo\n",
                   "styles": {
                     "code": true
                   }
