@@ -341,15 +341,11 @@
                   "styles": {}
                 },
                 {
-                  "type": "link",
-                  "href": "https://expo.dev",
-                  "content": [
-                    {
-                      "type": "text",
-                      "text": "Expo\n",
-                      "styles": {}
-                    }
-                  ]
+                  "type": "text",
+                  "text": "Expo\n",
+                  "styles": {
+                    "code": true
+                  }
                 },
                 {
                   "type": "text",
