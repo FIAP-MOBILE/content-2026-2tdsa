@@ -1,0 +1,1704 @@
+{
+  "blocks": [
+    {
+      "id": "12d78f97-08be-4a9c-ab4e-a69dcac99ff0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "27c69a08-d123-4f5d-b9a0-654d1ee54b50",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Introdução",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "c1905f2e-ef51-47e1-99ff-b42a4fc40aec",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Toda aplicação tem múltiplas telas a serem exibidas. E para isso, é utilizado o recurso de\nnavegação.\nNo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React Native",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " existe a biblioteca ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React Navigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " que atende esse próposito.\nÉ uma biblioteca de terceiros, ou seja, não foi criada pelo time do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", mas é ",
+              "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://reactnative.dev/docs/navigation",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "oficialmente sugerida por eles",
+                  "styles": {}
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "2affadf4-4855-4960-b4c9-c8b608db8b87",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Instalação",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "d6aae074-cc1d-4c18-9e24-b2b06fec6656",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para instalar a React Navigation, dentro do diretório do seu projeto basta rodar o\ncomando:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npm install @react-navigation/native",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0a043778-51af-444a-8da5-01efe5a59144",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para funcionar corretamente no Android, deve-se instalar mais duas bibliotecas:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npm install react-native-screens react-native-safe-area-context",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "94382355-6f47-4116-988c-78a669a41e49",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Se é um projeto feito com o Expo:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npx expo install react-native-screens react-native-safe-area-context",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b883c67b-7f4c-4964-b27a-1dd11c90090e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para a navegação funcionar no iOS, rode o seguinte comando dentro da pasta do projeto:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npx pod-install ios\n",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "Ele vai realizar a instalação de componentes necessários dentro da estrutura do projeto do iOS que o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React Navigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " necessita para funcionar corretamente.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2ea5e798-de9d-4071-a813-e458860a08dd",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No Android, ainda é necessário alterar um arquivo Java para funcionar corretamente.\nNa estrutura do seu projeto, localize o arquivo no caminho:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "android/app/src/main/java/com/<nome do seu projeto>/MainActivity.kt\n",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "Dentro desse arquivo, a primeira deve ser algo do tipo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "22da008b-40f6-4902-b62e-84e3601775ad",
+          "type": "codeBlock",
+          "props": {
+            "language": "java"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "package com.exemplo;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "888695bb-f6cd-4422-931c-01fa068a9087",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Após essa linha, coloque a linha:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e6d4ed48-59c1-496e-9008-1a99777027c8",
+          "type": "codeBlock",
+          "props": {
+            "language": "java"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import android.os.Bundle;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b5200e7a-3191-4285-a448-34520aee7591",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ainda no arquivo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "MainActivity.kt",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", dentro da classe MainActivity vai ter um metódo chamado ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "getMainComponentName",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Após esse metódo, adicionar o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "onCreate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", ficando igual conforme código a seguir:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "34ba7251-21d2-438b-8b40-66e3071cb928",
+          "type": "codeBlock",
+          "props": {
+            "language": "kotlin"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "class MainActivity : ReactActivity() {\n\n  /**\n   * Returns the name of the main component registered from JavaScript. This is used to schedule\n   * rendering of the component.\n   */\n  override fun getMainComponentName(): String = \"myapp\"\n\n  override fun onCreate(savedInstanceState: Bundle?) {\n    super.onCreate(null)\n  }\n  ...\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ca7a3ae6-ca45-460d-9463-66981e2b6259",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Utilização",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "21f71882-bf7e-4bfd-a105-9fcc60811403",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Feito todos os procedimentos, sua aplicação está pronta para utilizar a biblioteca. O seu arquivo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "App.tsx",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " deverá importar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "NavigationContainer",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e englobar toda sua aplicação dentro dele. Exemplo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "09ed4898-2d04-4bdb-93d9-2049d67d613a",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import React from 'react';\n\nimport { NavigationContainer } from '@react-navigation/native';\n\nfunction App(): React.JSX.Element {\n  return (\n    <NavigationContainer>\n      {/* Código da sua aplicação vai aqui dentro */}\n    </NavigationContainer>\n  );\n}\n\nexport default App;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c2c5416e-7f36-4eb5-b58b-10640d08772d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Por fim, adicione mais uma biblioteca para conseguir criar uma pilha de navegação:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npm install @react-navigation/native-stack",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "44a86e21-c4b0-49dc-bb36-c3a490ffba82",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ainda seguindo a estrutura anterior, dentro do seu ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "NavigationContainer",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", deve-se criar seu ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " (pilha) de navegação. Para isso, precisa realizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "import",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " do\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "createNativeStackNavigator",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". E dentro dele, basta adicionar as telas.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "617dd3df-6fae-4e39-a9d9-9ff9bf1cd4c1",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { createNativeStackNavigator } from '@react-navigation/native-stack';\n\nconst Stack = createNativeStackNavigator();\n\nfunction App() {\n  return (\n    <NavigationContainer>\n      <Stack.Navigator>\n        <Stack.Screen name=\"home\" component={Home} />\n      </Stack.Navigator>\n    </NavigationContainer>\n  );\n}",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c29f2693-4a23-40b0-a682-e4633b6c191b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Cada ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack.Screen",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é uma tela que sua aplicação vai conter e pode ser utilizada na sua pilha de navegação. A propriedade ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "name",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é uma identificação única, que é utilizada para chamar a tela. A propriedade ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "component",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " determina o que vai ser renderizado.\nA ordem de um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack.Screen",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é relevante apenas para determinar qual será a primeira tela exibida quando o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack.Navigator",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " for renderizado. Tirando isso, a ordem das telas pode ser aleatória, visto que pelo código que você controla a navegação.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "523f94bb-ff98-4437-91e0-40243ca0a12a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "E como navegamos de uma tela para outra?\nSupondo que sua aplicação tenha uma tela de ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Login",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " que vai pra uma tela de detalhes.\nO componente de ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Login",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " tem o seguinte código:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2e0d5135-a8c0-41bc-a9ce-792ae621a3f0",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { Button, Text, TextInput, ScrollView } from 'react-native';\n\nconst Login = () => {\n  return (\n    <ScrollView>\n      <Text>User</Text>\n      <TextInput placeholder=\"email\" keyboardType=\"email-address\" />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" secureTextEntry={true} />\n      <Button title=\"Login\" />\n    </ScrollView>\n  );\n};\n\nexport default Login;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "45c498b5-bebc-4c9e-a3ca-d8a4aa1c797a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Tela de detalhes:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8831a897-9c95-4aeb-943f-9287d590d480",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { View, Text, Button } from 'react-native';\n\nconst Details = () => {\n  return (\n    <View>\n      <Text>Details</Text>\n      <Button title=\"Go to details\" />\n    </View>\n  );\n};\n\nexport default Details;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4bfcd9d3-34c8-4a37-afc7-cc59c24002a2",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Dessa forma, o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack.Navigator",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " fica assim:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "278e76d2-3a84-4eb5-8c5c-50c0297f20a3",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import React from 'react';\n\nimport { NavigationContainer } from '@react-navigation/native';\nimport { createNativeStackNavigator } from '@react-navigation/native-stack';\nimport Login from './Screens/Login';\nimport Details from './Screens/Details';\n\nexport type RootStackParamList = {\n  Login: undefined;\n  Details: undefined;\n};\n\nconst Stack = createNativeStackNavigator<RootStackParamList>();\n\nfunction App(): React.JSX.Element {\n  return (\n    <NavigationContainer>\n      <Stack.Navigator>\n        <Stack.Screen name=\"Login\" component={Login} />\n        <Stack.Screen name=\"Details\" component={Details} />\n      </Stack.Navigator>\n    </NavigationContainer>\n  );\n}\n\nexport default App;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "18e25bac-d683-4ef3-ae3a-840325d7222d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Como se pode notar, foi criado um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " chamado ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "RootStackParamList",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e utilizado no momento de criação do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", sendo passado como argumento genérico do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "createNativeStackNavigator",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Com isso, durante a definição das telas que o aplicativo possui, só podem ser considerados apenas os atributos dentro do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "RootStackParamList",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "540b6b99-3e60-434d-8ed5-26d466926019",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Isso é o suficiente? Não! Eu apenas coloquei minhas telas no Stack, porém eu não realizo nenhuma navegação entre elas.\nO ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack.Screen",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " passa para o componente um objeto ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", que pode ser recuperado do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "props",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Sendo assim, o componente de ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Login",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " fica da seguinte forma:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c9e4eaf8-e6e5-4f6d-b1a2-5562b8b00cb4",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { Button, Text, TextInput, ScrollView } from 'react-native';\nimport { NativeStackScreenProps } from '@react-navigation/native-stack';\nimport { RootStackParamList } from '../App';\n\nconst Login = (props: NativeStackScreenProps<RootStackParamList>) => {\n  const { navigation } = props;\n  return (\n    <ScrollView>\n      <Text>User</Text>\n      <TextInput placeholder=\"email\" keyboardType=\"email-address\" />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" secureTextEntry={true} />\n      <Button title=\"Login\" onPress={() => navigation.navigate('Details')} />\n    </ScrollView>\n  );\n};\n\nexport default Login;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f3d70d72-d09f-4743-baa2-5ea158bd9b56",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Olhando melhor o código do componente ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Login",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", nota-se que no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "onPress",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Button",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", é utilizado o objeto ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", que possui o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", onde eu passo o nome da tela para qual a aplicação deve navegar.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "54145e30-1e6a-411c-aa2f-226614879b06",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É possível passar dados de uma tela para outra.\nPrimeiro, deve-se alterar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "RootStackParamList",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " para ficar da seguinte forma:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "896f007d-7eb1-4097-acd3-47d91229dfdb",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "export type RootStackParamList = {\n  Login: undefined;\n  Details: { id: number };\n};",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f74ff09b-f2c9-4a16-915f-64667129f1ab",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao chamar o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", basta passar o objeto no segundo paramêtro, por exemplo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "65652ef1-af88-45ce-a845-274aeaa5fe13",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "navigation.navigate('Details', { id: Math.random() });",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "03c65e38-e975-4783-af10-9bc431328ebc",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Na tela de destino, dentro do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "props",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " existe além do navigation, o objeto ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "route",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Exemplo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "11a6d778-d664-4041-bdd1-ed993ef1d38f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { NativeStackScreenProps } from '@react-navigation/native-stack';\nimport { View, Text, Button } from 'react-native';\nimport { RootStackParamList } from '../App';\n\nconst Details = (\n  props: NativeStackScreenProps<RootStackParamList, 'Details'>,\n) => {\n  const { route } = props;\n  const { id } = route.params;\n  return (\n    <View>\n      <Text>Details {id.toString()}</Text>\n      <Button title=\"Go to details\" />\n    </View>\n  );\n};\n\nexport default Details;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "faa5828c-0036-4352-ba54-cd8b19277d9a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso a passagem de dados para outra tela seja opcional, basta mudar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "type",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " com suas telas para ficar da seguinte forma:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "794889f3-92a7-40b6-86bd-f0373d36003d",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "export type RootStackParamList = {\n  Login: undefined;\n  Details?: { id: number };\n};",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d3fab10b-2108-463e-943b-ab1547a32962",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Dessa forma, agora é possível navegar para outra tela onde a passagem de dados é opcional:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "21fa2a74-9dff-4f53-b648-449136696923",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "// Passando dados\nnavigation.navigate('Details', { id: Math.random() });\n\n// Sem passar dados\nnavigation.navigate('Details');",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "669dc847-b4a4-43fc-9afa-79af30e42737",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Além do método ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", também existe o método ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "push",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " para navegar entre telas.\nQual a diferença entre eles?",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "25a29fb5-8a3d-4603-80ed-bf75ede224b2",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "navigate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> você abre a tela uma única vez. Ou seja, seguindo o exemplo dos slides, se eu estiver na tela de details e chamar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " para details\nnovamente, nada vai acontecer.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "af184804-bdb2-472a-aa07-ac4071147927",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "push",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> você coloca a tela no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " de navegação quantas vezes quiser. Ou seja, se eu estiver na tela de details e chamar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "push",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " para details, ele vai adicionar mais uma tela de details no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Stack",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5d37f04b-90e5-492e-8e45-845f47dedebb",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Além dos métodos para ir para uma tela, é possível utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "navigate",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " para tirar telas da pilha de navegação.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f7de69b9-628c-4f5d-b3ff-981a85b258d5",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "pop",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> é um metódo para fechar a tela atual. Aceita um argumento númerico opcional para determinar, quantas telas devem ser tiradas da pilha",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c44c1700-707f-4af5-b59c-9c28b1ddbe0c",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "// Fecha apenas a tela atual\nnavigation.pop();\n\n// Fecha a tela atual e remove mais 2 telas da pilha da navegação\nnavigation.pop(3);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "28be8a3f-bee5-433f-b7bc-4ffb1fd088b1",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "popToTop",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> é um metódo para fechar a tela atual voltar para a primeira tela da pilha de navegação. Exemplo: se durante a navegação, você tem uma tela inicial ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Home",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " que chama uma tela de Detalhes de Usuário, que dessa tela você pode abrir uma nova tela de Detalhes e assim sucessivamente, você pode voltar para a tela ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Home",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " da seguinte forma:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6959b0ff-899f-4a0f-ade5-829d18ae23b2",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "// Fecha apenas a tela atual\nnavigation.popToTop();",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "455bf3ea-ab73-4013-9009-192c69174eae",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Hooks",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "d1edd9d4-f832-4808-b949-48b24baa4a5f",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React Navigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " existem dois hooks que são bem úteis: ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "useNavigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "useRoute",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6371bd9f-913d-461d-abf8-b9d2ef698347",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useNavigation",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> Permite trabalhar com a atual navegação da sua aplicação\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "useRoute",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> Permite trabalhar com os dados passados para tela atual ",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7ce794cb-dc7a-4f9d-aa91-8c0b6f452313",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Exemplo de utilização do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "useNavigation",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "980ae24c-ef90-4b92-8bfb-f7fd376bddc7",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { Button, Text, TextInput, ScrollView } from 'react-native';\nimport { RootStackParamList } from '../App';\nimport { useNavigation } from '@react-navigation/native';\nimport { NativeStackNavigationProp } from '@react-navigation/native-stack';\n\nconst Login = () => {\n  const navigation =\n    useNavigation<NativeStackNavigationProp<RootStackParamList>>();\n\n  return (\n    <ScrollView>\n      <Text>User</Text>\n      <TextInput placeholder=\"email\" keyboardType=\"email-address\" />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" secureTextEntry={true} />\n      <Button title=\"Login\" onPress={() => navigation.navigate('Details')} />\n    </ScrollView>\n  );\n};\n\nexport default Login;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6e204d5c-c599-4e45-b72a-dd8421dc6446",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Exemplo de utilização do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "useRoute",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3b4384fa-b9b3-4e53-a0ae-f4e90ea79ce2",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { View, Text, Button } from 'react-native';\nimport { RootStackParamList } from '../App';\nimport { RouteProp, useRoute } from '@react-navigation/native';\n\nconst Details = () => {\n  const { params } = useRoute<RouteProp<RootStackParamList, 'Details'>>();\n  const { id } = params;\n\n  return (\n    <View>\n      <Text>Details {id.toString()}</Text>\n      <Button title=\"Go to details\" />\n    </View>\n  );\n};\n\nexport default Details;",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "32e06006-a487-470e-a0e3-050fdf5ca68e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
