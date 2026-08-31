@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p>Seu aplicativo pode precisar em algum momento de utilizar os recursos do sistema operacional, como a camera, lista de contatos, armazenamento, etc.<br>Para isso, deve ser solicitado ao usuário permissão para acessar tais recursos. O conteúdo desta aula irá detalhar como abordar e utilizar essa parte de permissões.</p>
+<hr>
+<p>No <code>Android</code>, temos o seguinte fluxo<br><img src="https://developer.android.com/static/images/training/permissions/workflow-overview.svg" alt="height:600px"></p>
+<hr>
+<p>Ainda no <code>Android</code>, quando o usuário solicita alguma permissão, o fluxo é descrito conforme imagem a seguir<br><img src="https://developer.android.com/static/images/training/permissions/workflow-runtime.svg" alt="height:600px"></p>
+<hr>
+<p>Já no <code>iOS</code>, funciona da seguinte forma<br><img src="https://blog.logrocket.com/wp-content/uploads/2021/08/ios-permissions-flow-e1628718247302.png" alt="height:600px"></p>
+<hr>
+<p>No React Native, para conseguir acessar as permissões, existe a biblioteca <a href="https://github.com/zoontek/react-native-permissions"><code>React Native Permissions</code></a><br>Para utiliza-lá, basta instalar com o comando:<br><code>npm install react-native-permissions</code></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p>:warning: <strong>Importante</strong>: No <code>iOS</code>, deve-se fazer um passo adicional para conseguir utlizar essa biblioteca. Neste <a href="https://github.com/zoontek/react-native-permissions#ios">link</a> é possível obter mais detalhes do que deve ser feito</p>
+<hr>
+<p>Uma vez instalada todas as bibliotecas, primeira precisa declarar no aplicativo quais permissões serão utilizadas.<br>Como iremos solicitar a permissão para utilizar camera, iremos colocar suas devidas permissões.</p>
+<ul>
+<li><code>Android</code> -&gt; configure o arquivo <code>AndroidManifest.xml</code> </li>
+<li><code>iOS</code> -&gt; configure o arquivo <code>Info.plist</code>.</li>
+<li><code>Expo</code> -&gt; configure o arquivo <code>app.json</code></li>
+</ul>
+<hr>
+<p>No <code>Android</code>, adicione a linha de permissião da camera no arquivo <code>AndroidManifest.xml</code> da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">xml</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-xml">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+  package=&quot;com.permissions&quot;&gt;
+
+    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+
+    
+    &lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+
+    &lt;application&gt;
+        ...
+    &lt;/application&gt;
+&lt;/manifest&gt;</code></pre></div></div>
+<p>Caso seu projeto seja feito com o <code>Expo</code>:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JSON</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-json">{
+  &quot;android&quot;: {
+    &quot;permissions&quot;: [&quot;android.permission.CAMERA&quot;]
+  }
+}</code></pre></div></div>
+<hr>
+<p>Caso queira utilizar no <code>iOS</code>, adicione a permissão da camera no <code>Info.plist</code> da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">xml</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+  ...
+  &lt;key&gt;NSCameraUsageDescription&lt;/key&gt;
+  &lt;string&gt;Preciso acessar sua camera porque acho divertido&lt;/string&gt;
+  ...
+&lt;/dict&gt;
+&lt;/plist&gt;</code></pre></div></div>
+<p>Caso seu projeto seja feito com <code>Expo</code>:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JSON</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-json">{
+  &quot;ios&quot;: {
+    &quot;infoPlist&quot;: {
+      &quot;NSCameraUsageDescription&quot;: &quot;Preciso acessar sua camera porque acho divertido&quot;
+    }
+  }
+}</code></pre></div></div>
+<hr>
+<p>:warning: <strong>IMPORTANTE</strong> Caso seu projeto seja feito com o <code>Expo</code>, mude o seu <code>app.json</code> da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JSON</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-json">{
+  ...
+  &quot;plugins&quot;: [
+    [
+      &quot;react-native-permissions&quot;, 
+      { &quot;iosPermissions&quot;: [] }
+    ]
+  ]
+  ...
+}</code></pre></div></div>
+<hr>
+<p>Após realizado as devidas configurações, no seu <code>App.tsx</code> coloque o seguinte código:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span></div><pre><code class="language-javascript">import React, { useEffect, useState } from &quot;react&quot;;
+import { Text, View, Button } from &quot;react-native&quot;;
+
+import { request, PERMISSIONS, check } from &quot;react-native-permissions&quot;;
+
+const App = () =&gt; {
+  const [isGranted, setIsGranted] = useState&lt;boolean&gt;();
+
+  const requestCameraPermission = async () =&gt; {
+    try {
+      const result = await request(PERMISSIONS.ANDROID.CAMERA);
+      setIsGranted(result === &quot;granted&quot;);
+    } catch (error) {
+      setIsGranted(false);
+    }
+  };
+
+  const checkCameraPermission = async () =&gt; {
+    const result = await check(PERMISSIONS.ANDROID.CAMERA);
+    setIsGranted(result === &quot;granted&quot;);
+  };
+
+  useEffect(() =&gt; {
+    checkCameraPermission();
+  }, []);
+
+  return (
+    &lt;View&gt;
+      &lt;Button title=&quot;Solicitar permissão&quot; onPress={requestCameraPermission} /&gt;
+      &lt;Text&gt;Permissão {isGranted ? &quot;concedida&quot; : &quot;negada&quot;}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<hr>
+<p>E então, execute com o comando:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">terminal</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-terminal">npm run android</code></pre></div></div>
+<br>
+
+<p>:warning: <strong>IMPORTANTE</strong> Um projeto feito com o <code>Expo</code>, toda vez que mudar as permissões deve rodar o seguinte comando:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code>npx expo prebuild</code></pre></div></div>
+<hr>
+<p>No código de exemplo, é utilizada a função <code>request</code> para solicitar ao usuário a permissão do usuário para acessar a camera.<br>Ela exige apenas um argumento, que é a permissão que será solicitada ao usuário.<br>Além da função <code>request</code>, temos também a função <code>check</code>, cuja implementação apenas verifica qual o status da permissão solicitada. A função <code>check</code> <strong>NÃO</strong> irá solicitar ao usuário permissão para acessar o recurso solicitado.<br>Caso queira utilizar múltiplas permissões, para evitar chamar a função <code>check</code>/<code>request</code> múltiplas vezes, existem as funções <code>checkMultiple</code> e <code>requestMultiple</code> onde aceitam uma lista de permissões a ser solicitada ao usuário.</p>
+<hr>
+<p>Quando se solicita/verifica uma permissão, a mesma pode possuir diversos status. A biblioteca <code>React Native Permissions</code> fez uma abstração da seguinte forma:</p>
+<p><code>UNAVAILABLE</code> -&gt; O recurso solicitado não existe no dispositivo<br><code>DENIED</code> -&gt; A permissão para o recurso foi negada<br><code>GRANTED</code> -&gt; Acesso ao recurso foi autorizado pelo usuário<br><code>LIMITED</code> -&gt; Acesso ao recurso foi autorizado pelo usuário, porém com limitações<br><code>BLOCKED</code> -&gt; O acesso ao recuso foi recusado mais de uma vez pelo usuário, causando bloqueio ao seu acesso</p>
+<p></p>
+
+<hr>
+<p>Um recurso interessante que a biblioteca <code>React Native Permissions</code> tem é a função <code>openSettings</code>.<br>Com ela, é possível direto da sua aplicação abrir a parte de configurações.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span><span class="line-number">43</span><span class="line-number">44</span><span class="line-number">45</span></div><pre><code class="language-javascript">import React, { useEffect, useState } from &quot;react&quot;;
+import { Text, View, Button } from &quot;react-native&quot;;
+
+import {
+  request,
+  PERMISSIONS,
+  check,
+  openSettings,
+} from &quot;react-native-permissions&quot;;
+
+const App = () =&gt; {
+  const [isGranted, setIsGranted] = useState&lt;boolean&gt;();
+
+  const requestCameraPermission = async () =&gt; {
+    try {
+      const result = await request(PERMISSIONS.ANDROID.CAMERA);
+      setIsGranted(result === &quot;granted&quot;);
+    } catch (error) {
+      setIsGranted(false);
+    }
+  };
+
+  const checkCameraPermission = async () =&gt; {
+    const result = await check(PERMISSIONS.ANDROID.CAMERA);
+    setIsGranted(result === &quot;granted&quot;);
+  };
+
+  const showSettings = () =&gt; {
+    openSettings(&quot;application&quot;);
+  };
+
+  useEffect(() =&gt; {
+    checkCameraPermission();
+  }, []);
+
+  return (
+    &lt;View&gt;
+      &lt;Button title=&quot;Solicitar permissão&quot; onPress={requestCameraPermission} /&gt;
+      &lt;Button title=&quot;Ver configurações&quot; onPress={showSettings} /&gt;
+      &lt;Text&gt;Permissão {isGranted ? &quot;concedida&quot; : &quot;negada&quot;}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>Abaixo tem uma lista com todas as permissões que os dispositivos atualmente tem.</p>
+<p><a href="https://github.com/zoontek/react-native-permissions#supported-permissions"><code>React Native Permissions</code></a><br><a href="https://developer.android.com/reference/android/Manifest.permission"><code>Android</code></a><br><a href="https://developer.apple.com/documentation/bundleresources/information_property_list/protected_resources"><code>iOS</code></a></p>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
