@@ -75,16 +75,17 @@
     "pages": [
       "03-preparando-o-ambiente",
       "requisies-http",
-      "revisitando-o-javascript",
-      "04-typescript",
-      "05-componentes-do-react-native",
-      "06-usando-o-react-navigation",
       "08-react-navigation-ii",
       "02-revisitando-o-react",
       "09-async-storage",
       "10-context",
       "11-firebase",
-      "12-firebase-firestore"
+      "12-firebase-firestore",
+      "revisitando-o-javascript",
+      "04-typescript",
+      "06-usando-o-react-navigation",
+      "05-componentes-do-react-native",
+      "permisses"
     ],
     "slides": [
       "navega-o"
