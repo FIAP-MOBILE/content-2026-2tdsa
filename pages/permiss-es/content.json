@@ -212,103 +212,1069 @@
           "styles": {}
         }
       ],
-      "children": []
-    },
-    {
-      "id": "42cf299b-7772-43b0-a9fd-40ab47ba44b9",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
+      "children": [
         {
-          "type": "text",
-          "text": "No React Native, para conseguir acessar as permissões, existe a biblioteca ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "React Native Permissions\n",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": "Para utiliza-lá, basta instalar com o comando:\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "npm install react-native-permissions",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "52cbeabb-3519-4b53-9720-84320d54f765",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "⚠️  ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Importante",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ": No ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "iOS",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", deve-se fazer um passo adicional para conseguir utlizar essa biblioteca. Neste ",
-          "styles": {}
-        },
-        {
-          "type": "link",
-          "href": "https://github.com/zoontek/react-native-permissions#ios",
+          "id": "a7cf6064-3f49-47a3-8e96-3773d37eb753",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
           "content": [
             {
               "type": "text",
-              "text": "link",
+              "text": "No React Native, para conseguir acessar as permissões, existe a biblioteca ",
               "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "React Native Permissions\n",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "Para utiliza-lá, basta instalar com o comando:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "npm install react-native-permissions",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3c10ca21-d24e-4d6a-8f48-a172607510ef",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "⚠️  ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Importante",
+              "styles": {
+                "bold": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ": No ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "iOS",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", deve-se fazer um passo adicional para conseguir utlizar essa biblioteca. Neste ",
+              "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://github.com/zoontek/react-native-permissions#ios",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "link",
+                  "styles": {}
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " é possível obter mais detalhes do que deve ser feito",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a9257e53-fb1f-4cdb-8ccc-123a227730f5",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Configuração",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "14ca090c-5a4f-46bf-a887-df1136c99e93",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Uma vez instalada todas as bibliotecas, primeira precisa declarar no aplicativo quais permissões serão utilizadas.\nComo iremos solicitar a permissão para utilizar camera, iremos colocar suas devidas permissões.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "d4ae77f7-dde9-4148-9d3e-71756b00119c",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Android",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " -> configure o arquivo ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "AndroidManifest.xml",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "eb95bc2f-2776-4592-ad2a-c2d881a1154c",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "iOS",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " -> configure o arquivo ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "Info.plist",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ".",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "57174e36-9767-4cb1-b797-d74d53683da6",
+              "type": "bulletListItem",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Expo",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " -> configure o arquivo ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "app.json",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "43b0c000-c1ed-4474-9daf-d11c6502d1e8",
+              "type": "heading",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left",
+                "level": 3,
+                "isToggleable": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Android",
+                  "styles": {}
+                }
+              ],
+              "children": [
+                {
+                  "id": "b8e9c1eb-e4a8-47ad-951f-80e44bd7027a",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "No ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "Android",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": ", adicione a linha de permissião da camera no arquivo ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "AndroidManifest.xml",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " da seguinte forma:",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "ff946661-e7a7-4c87-a318-0dabbf0b1e58",
+                  "type": "codeBlock",
+                  "props": {
+                    "language": "xml"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n  package=\"com.permissions\">\n\n    <uses-permission android:name=\"android.permission.INTERNET\" />\n\n    \n    <uses-permission android:name=\"android.permission.CAMERA\" />\n\n    <application>\n        ...\n    </application>\n</manifest>",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "268a9ffd-14c3-49f9-905d-90c3c68cba7e",
+              "type": "heading",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left",
+                "level": 3,
+                "isToggleable": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "iOS",
+                  "styles": {}
+                }
+              ],
+              "children": [
+                {
+                  "id": "27d32ee5-8e1a-439b-ba33-83e0cdad8b4e",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Caso queira utilizar no ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "iOS",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": ", adicione a permissão da camera no ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "Info.plist",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " da seguinte forma:",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "5d921a29-54fe-4ed1-a19c-a7fe3322274e",
+                  "type": "codeBlock",
+                  "props": {
+                    "language": "xml"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  ...\n  <key>NSCameraUsageDescription</key>\n  <string>Preciso acessar sua camera porque acho divertido</string>\n  ...\n</dict>\n</plist>",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5f6e3d29-43e2-46b7-8169-1deff10703f9",
+              "type": "heading",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left",
+                "level": 3,
+                "isToggleable": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Expo",
+                  "styles": {}
+                }
+              ],
+              "children": [
+                {
+                  "id": "71ee6da3-b3d5-41a0-bab5-155f10eede66",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Caso seu projeto seja feito com o ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "Expo",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": ", mude o seu ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "app.json",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " da seguinte forma:",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "ef78abf0-7424-453d-a35f-1ce310b8554a",
+                  "type": "codeBlock",
+                  "props": {
+                    "language": "json"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  ...\n  {\n    \"android\": {\n      \"permissions\": [\"android.permission.CAMERA\"]\n    }\n  },\n  {\n    \"ios\": {\n      \"infoPlist\": {\n      \"NSCameraUsageDescription\": \"Preciso acessar sua camera porque acho divertido\"\n      }\n    }\n  },\n  \"plugins\": [\n    [\n      \"react-native-permissions\", \n      { \"iosPermissions\": [] }\n    ]\n  ]\n  ...\n}",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " é possível obter mais detalhes do que deve ser feito",
-          "styles": {}
+          "id": "4abf09f8-1674-4101-bc5e-5b4d681d9dfc",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Desenvolvimento",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "d2790c25-2d14-4886-b756-a616a5d6dffa",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Após realizado as devidas configurações, no seu ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "App.tsx",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " coloque o seguinte código:",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "a97e2755-a15d-400f-b336-8c575247be79",
+              "type": "codeBlock",
+              "props": {
+                "language": "javascript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "import React, { useEffect, useState } from \"react\";\nimport { Text, View, Button } from \"react-native\";\n\nimport { request, PERMISSIONS, check } from \"react-native-permissions\";\n\nconst App = () => {\n  const [isGranted, setIsGranted] = useState<boolean>();\n\n  const requestCameraPermission = async () => {\n    try {\n      const result = await request(PERMISSIONS.ANDROID.CAMERA);\n      setIsGranted(result === \"granted\");\n    } catch (error) {\n      setIsGranted(false);\n    }\n  };\n\n  const checkCameraPermission = async () => {\n    const result = await check(PERMISSIONS.ANDROID.CAMERA);\n    setIsGranted(result === \"granted\");\n  };\n\n  useEffect(() => {\n    checkCameraPermission();\n  }, []);\n\n  return (\n    <View>\n      <Button title=\"Solicitar permissão\" onPress={requestCameraPermission} />\n      <Text>Permissão {isGranted ? \"concedida\" : \"negada\"}</Text>\n    </View>\n  );\n};\n\nexport default App;",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "ed0a4cc1-60d6-4615-ba85-7b1a2a7a092b",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "E então, execute com o comando:",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "757670c3-27c4-4d76-8b2c-94e802b1e560",
+              "type": "codeBlock",
+              "props": {
+                "language": "terminal"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "npm run android",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "28716e39-eed0-4895-bf8a-4ca600367255",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [],
+              "children": []
+            },
+            {
+              "id": "bcf93141-76a3-4e7f-9933-83eb0cabf9af",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "⚠️  ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "IMPORTANTE",
+                  "styles": {
+                    "bold": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " Um projeto feito com o ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "Expo",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", toda vez que mudar as permissões deve rodar o seguinte comando:",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "4a79be17-d4e3-4dc7-965b-24c9f5ef417e",
+              "type": "codeBlock",
+              "props": {
+                "language": "javascript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "npx expo prebuild",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "c5acf4ce-de6b-4fa9-953f-a88cf42c683a",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No código de exemplo, é utilizada a função ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "request",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " para solicitar ao usuário a permissão do usuário para acessar a camera.\nEla exige apenas um argumento, que é a permissão que será solicitada ao usuário.\nAlém da função ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "request",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", temos também a função ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "check",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", cuja implementação apenas verifica qual o status da permissão solicitada. A função ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "check",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "NÃO",
+                  "styles": {
+                    "bold": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " irá solicitar ao usuário permissão para acessar o recurso solicitado.\nCaso queira utilizar múltiplas permissões, para evitar chamar a função ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "check",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "/",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "request",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " múltiplas vezes, existem as funções ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "checkMultiple",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " e ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "requestMultiple",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " onde aceitam uma lista de permissões a ser solicitada ao usuário.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "d9bede73-e786-4e63-b4ea-b58597f2950b",
+              "type": "heading",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left",
+                "level": 2,
+                "isToggleable": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Status",
+                  "styles": {}
+                }
+              ],
+              "children": [
+                {
+                  "id": "7d144c28-5bbb-42fc-a521-57251ca3d5d5",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Quando se solicita/verifica uma permissão, a mesma pode possuir diversos status. A biblioteca ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "React Native Permissions",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " fez uma abstração da seguinte forma:",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "ad2011a6-0037-4ee9-bfe2-127cf1302691",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "UNAVAILABLE",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " -> O recurso solicitado não existe no dispositivo\n",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "DENIED",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " -> A permissão para o recurso foi negada\n",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "GRANTED",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " -> Acesso ao recurso foi autorizado pelo usuário\n",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "LIMITED",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " -> Acesso ao recurso foi autorizado pelo usuário, porém com limitações\n",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "BLOCKED",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " -> O acesso ao recuso foi recusado mais de uma vez pelo usuário, causando bloqueio ao seu acesso",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "aa349b92-5e2a-4ce6-9226-4a750c559161",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "d7a10988-231a-4cf8-95b0-6efb750366ff",
+              "type": "heading",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left",
+                "level": 2,
+                "isToggleable": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Configurações do App",
+                  "styles": {}
+                }
+              ],
+              "children": [
+                {
+                  "id": "7c1c6bf6-fd3d-406b-9119-fb8def6d276e",
+                  "type": "paragraph",
+                  "props": {
+                    "backgroundColor": "default",
+                    "textColor": "default",
+                    "textAlignment": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Um recurso interessante que a biblioteca ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "React Native Permissions",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " tem é a função ",
+                      "styles": {}
+                    },
+                    {
+                      "type": "text",
+                      "text": "openSettings",
+                      "styles": {
+                        "code": true
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": ".\nCom ela, é possível direto da sua aplicação abrir a parte de configurações.",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "6f9b40ee-2287-4c91-9f1a-30ed2405de6e",
+                  "type": "codeBlock",
+                  "props": {
+                    "language": "typescript"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "import React, { useEffect, useState } from \"react\";\nimport { Text, View, Button } from \"react-native\";\n\nimport {\n  request,\n  PERMISSIONS,\n  check,\n  openSettings,\n} from \"react-native-permissions\";\n\nconst App = () => {\n  const [isGranted, setIsGranted] = useState<boolean>();\n\n  const requestCameraPermission = async () => {\n    try {\n      const result = await request(PERMISSIONS.ANDROID.CAMERA);\n      setIsGranted(result === \"granted\");\n    } catch (error) {\n      setIsGranted(false);\n    }\n  };\n\n  const checkCameraPermission = async () => {\n    const result = await check(PERMISSIONS.ANDROID.CAMERA);\n    setIsGranted(result === \"granted\");\n  };\n\n  const showSettings = () => {\n    openSettings(\"application\");\n  };\n\n  useEffect(() => {\n    checkCameraPermission();\n  }, []);\n\n  return (\n    <View>\n      <Button title=\"Solicitar permissão\" onPress={requestCameraPermission} />\n      <Button title=\"Ver configurações\" onPress={showSettings} />\n      <Text>Permissão {isGranted ? \"concedida\" : \"negada\"}</Text>\n    </View>\n  );\n};\n\nexport default App;",
+                      "styles": {}
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bdca4bb8-4270-4127-8970-1efdc3640991",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Lista",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "d2d000c9-7db2-493d-a450-350cb1b4cbbe",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Abaixo tem uma lista com todas as permissões que os dispositivos atualmente tem.",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "d23f593b-a375-4716-b552-aef07aa00eb4",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "link",
+                  "href": "https://github.com/zoontek/react-native-permissions#supported-permissions",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "React Native Permissions",
+                      "styles": {}
+                    }
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "441e9e40-10c4-4974-b9e0-ba8b7a75eb88",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "link",
+                  "href": "https://developer.android.com/reference/android/Manifest.permission",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Android",
+                      "styles": {}
+                    }
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "f7f1f8cc-bb99-4e80-9186-da846d1014af",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "link",
+                  "href": "https://developer.apple.com/documentation/bundleresources/information_property_list/protected_resources",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "iOS",
+                      "styles": {}
+                    }
+                  ]
+                }
+              ],
+              "children": []
+            }
+          ]
         }
-      ],
-      "children": []
+      ]
     },
     {
-      "id": "9f01188e-b93b-4ca2-a690-3b66d0da8dc4",
+      "id": "42cf299b-7772-43b0-a9fd-40ab47ba44b9",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
@@ -319,857 +1285,7 @@
       "children": []
     },
     {
-      "id": "132ed13c-7ad3-48ad-8be8-a5c2770563e2",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Uma vez instalada todas as bibliotecas, primeira precisa declarar no aplicativo quais permissões serão utilizadas.\nComo iremos solicitar a permissão para utilizar camera, iremos colocar suas devidas permissões.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "7fd13c0a-742d-436f-be47-33623d7278b5",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Android",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> configure o arquivo ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "AndroidManifest.xml",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "f06d077d-d063-424b-a08a-199bfb44ef2f",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "iOS",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> configure o arquivo ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Info.plist",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ".",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "4b03832a-08aa-4b06-bf75-fa43ebc00bab",
-      "type": "bulletListItem",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Expo",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> configure o arquivo ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "app.json",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "2c2caa52-4c77-4e96-9c77-a688f6865776",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "No ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Android",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", adicione a linha de permissião da camera no arquivo ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "AndroidManifest.xml",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " da seguinte forma:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "01a568e3-9210-4c57-8fb1-8160c6bc96e8",
-      "type": "codeBlock",
-      "props": {
-        "language": "xml"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n  package=\"com.permissions\">\n\n    <uses-permission android:name=\"android.permission.INTERNET\" />\n\n    \n    <uses-permission android:name=\"android.permission.CAMERA\" />\n\n    <application>\n        ...\n    </application>\n</manifest>",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "71245e9a-0400-4dfc-bfcc-cf18a370624f",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Caso seu projeto seja feito com o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Expo",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ":",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "af69151f-68ea-4a91-af3d-1330bb0812f3",
-      "type": "codeBlock",
-      "props": {
-        "language": "json"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "{\n  \"android\": {\n    \"permissions\": [\"android.permission.CAMERA\"]\n  }\n}",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "098c5c02-01a4-4423-8d48-3149fb758215",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Caso queira utilizar no ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "iOS",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", adicione a permissão da camera no ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Info.plist",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " da seguinte forma:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "b07a66ea-1fa7-4564-86d9-862295a04c54",
-      "type": "codeBlock",
-      "props": {
-        "language": "xml"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  ...\n  <key>NSCameraUsageDescription</key>\n  <string>Preciso acessar sua camera porque acho divertido</string>\n  ...\n</dict>\n</plist>",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "5abe2663-77dc-4eeb-8ef0-388900353561",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Caso seu projeto seja feito com ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Expo",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ":",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "d6b2e4cf-3fb3-4d43-81ae-11942ba6c07d",
-      "type": "codeBlock",
-      "props": {
-        "language": "json"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "{\n  \"ios\": {\n    \"infoPlist\": {\n      \"NSCameraUsageDescription\": \"Preciso acessar sua camera porque acho divertido\"\n    }\n  }\n}",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "3cb72fda-c2cd-4b3c-94dc-6c9b1d4e3756",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": ":warning: ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "IMPORTANTE",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " Caso seu projeto seja feito com o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Expo",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", mude o seu ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "app.json",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " da seguinte forma:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "5557181c-7789-44a0-b824-0eb0384d3a22",
-      "type": "codeBlock",
-      "props": {
-        "language": "json"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "{\n  ...\n  \"plugins\": [\n    [\n      \"react-native-permissions\", \n      { \"iosPermissions\": [] }\n    ]\n  ]\n  ...\n}",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "aa6def87-7a95-4d10-9621-e6beccc7cc9c",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Após realizado as devidas configurações, no seu ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "App.tsx",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " coloque o seguinte código:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "6a579353-12f0-4168-9062-8169a53bb468",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "import React, { useEffect, useState } from \"react\";\nimport { Text, View, Button } from \"react-native\";\n\nimport { request, PERMISSIONS, check } from \"react-native-permissions\";\n\nconst App = () => {\n  const [isGranted, setIsGranted] = useState<boolean>();\n\n  const requestCameraPermission = async () => {\n    try {\n      const result = await request(PERMISSIONS.ANDROID.CAMERA);\n      setIsGranted(result === \"granted\");\n    } catch (error) {\n      setIsGranted(false);\n    }\n  };\n\n  const checkCameraPermission = async () => {\n    const result = await check(PERMISSIONS.ANDROID.CAMERA);\n    setIsGranted(result === \"granted\");\n  };\n\n  useEffect(() => {\n    checkCameraPermission();\n  }, []);\n\n  return (\n    <View>\n      <Button title=\"Solicitar permissão\" onPress={requestCameraPermission} />\n      <Text>Permissão {isGranted ? \"concedida\" : \"negada\"}</Text>\n    </View>\n  );\n};\n\nexport default App;",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "1febc234-0015-4f49-be10-a150e72364ce",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "E então, execute com o comando:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "a480e7b7-5fde-4f97-87e6-177e66e0af1b",
-      "type": "codeBlock",
-      "props": {
-        "language": "terminal"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "npm run android",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "3c7099c2-092d-4e74-a4a3-310301656792",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "\n",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "5a386a07-3748-43e1-ad7f-7ed07e476331",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": ":warning: ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "IMPORTANTE",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " Um projeto feito com o ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Expo",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", toda vez que mudar as permissões deve rodar o seguinte comando:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "5887a179-15c7-47d6-8f04-25b4be8ddde6",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "npx expo prebuild",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "3d0a7f59-c5ef-488d-ba72-03bf11a9888e",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "No código de exemplo, é utilizada a função ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "request",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " para solicitar ao usuário a permissão do usuário para acessar a camera.\nEla exige apenas um argumento, que é a permissão que será solicitada ao usuário.\nAlém da função ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "request",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", temos também a função ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "check",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", cuja implementação apenas verifica qual o status da permissão solicitada. A função ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "check",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "NÃO",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " irá solicitar ao usuário permissão para acessar o recurso solicitado.\nCaso queira utilizar múltiplas permissões, para evitar chamar a função ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "check",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": "/",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "request",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " múltiplas vezes, existem as funções ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "checkMultiple",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " e ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "requestMultiple",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " onde aceitam uma lista de permissões a ser solicitada ao usuário.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "4a60661a-23be-4bd3-be27-8d3fef7a8b60",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Quando se solicita/verifica uma permissão, a mesma pode possuir diversos status. A biblioteca ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "React Native Permissions",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " fez uma abstração da seguinte forma:",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "b35f8eb5-5ea0-4f49-98a8-701bde64290a",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "UNAVAILABLE",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> O recurso solicitado não existe no dispositivo\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "DENIED",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> A permissão para o recurso foi negada\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "GRANTED",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> Acesso ao recurso foi autorizado pelo usuário\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "LIMITED",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> Acesso ao recurso foi autorizado pelo usuário, porém com limitações\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "BLOCKED",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " -> O acesso ao recuso foi recusado mais de uma vez pelo usuário, causando bloqueio ao seu acesso",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "152967f8-84f7-4413-bb51-ca84a3c26f84",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Um recurso interessante que a biblioteca ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "React Native Permissions",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " tem é a função ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "openSettings",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ".\nCom ela, é possível direto da sua aplicação abrir a parte de configurações.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "0165c357-127e-48ce-87af-1367fbe50e97",
-      "type": "codeBlock",
-      "props": {
-        "language": "javascript"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "import React, { useEffect, useState } from \"react\";\nimport { Text, View, Button } from \"react-native\";\n\nimport {\n  request,\n  PERMISSIONS,\n  check,\n  openSettings,\n} from \"react-native-permissions\";\n\nconst App = () => {\n  const [isGranted, setIsGranted] = useState<boolean>();\n\n  const requestCameraPermission = async () => {\n    try {\n      const result = await request(PERMISSIONS.ANDROID.CAMERA);\n      setIsGranted(result === \"granted\");\n    } catch (error) {\n      setIsGranted(false);\n    }\n  };\n\n  const checkCameraPermission = async () => {\n    const result = await check(PERMISSIONS.ANDROID.CAMERA);\n    setIsGranted(result === \"granted\");\n  };\n\n  const showSettings = () => {\n    openSettings(\"application\");\n  };\n\n  useEffect(() => {\n    checkCameraPermission();\n  }, []);\n\n  return (\n    <View>\n      <Button title=\"Solicitar permissão\" onPress={requestCameraPermission} />\n      <Button title=\"Ver configurações\" onPress={showSettings} />\n      <Text>Permissão {isGranted ? \"concedida\" : \"negada\"}</Text>\n    </View>\n  );\n};\n\nexport default App;",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "a21b1262-3bc2-4f35-9f75-34bf67ea5858",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Abaixo tem uma lista com todas as permissões que os dispositivos atualmente tem.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "2ff0a6bc-be52-4dd9-8eb4-f600fdeae1dc",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "React Native Permissions\nAndroid\niOS",
-          "styles": {
-            "code": true
-          }
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "190fccf1-821d-473a-ab61-363d1461f2bf",
+      "id": "51bb9d8f-71e6-4a2a-9f28-78f728f9944b",
       "type": "paragraph",
       "props": {
         "backgroundColor": "default",
