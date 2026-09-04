@@ -96,10 +96,24 @@
                 },
                 {
                   "type": "text",
-                  "text": ", temos o seguinte fluxo",
+                  "text": ", temos o seguinte fluxo:",
                   "styles": {}
                 }
               ],
+              "children": []
+            },
+            {
+              "id": "6d4654de-cc0a-44a3-aaa8-2c4c9e25b6ec",
+              "type": "image",
+              "props": {
+                "textAlignment": "left",
+                "backgroundColor": "default",
+                "name": "workflow-overview.svg",
+                "url": "https://developer.android.com/static/images/training/permissions/workflow-overview.svg",
+                "caption": "",
+                "showPreview": true,
+                "previewWidth": 645
+              },
               "children": []
             },
             {
@@ -129,6 +143,20 @@
                   "styles": {}
                 }
               ],
+              "children": []
+            },
+            {
+              "id": "aa482b80-82ec-499a-b4d8-74f90c489c64",
+              "type": "image",
+              "props": {
+                "textAlignment": "left",
+                "backgroundColor": "default",
+                "name": "workflow-runtime.svg",
+                "url": "https://developer.android.com/static/images/training/permissions/workflow-runtime.svg",
+                "caption": "",
+                "showPreview": true,
+                "previewWidth": 723
+              },
               "children": []
             }
           ]
@@ -175,6 +203,21 @@
                 {
                   "type": "text",
                   "text": ", funciona da seguinte forma",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "d353d2a2-c234-46f0-bae9-e543d7b423bf",
+              "type": "codeBlock",
+              "props": {
+                "language": "javascript"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": " ┏━━━━━━━━━━━━━━━━━━━━━━━━┓\n ┃ check(PERMISSIONS.X.Y) ┃\n ┗━━━━━━━━━━━━━━━━━━━━━━━━┛\n              │                                ┌─────────────────────┐\n  Is the feature available ───────── NO ─────▶ │ RESULTS.UNAVAILABLE │\n      on this device ?                         └─────────────────────┘\n              │\n             YES\n              │                                ┌───────────────────────────┐\n      Is the permission ─────────── YES ─────▶ │ RESULTS.GRANTED / LIMITED │\n      already granted ?                        └───────────────────────────┘\n              │\n              NO\n              │                                ┌─────────────────┐\nIs the permission requestable, ───── NO ─────▶ │ RESULTS.BLOCKED │\n or is the platform Android ?                  └─────────────────┘\n              │\n             YES\n              │\n              ▼\n     ┌────────────────┐\n     │ RESULTS.DENIED │\n     └────────────────┘\n              │\n              ▼\n ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n ┃ request(PERMISSIONS.X.Y) ┃◀─────────────────────────┐\n ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛                          │\n              │                                       YES\n              │                                        │\n    Did the user see and ──────── NO ──────── Is the permission\n    accept the request ?                      still requestable ?\n              │                                        │\n             YES                                       NO\n              │                                        │\n              ▼                                        ▼\n┌───────────────────────────┐                 ┌─────────────────┐\n│ RESULTS.GRANTED / LIMITED │                 │ RESULTS.BLOCKED │\n└───────────────────────────┘                 └─────────────────┘",
                   "styles": {}
                 }
               ],
