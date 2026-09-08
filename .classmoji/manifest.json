@@ -10,6 +10,14 @@
         }
       }
     },
+    "checkpoint-5": {
+      "pages": [
+        "12-firebase-firestore",
+        "11-firebase"
+      ],
+      "slides": [],
+      "assignments": {}
+    },
     "clyvo-challenge": {
       "pages": [],
       "slides": [],
@@ -83,8 +91,6 @@
       "02-revisitando-o-react",
       "09-async-storage",
       "10-context",
-      "11-firebase",
-      "12-firebase-firestore",
       "revisitando-o-javascript",
       "04-typescript",
       "06-usando-o-react-navigation",
