@@ -16,7 +16,12 @@
         "11-firebase"
       ],
       "slides": [],
-      "assignments": {}
+      "assignments": {
+        "checkpoint-5": {
+          "pages": [],
+          "slides": []
+        }
+      }
     },
     "clyvo-challenge": {
       "pages": [],
