@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+
+<p>Mobile App Development</p>
+<hr>
+<p><code>Firebase</code> é uma biblioteca oferecida pelo Google que faz uma excelente abstração de uma série de recursos que sua aplicação pode precisar. Alguns deles são:</p>
+<ul>
+<li>Autenticação</li>
+<li>Banco de dados</li>
+<li>Mensageria</li>
+<li>Analytics</li>
+</ul>
+<hr>
+<p>Para acessar sua conta gratuita, basta acessar o seguinte endereço com uma conta<br><code>Google</code>:<br><a href="https://firebase.google.com/">https://firebase.google.com/</a></p>
+<p>No topo superior direito tem o link <code>Go To Console</code> que vai te direcionar para o console do <code>Firebase</code>. Se preferir, é possível acessar o console diretamente através do link:<br><a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a></p>
+<hr>
+<p>Ao acessar a página inicial, tem a opção de adicionar um novo projeto:<br><img src="https://i.imgur.com/WkjgSMT.png" alt="novo projeto height:550"></p>
+<hr>
+<p>Ao clicar em Adicionar Projeto, aparecerá uma tela que pede o nome do seu projeto:<br><img src="https://i.imgur.com/nJP4Pou.png" alt="criando o projeto"></p>
+<hr>
+<p>Ao informar o nome do projeto, na segunda etapa ele oferece a opção de utilizar o <code>Google Analytics</code>. Nesse primeiro momento, não será utilizado esse recurso, então desmarque a opção conforme imagem a seguir:<br><img src="https://i.imgur.com/xpjHxMr.png" alt="desabilitando analytics height:550px"></p>
+<p></p>
+
+<hr>
+<p>Ao confirmar a criação do projeto, aparecerá uma tela mostrando que seu projeto está sendo criado<br><img src="https://i.imgur.com/3ia4P5q.png" alt="criando projeto"></p>
+<hr>
+<p>Quando o processo é finalizado, ele te da opção de explorar o projeto:<br><img src="https://i.imgur.com/dkm5Yrk.png" alt="projeto criado"></p>
+<hr>
+<p>Vamos utilizar nesse primeiro momento, a parte de autenticação do <code>Firebase</code>.<br>Para isso, dentro do seu projeto, no menu lateral à esquerda, clique em <code>Build</code> e acesse a opção  <code>Authentication</code></p>
+<p><img src="https://i.imgur.com/aVT0Mdy.png" alt="autenticação height:550px"></p>
+<hr>
+<p>Basta clicar no botão <code>Get Started</code> para configurar a parte de autenticação no seu projeto<br><img src="https://i.imgur.com/iOq7vjj.png" alt="autenticação"></p>
+<hr>
+<p>Uma vez iniciado a configuração, aparecerá uma tela onde se pode selecionar os tipos de  autenticação que serão utilizados. Nesse primeiro momento, utilize o <code>Anonymous</code>.<br><img src="https://i.imgur.com/jle6eWC.png" alt="anonymous"></p>
+<hr>
+<p>Para ativar autenticação anônima, basta selecionar a opção anônima e na sequência ativa-la.<br>Para concluir, clique no botão <code>Save</code><br><img src="https://i.imgur.com/ZZUPj9q.png" alt="ativando anonymous"></p>
+<hr>
+<p>Após essas configurações no Firebase, é necessário configurar a sua aplicação.</p>
+<hr>
+<p>O <code>Expo</code> tem uma estrutura de arquivos bem diferente de um projeto <code>React Native</code>. Para conseguir utilizar o <code>Firebase</code> nele, será necessário fazer outras configurações. Primeiro, instale o pacote do <code>Firebase</code> com o comando:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install firebase</code></pre></div></div></div>
+<p></p>
+
+<hr>
+<p>Na tela de configurações do projeto no <code>Firebase</code>, clique <code>Add app</code> e selecione a opção web, representada pelo ícone que tem a tag <code>&lt;/&gt;</code>. Ao clica nesse ícone, aparecerá a seguinte tela:<br><img src="https://i.imgur.com/FDC9RH3.png" alt="new app web"></p>
+<hr>
+<p>Será gerado um código no que você pode copiar e colocar num arquivo chamado <code>firebaseConfig.ts</code> na raiz do seu projeto.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">JavaScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span></div><pre><code class="language-javascript">// Import the functions you need from the SDKs you need
+import { initializeApp } from &#39;firebase/app&#39;;
+import { getAuth } from &#39;firebase/auth&#39;;
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app&#39;s Firebase configuration
+const firebaseConfig = {
+  apiKey: &#39;api-key&#39;,
+  authDomain: &#39;project-id.firebaseapp.com&#39;,
+  projectId: &#39;project-id&#39;,
+  storageBucket: &#39;project-id.appspot.com&#39;,
+  messagingSenderId: &#39;sender-id&#39;,
+  appId: &#39;app-id&#39;,
+};
+
+// Initialize Firebase
+const firebase = initializeApp(firebaseConfig);
+const auth = getAuth(firebase);
+
+export { auth };</code></pre></div></div>
+<hr>
+<p>Agora, vamos deixar o <code>App.tsx</code> com o seguinte código:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+import { auth } from &#39;./firebaseConfig&#39;;
+import * as firebase from &#39;firebase/auth&#39;;
+import { Text, View, Button } from &#39;react-native&#39;;
+
+const App = () =&gt; {
+  const [user, setUser] = useState&lt;firebase.User&gt;();
+
+  const doAnonymousLogin = async () =&gt; {
+    const { user } = await firebase.signInAnonymously(auth);
+    setUser(user);
+  };
+
+  return (
+    &lt;View&gt;
+      {!user ? (
+        &lt;Button title=&quot;Login Anônimo&quot; onPress={doAnonymousLogin} /&gt;
+      ) : (
+        &lt;Text&gt;User ID: {user.uid}&lt;/Text&gt;
+      )}
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<hr>
+<p>Quando executar a aplicação, ao clicar no botão Login Anônimo, ele autenticara na plataforma do <code>Firebase</code>. No console, é possível verificar os usuários da sua aplicação<br><img src="https://i.imgur.com/rfsZMYw.png" alt="usuários"></p>
+<hr>
+<p>Utilizando o <code>Firebase</code>, podemos utilizar também a autenticação onde é possível utilizar email e senha. Para isso, deve-se adicionar o provedor Email/Senha no console do <code>Firebase</code>. No menu lateral esquerdo, na opção <code>Build</code> tem a sub-opção <code>Authentication</code>. Clique na aba <code>Sign-in method</code>e depois clique no botão <code>Add New Provider</code><br><img src="https://i.imgur.com/CkDLhPQ.png" alt="add new provider"></p>
+<hr>
+<p>Ao clicar no botão, dentro da seção <code>Native Providers</code> basta selecionar <code>Email/Password</code><br><img src="https://i.imgur.com/y71761S.png" alt="email provider"></p>
+<hr>
+<p>Ao selecionar a opção <code>Email/Password</code>, habilite a opção <code>Email/Password</code> e clique no  botão <code>Save</code><br><img src="https://i.imgur.com/U4TkcOf.png" alt="habilitando email"></p>
+<hr>
+<p>Para criar uma conta, existe o método <code>createUserWithEmailAndPassword</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+import { auth } from &#39;./firebaseConfig&#39;;
+import * as firebase from &#39;firebase/auth&#39;;
+import { Text, View, Button, TextInput } from &#39;react-native&#39;;
+
+const App = () =&gt; {
+  const [email, setEmail] = useState(&#39;&#39;);
+  const [password, setPassword] = useState(&#39;&#39;);
+  const [user, setUser] = useState&lt;firebase.User&gt;();
+  const [error, setError] = useState&lt;any&gt;();
+
+  const createAccount = async () =&gt; {
+    try {
+      setError(undefined);
+      const { user: firebaseUser } =
+        await firebase.createUserWithEmailAndPassword(auth, email, password);
+      setUser(firebaseUser);
+    } catch (error) {
+      setError(error);
+    }
+  };
+
+  return (
+    &lt;View
+      style={{
+        flex: 1,
+        justifyContent: &#39;center&#39;,
+        alignItems: &#39;center&#39;,
+      }}
+    &gt;
+      &lt;Text&gt;Email&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; onChangeText={setEmail} /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; onChangeText={setPassword} /&gt;
+      &lt;Button title=&quot;Login&quot; onPress={createAccount} /&gt;
+      {error &amp;&amp; &lt;Text&gt;{error?.message}&lt;/Text&gt;}
+      {user &amp;&amp; &lt;Text&gt;{user?.uid}&lt;/Text&gt;}
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<hr>
+<p>Para se autenticar, pode-se invocar o método <code>signInWithEmailAndPassword</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span><span class="line-number">43</span><span class="line-number">44</span><span class="line-number">45</span></div><pre><code class="language-typescript">import React, { useState } from &#39;react&#39;;
+import { auth } from &#39;./firebaseConfig&#39;;
+import * as firebase from &#39;firebase/auth&#39;;
+import { Text, View, Button, TextInput } from &#39;react-native&#39;;
+
+const App = () =&gt; {
+  const [email, setEmail] = useState(&#39;&#39;);
+  const [password, setPassword] = useState(&#39;&#39;);
+  const [user, setUser] = useState&lt;firebase.User&gt;();
+  const [error, setError] = useState&lt;any&gt;();
+
+  const createAccount = async () =&gt; {
+    try {
+      setError(undefined);
+      const { user: firebaseUser } = await firebase.signInWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+      setUser(firebaseUser);
+    } catch (error) {
+      setError(error);
+    }
+  };
+
+  return (
+    &lt;View
+      style={{
+        flex: 1,
+        justifyContent: &#39;center&#39;,
+        alignItems: &#39;center&#39;,
+      }}
+    &gt;
+      &lt;Text&gt;Email&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;email&quot; onChangeText={setEmail} /&gt;
+      &lt;Text&gt;Password&lt;/Text&gt;
+      &lt;TextInput placeholder=&quot;password&quot; onChangeText={setPassword} /&gt;
+      &lt;Button title=&quot;Login&quot; onPress={createAccount} /&gt;
+      {error &amp;&amp; &lt;Text&gt;{error?.message}&lt;/Text&gt;}
+      {user &amp;&amp; &lt;Text&gt;{user?.uid}&lt;/Text&gt;}
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre></div></div>
+<p></p>
+
+<hr>
+<p>Ambos os métodos <code>signInWithEmailAndPassword</code> e <code>createUserWithEmailAndPassword</code> retornam uma propriedade <code>user</code> tem os dados do usuário autenticado. Caso ocorra alguma exceção, o <code>error</code> tem a propriedade <code>message</code> que informa qual foi o erro que ocorreu durante a requisição.</p>
+<hr>
+<p>O método <code>signOut</code> desloga o usuário</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span></div><pre><code class="language-typescript">import { auth } from &#39;./firebaseConfig&#39;;
+import * as firebase from &#39;firebase/auth&#39;;
+
+const signOut = async () =&gt; {
+  await firebase.signOut(auth);
+};</code></pre></div></div>
+<hr>
+<p>Alguns recursos interessantes que existe no Firebase são reiniciar senha e validação de<br>email. Para reiniciar a senha podemos utilizar o método <code>sendPasswordResetEmail</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span></div><pre><code class="language-typescript">import { auth } from &quot;./firebaseConfig&quot;;
+import * as firebase from &#39;firebase/auth&#39;;
+
+const sendPasswordRecover = async () =&gt; {
+  await firebase.sendPasswordResetEmail(auth, &#39;email@email.com`)
+}</code></pre></div></div>
+<hr>
+<p>Para validar o email, o objeto user retornado quando o usuário é criado/autenticado, tem o<br>método <code>sendEmailVerification</code>. Um email é enviado para o caixa e email do usuário para qual foi solicitado a verificação</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span></div><pre><code class="language-typescript">import { auth } from &#39;./firebaseConfig&#39;;
+import * as firebase from &#39;firebase/auth&#39;;
+
+const sendEmail = async () =&gt; {
+  try {
+    setError(undefined);
+    const { user: firebaseUser } =
+      await firebase.createUserWithEmailAndPassword(auth, email, password);
+    user.sendEmailVerification();
+    setUser(firebaseUser);
+  } catch (error) {
+    setError(error);
+  }
+};</code></pre></div></div>
+<hr>
+<p>Um metódo que existe na instância <code>auth</code> é o <code>onAuthStateChanged</code>. Com ele é possível saber quando o estado da autenticação foi alterado.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span></div><pre><code class="language-typescript">import { auth } from &quot;./firebaseConfig&quot;;
+import * as firebase from &#39;firebase/auth&#39;;
+
+const onAuthStateChanged = async (user: firebase.User | null) =&gt; {
+  console.log(&#39;user changed&#39;, user);
+  setUser(user);
+};
+
+...
+
+useEffect(() =&gt; {
+  const subscriber = firebase.onAuthStateChanged(auth, onAuthStateChanged);
+  return subscriber;
+}, []);</code></pre></div></div>
+<hr>
+<p>No console do <code>Firebase</code>, é possível personalizar os emails que são enviados para os usuário.<br>Ainda na tela de <code>Authentication</code>, a aba <code>Templates</code> possui todos os templates que o <code>Firebase</code> envia para o usuário.<br><img src="https://i.imgur.com/k6XGKH9.png" alt="firebase templates height:500px"></p>
+<p></p>
+
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
