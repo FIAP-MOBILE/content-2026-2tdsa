@@ -1904,10 +1904,23 @@
             },
             {
               "type": "text",
-              "text": " envia para o usuário.\n",
+              "text": " envia para o usuário.",
               "styles": {}
             }
           ],
+          "children": []
+        },
+        {
+          "id": "49dbd87d-045d-4503-bd4e-0f98f2cea1a5",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "firebase templates",
+            "url": "https://i.imgur.com/k6XGKH9.png",
+            "caption": "",
+            "showPreview": true
+          },
           "children": []
         }
       ]
