@@ -101,7 +101,8 @@
       "04-typescript",
       "05-componentes-do-react-native",
       "permisses",
-      "firebase-expo"
+      "firebase-expo",
+      "firestore-expo"
     ],
     "slides": [
       "navega-o"
