@@ -625,6 +625,25 @@
           "children": []
         },
         {
+          "id": "f91f24b9-24b9-4a73-98f0-9a4276c7eb75",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 1,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Aplicação",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
           "id": "97aaa246-102f-4df1-911f-30e82b366e09",
           "type": "paragraph",
           "props": {
