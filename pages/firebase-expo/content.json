@@ -656,7 +656,7 @@
           "children": []
         },
         {
-          "id": "4b5133a2-ee81-4bb2-9b6f-1eb5d56807af",
+          "id": "18055e6e-c02d-4aa2-b7a4-a8a4d8c6980d",
           "type": "paragraph",
           "props": {
             "backgroundColor": "default",
@@ -666,56 +666,82 @@
           "content": [
             {
               "type": "text",
-              "text": "No arquivo ",
-              "styles": {}
+              "text": "O ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
             },
             {
               "type": "text",
-              "text": "build.gradle",
+              "text": "Expo",
               "styles": {
                 "code": true
               }
             },
             {
               "type": "text",
-              "text": " que fica no caminho ",
-              "styles": {}
+              "text": " tem uma estrutura de arquivos bem diferente de um projeto ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
             },
             {
               "type": "text",
-              "text": "android/app/",
+              "text": "React Native",
               "styles": {
                 "code": true
               }
             },
             {
               "type": "text",
-              "text": " localize a linha do arquivo onde tem escrito ",
-              "styles": {}
+              "text": ". Para conseguir utilizar o ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
             },
             {
               "type": "text",
-              "text": "applicationId \"com.nomedoprojeto\"",
+              "text": "Firebase",
               "styles": {
                 "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " nele, será necessário fazer outras configurações. Primeiro, instale o pacote do ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Firebase",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " com o comando:",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
               }
             }
           ],
           "children": []
         },
         {
-          "id": "5194c1dd-7e4a-4e52-915f-01ca09ace894",
-          "type": "codeBlock",
+          "id": "53d0cf82-1085-4b8c-8053-31a582368680",
+          "type": "terminal",
           "props": {
-            "language": "gradle"
+            "code": "npx expo install firebase",
+            "title": ""
           },
-          "content": [
-            {
-              "type": "text",
-              "text": "android {\n    ndkVersion rootProject.ext.ndkVersion\n    buildToolsVersion rootProject.ext.buildToolsVersion\n    compileSdk rootProject.ext.compileSdkVersion\n\n    namespace \"com.firebase\"\n    defaultConfig {\n        applicationId \"com.firebase\"\n        minSdkVersion rootProject.ext.minSdkVersion\n        targetSdkVersion rootProject.ext.targetSdkVersion\n        versionCode 1\n        versionName \"1.0\"\n    }\n    ...\n}",
-              "styles": {}
-            }
-          ],
           "children": []
         },
         {
@@ -729,32 +755,11 @@
           "content": [
             {
               "type": "text",
-              "text": "Copie o conteúdo dentro das aspas. No exemplo deste slide: ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "com.firebase",
+              "text": "Na tela de configurações do projeto no ",
               "styles": {
-                "code": true
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
               }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "afff8aa7-17bd-45cb-ba8f-0b11a8e76d3e",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Volte no console do ",
-              "styles": {}
             },
             {
               "type": "text",
@@ -765,39 +770,53 @@
             },
             {
               "type": "text",
-              "text": ". Selecione a sua aplicação e do lado da opção ",
-              "styles": {}
+              "text": ", clique ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
             },
             {
               "type": "text",
-              "text": "Project Overview",
+              "text": "Add app",
               "styles": {
                 "code": true
               }
             },
             {
               "type": "text",
-              "text": " tem uma engrenagem do lado direito. Ao clicar nela, selecione a opção ",
-              "styles": {}
+              "text": " e selecione a opção web, representada pelo ícone que tem a tag ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
             },
             {
               "type": "text",
-              "text": "Project Settings",
+              "text": "</>",
               "styles": {
                 "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Ao clica nesse ícone, aparecerá a seguinte tela:",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
               }
             }
           ],
           "children": []
         },
         {
-          "id": "07c6830f-8a59-43f6-8dfb-16d83d2b87fa",
+          "id": "e6bee440-a3be-4bec-9b1f-8830168f0f64",
           "type": "image",
           "props": {
             "textAlignment": "left",
             "backgroundColor": "default",
-            "name": "configurações do projeto",
-            "url": "https://i.imgur.com/qIY2bp6.png",
+            "name": "new app web",
+            "url": "https://i.imgur.com/FDC9RH3.png",
             "caption": "",
             "showPreview": true
           },
@@ -814,44 +833,47 @@
           "content": [
             {
               "type": "text",
-              "text": "Irá abrir a página inicial do projeto e nela, tem um ícone do Android conforme imagem a seguir.",
-              "styles": {}
+              "text": "Será gerado um código no que você pode copiar e colocar num arquivo chamado ",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
+            },
+            {
+              "type": "text",
+              "text": "firebaseConfig.ts",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " na raiz do seu projeto.",
+              "styles": {
+                "textColor": "rgb(145, 163, 173)",
+                "backgroundColor": "rgb(255, 255, 255)"
+              }
             }
           ],
           "children": []
         },
         {
-          "id": "b57b6186-6ea2-40ac-b7b8-16bed06c01a1",
-          "type": "image",
+          "id": "8d99ab27-7dd7-406c-be1b-b13e2b682e02",
+          "type": "codeBlock",
           "props": {
-            "textAlignment": "left",
-            "backgroundColor": "default",
-            "name": "configurações android",
-            "url": "https://i.imgur.com/LH4lgHq.png",
-            "caption": "",
-            "showPreview": true
-          },
-          "children": []
-        },
-        {
-          "id": "6649b463-a113-49c4-b11c-e1d9a976c85e",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
+            "language": "typescript"
           },
           "content": [
             {
               "type": "text",
-              "text": "Clique no ícone do Android",
+              "text": "// Import the functions you need from the SDKs you need\nimport { initializeApp } from \"firebase/app\";\nimport { getAuth } from \"firebase/auth\";\n// TODO: Add SDKs for Firebase products that you want to use\n// https://firebase.google.com/docs/web/setup#available-libraries\n\n// Your web app's Firebase configuration\nconst firebaseConfig = {\n  apiKey: 'api-key',\n  authDomain: 'project-id.firebaseapp.com',\n  projectId: 'project-id',\n  storageBucket: 'project-id.appspot.com',\n  messagingSenderId: 'sender-id',\n  appId: 'app-id',\n};\n\n// Initialize Firebase\nconst firebase = initializeApp(firebaseConfig);\nconst auth = getAuth(firebase);\n\nexport { auth };",
               "styles": {}
             }
           ],
           "children": []
         },
         {
-          "id": "fa8d2f5c-dc2c-42a0-b5ed-aa72503ceeb9",
+          "id": "6ebdb0c2-88ab-459f-bedf-82927a462cee",
           "type": "paragraph",
           "props": {
             "backgroundColor": "default",
@@ -859,353 +881,6 @@
             "textAlignment": "left"
           },
           "content": [],
-          "children": []
-        },
-        {
-          "id": "2e1bb8e8-dc09-4a56-ae59-b84311df4887",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Ao clicar no ícone do Android, aparecerá a tela conforme imagem no slide. Nessa primeira\netapa, iremos preencher o nome do pacote do Android, o mesmo que foi copiado\nanteriormente e depois clicar no botão ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "Register app",
-              "styles": {
-                "code": true
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "f04621d6-bdcf-4a62-ae1f-789298e71cd0",
-          "type": "image",
-          "props": {
-            "textAlignment": "left",
-            "backgroundColor": "default",
-            "name": "registrando a aplicação",
-            "url": "https://i.imgur.com/Y4A5lEq.png",
-            "caption": "",
-            "showPreview": true
-          },
-          "children": []
-        },
-        {
-          "id": "83e22f0b-94d0-4aec-9952-553e592ce611",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Na segunda etapa, clique para baixar o arquivo ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "google-services.json",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ".",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "1135fc38-9162-42b1-aa6e-6003f6a502b0",
-          "type": "image",
-          "props": {
-            "textAlignment": "left",
-            "backgroundColor": "default",
-            "name": "google services json",
-            "url": "https://i.imgur.com/6AVMuc8.png",
-            "caption": "",
-            "showPreview": true
-          },
-          "children": []
-        },
-        {
-          "id": "7d3fefa6-b2e3-4b8e-955c-007444e26d74",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Salve ele no seguinte caminho do seu projeto: ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "android/app",
-              "styles": {
-                "code": true
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "5d18f66b-24f7-4073-8d07-1c07b8ac684b",
-          "type": "image",
-          "props": {
-            "textAlignment": "left",
-            "backgroundColor": "default",
-            "name": "projeto arquivo",
-            "url": "https://i.imgur.com/LEMZaHY.png",
-            "caption": "",
-            "showPreview": true
-          },
-          "children": []
-        },
-        {
-          "id": "9a256b78-7d38-40c9-ab37-d49b870aba76",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Agora é necessário fazer algumas configurações no seu aplicativo.\nPrimeiro, abra o arquivo ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "android/build.gradle",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ". Na seção ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "buildscript",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ", existe a seção\n",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "dependencies",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ". Dentro dela deve ser adicionada a seguinte dependência ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "com.google.gms.google-services",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ":",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "da7ca9c7-2add-44a9-bd78-eb7359da05b3",
-          "type": "codeBlock",
-          "props": {
-            "language": "gradle"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "buildscript {\n    ext {\n        buildToolsVersion = '34.0.0'\n        minSdkVersion = 23\n        compileSdkVersion = 34\n        targetSdkVersion = 34\n        ndkVersion = '26.1.10909125'\n        kotlinVersion = '1.9.22'\n    }\n    repositories {\n        google()\n        mavenCentral()\n    }\n    dependencies {\n        classpath('com.android.tools.build:gradle')\n        classpath('com.facebook.react:react-native-gradle-plugin')\n        classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')\n        classpath('com.google.gms.google-services:4.4.2')\n    }\n}",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "472a4cd2-07bb-47ce-b9a9-a63b840d5a86",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Agora abra o arquivo ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "android/app/build.gradle",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": ". Logo após a primeira linha, adicione a\nseguinte linha:",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "87b2f2d6-7585-416d-b855-1abe09455100",
-          "type": "codeBlock",
-          "props": {
-            "language": "gradle"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "apply plugin: \"com.google.gms.google-services\"",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "c48c37e4-f413-419b-a9bd-30f6d982fe95",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Depois, na seção ",
-              "styles": {}
-            },
-            {
-              "type": "text",
-              "text": "dependencies",
-              "styles": {
-                "code": true
-              }
-            },
-            {
-              "type": "text",
-              "text": " adicione a seguinte dependência:",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "d3fea88b-a491-412c-a587-5c88cfa5c271",
-          "type": "codeBlock",
-          "props": {
-            "language": "gradle"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "dependencies {\n    // The version of react-native is set by the React Native Gradle Plugin\n    implementation('com.facebook.react:react-android')\n\n    if (hermesEnabled.toBoolean()) {\n        implementation('com.facebook.react:hermes-android')\n    } else {\n        implementation jscFlavor\n    }\n    implementation platform('com.google.firebase:firebase-bom:33.1.2')\n}",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "cbd130c3-0747-4781-8fcb-28e20d25516a",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Para utilizar o Firebase no seu projeto, primeiro deve-se instalar sua respectiva biblioteca.",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "decf0237-4ae9-4250-8867-73ad2ae4d679",
-          "type": "terminal",
-          "props": {
-            "code": "npm install @react-native-firebase/app",
-            "title": "Terminal"
-          },
-          "children": []
-        },
-        {
-          "id": "689c6726-2a09-4d3f-bdae-51f540375b90",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [],
-          "children": []
-        },
-        {
-          "id": "7870d931-ca0f-49ac-889e-cdf4965f0f9c",
-          "type": "paragraph",
-          "props": {
-            "backgroundColor": "default",
-            "textColor": "default",
-            "textAlignment": "left"
-          },
-          "content": [
-            {
-              "type": "text",
-              "text": "Para utilizar a parte de autenticação, ainda precisa adicionar mais um pacote:",
-              "styles": {}
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "e346e01d-5bd7-41b6-ba53-24a1dbe1a131",
-          "type": "terminal",
-          "props": {
-            "code": "npm install @react-native-firebase/auth",
-            "title": "Terminal"
-          },
           "children": []
         },
         {
@@ -1246,7 +921,7 @@
           "content": [
             {
               "type": "text",
-              "text": "import React, { useState } from 'react';\nimport auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';\nimport { Text, View, Button } from 'react-native';\n\nconst App = () => {\n  const [user, setUser] = useState<FirebaseAuthTypes.User | null>();\n  const firebaseAuth = auth();\n  const doAnonymousLogin = async () => {\n    const { user } = await firebaseAuth.signInAnonymously();\n    setUser(user);\n  };\n\n  return (\n    <View>\n      {!user ? (\n        <Button title=\"Login Anônimo\" onPress={doAnonymousLogin} />\n      ) : (\n        <Text>User ID: {user.uid}</Text>\n      )}\n    </View>\n  );\n};\n\nexport default App;",
+              "text": "import React, {useState} from 'react';\nimport { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\nimport {Text, View, Button} from 'react-native';\n\nconst App = () => {\n  const [user, setUser] = useState<firebase.User>();\n\n  const doAnonymousLogin = async () => {\n    const {user} = await firebase.signInAnonymously(auth);\n    setUser(user);\n  };\n\n  return (\n    <View>\n      {!user ? (\n        <Button title=\"Login Anônimo\" onPress={doAnonymousLogin} />\n      ) : (\n        <Text>User ID: {user.uid}</Text>\n      )}\n    </View>\n  );\n};\n\nexport default App;",
               "styles": {}
             }
           ],
@@ -1534,7 +1209,7 @@
           "content": [
             {
               "type": "text",
-              "text": "import React, { useState } from 'react';\nimport auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';\nimport { Text, View, Button, TextInput } from 'react-native';\n\nconst App = () => {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [user, setUser] = useState<FirebaseAuthTypes.User | null>();\n  const [error, setError] = useState<any>();\n  const firebaseAuth = auth();\n\n  const createAccount = async () => {\n    try {\n      setError(undefined);\n      const { user: firebaseUser } =\n        await firebaseAuth.createUserWithEmailAndPassword(email, password);\n      setUser(firebaseUser);\n    } catch (error) {\n      setError(error);\n    }\n  };\n\n  return (\n    <View\n      style={{\n        flex: 1,\n        justifyContent: 'center',\n        alignItems: 'center',\n      }}\n    >\n      <Text>Email</Text>\n      <TextInput placeholder=\"email\" onChangeText={setEmail} />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" onChangeText={setPassword} />\n      <Button title=\"Login\" onPress={doLogin} />\n      {error && <Text>{error?.message}</Text>}\n      {user && <Text>{user?.uid}</Text>}\n    </View>\n  );\n};\n\nexport default App;",
+              "text": "import React, {useState} from 'react';\nimport { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\nimport {Text, View, Button, TextInput} from 'react-native';\n\nconst App = () => {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [user, setUser] = useState<firebase.User>();\n  const [error, setError] = useState<any>();\n\n  const createAccount = async () => {\n    try {\n      setError(undefined);\n      const {user: firebaseUser} =\n        await firebase.createUserWithEmailAndPassword(auth, email, password);\n      setUser(firebaseUser);\n    } catch (error) {\n      setError(error);\n    }\n  };\n\n  return (\n    <View\n      style={{\n        flex: 1,\n        justifyContent: 'center',\n        alignItems: 'center',\n      }}>\n      <Text>Email</Text>\n      <TextInput placeholder=\"email\" onChangeText={setEmail} />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" onChangeText={setPassword} />\n      <Button title=\"Login\" onPress={createAccount} />\n      {error && <Text>{error?.message}</Text>}\n      {user && <Text>{user?.uid}</Text>}\n    </View>\n  );\n};\n\nexport default App;",
               "styles": {}
             }
           ],
@@ -1573,7 +1248,7 @@
           "content": [
             {
               "type": "text",
-              "text": "import React, { useState } from 'react';\nimport auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';\nimport { Text, View, Button, TextInput } from 'react-native';\n\nconst App = () => {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [user, setUser] = useState<FirebaseAuthTypes.User | null>();\n  const [error, setError] = useState<any>();\n  const firebaseAuth = auth();\n\n  const doLogin = async () => {\n    try {\n      setError(undefined);\n      const { user: firebaseUser } =\n        await firebaseAuth.signInWithEmailAndPassword(email, password);\n      setUser(firebaseUser);\n    } catch (error) {\n      setError(error);\n    }\n  };\n\n  return (\n    <View\n      style={{\n        flex: 1,\n        justifyContent: 'center',\n        alignItems: 'center',\n      }}\n    >\n      <Text>Email</Text>\n      <TextInput placeholder=\"email\" onChangeText={setEmail} />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" onChangeText={setPassword} />\n      <Button title=\"Login\" onPress={doLogin} />\n      {error && <Text>{error?.message}</Text>}\n      {user && <Text>{user?.uid}</Text>}\n    </View>\n  );\n};\n\nexport default App;",
+              "text": "import React, {useState} from 'react';\nimport { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\nimport {Text, View, Button, TextInput} from 'react-native';\n\nconst App = () => {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [user, setUser] = useState<firebase.User>();\n  const [error, setError] = useState<any>();\n\n  const createAccount = async () => {\n    try {\n      setError(undefined);\n      const {user: firebaseUser} =\n        await firebase.signInWithEmailAndPassword(auth, email, password);\n      setUser(firebaseUser);\n    } catch (error) {\n      setError(error);\n    }\n  };\n\n  return (\n    <View\n      style={{\n        flex: 1,\n        justifyContent: 'center',\n        alignItems: 'center',\n      }}>\n      <Text>Email</Text>\n      <TextInput placeholder=\"email\" onChangeText={setEmail} />\n      <Text>Password</Text>\n      <TextInput placeholder=\"password\" onChangeText={setPassword} />\n      <Button title=\"Login\" onPress={createAccount} />\n      {error && <Text>{error?.message}</Text>}\n      {user && <Text>{user?.uid}</Text>}\n    </View>\n  );\n};\n\nexport default App;",
               "styles": {}
             }
           ],
@@ -1694,7 +1369,7 @@
           "content": [
             {
               "type": "text",
-              "text": "const signOut = async () => {\n  await auth().signOut();\n};",
+              "text": "import { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\n\nconst signOut = async () => {\n  await firebase.signOut(auth)\n}",
               "styles": {}
             }
           ],
@@ -1733,7 +1408,7 @@
           "content": [
             {
               "type": "text",
-              "text": "const sendPasswordRecover = async () => {\n  await auth().sendPasswordResetEmail('email@email.com`)\n}",
+              "text": "import { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\n\nconst sendPasswordRecover = async () => {\n  await firebase.sendPasswordResetEmail(auth, 'email@email.com`)\n}",
               "styles": {}
             }
           ],
@@ -1777,7 +1452,7 @@
           "content": [
             {
               "type": "text",
-              "text": "const createAccount = async () => {\n  try {\n    setError(undefined);\n    const { user: firebaseUser } =\n      await firebaseAuth.createUserWithEmailAndPassword(email, password);\n    user.sendEmailVerification();\n    setUser(firebaseUser);\n  } catch (error) {\n    setError(error);\n  }\n};",
+              "text": "import { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\n\nconst sendEmail = async () => {\n  try {\n    setError(undefined);\n    const {user: firebaseUser} =\n      await firebase.createUserWithEmailAndPassword(auth, email, password);\n      await firebase.sendEmailVerification(user)\n  } catch (error) {\n  }\n};",
               "styles": {}
             }
           ],
@@ -1833,7 +1508,7 @@
           "content": [
             {
               "type": "text",
-              "text": "const onAuthStateChanged = async (user: FirebaseAuthTypes.User | null) => {\n  console.log('user changed', user);\n  setUser(user);\n};\n\nuseEffect(() => {\n  const subscriber = auth().onAuthStateChanged(onAuthStateChanged);\n  return subscriber;\n}, []);",
+              "text": "import { auth } from \"./firebaseConfig\";\nimport * as firebase from 'firebase/auth';\n\nconst onAuthStateChanged = async (user: firebase.User | null) => {\n  console.log('user changed', user);\n  setUser(user);\n};\n\n...\n\nuseEffect(() => {\n  const subscriber = firebase.onAuthStateChanged(auth, onAuthStateChanged);\n  return subscriber;\n}, []);",
               "styles": {}
             }
           ],
