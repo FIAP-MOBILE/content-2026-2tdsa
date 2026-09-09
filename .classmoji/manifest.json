@@ -97,10 +97,11 @@
       "09-async-storage",
       "10-context",
       "revisitando-o-javascript",
-      "04-typescript",
       "06-usando-o-react-navigation",
+      "04-typescript",
       "05-componentes-do-react-native",
-      "permisses"
+      "permisses",
+      "firebase-expo"
     ],
     "slides": [
       "navega-o"
