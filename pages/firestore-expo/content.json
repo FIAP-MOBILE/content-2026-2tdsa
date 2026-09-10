@@ -1,0 +1,1554 @@
+{
+  "blocks": [
+    {
+      "id": "92bd62e7-e755-4d66-a692-255dbfd08c54",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Introdução",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "98bfe4df-09c7-4125-ab37-089464fced49",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Dentro do framework do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firebase",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", existe um recurso muito interessante chamado ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Esse recurso permite que você utilize um banco de dados bem robusto. Com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", é possível trabalhar com sua aplicação até mesmo offline, pois a biblioteca tem toda a inteligência de sincronizar os dados assim que uma conexão estiver disponível. E nessa aula iremos aprender a utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firebase",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " no projeto.\n⚠️  ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "IMPORTANTE:​ Leve em consideração a configuração já feita anteriormente para ter o Firebase rodando dentro do projeto",
+              "styles": {
+                "bold": true
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "efc2f6bd-4a0b-48a2-96f3-a779a0c7356f",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Configuração",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "16d7d9b2-3491-4f2d-94e7-dda56720f7b5",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Primeiro, acesso o ",
+              "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://console.firebase.google.com",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "console",
+                  "styles": {}
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " do Firebase e no menu lateral esquerdo, expanda o menu ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Build",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e dentro dele acesse a opção ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Cloud Firestore",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dcb2a367-cf25-4180-ae71-e0c2809c9656",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "",
+            "url": "https://i.imgur.com/X93kzx0.png",
+            "caption": "",
+            "showPreview": true,
+            "previewWidth": 512
+          },
+          "children": []
+        },
+        {
+          "id": "9b531f4f-6090-420a-82d7-46317ca4c17b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Irá aparecer a página inicial do Firestore. Nessa página, clique no botão ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Create database",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "15be071e-7219-4fa9-aa0d-b6cb3a706abf",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "criar database",
+            "url": "https://i.imgur.com/9pHJ0bQ.png",
+            "caption": "",
+            "showPreview": true
+          },
+          "children": []
+        },
+        {
+          "id": "4c869d1d-755f-4ce7-b40d-44e0d9038abd",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Selecione em qual região seu banco de dados ficará armazenado e clique em concluir",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1f886386-99ce-48d7-b35f-786908eca229",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "Criando o banco de dados",
+            "url": "https://i.imgur.com/sq3YI3Q.png",
+            "caption": "",
+            "showPreview": true
+          },
+          "children": []
+        },
+        {
+          "id": "16b55de0-fa07-449a-ad1d-bebab2828b1e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Na segunda etapa, será exibido as configurações do seu banco de dados. Pode utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Production Mode",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e clicar no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Next",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3a1325a5-cdcf-4656-9e43-a35619ec0dd1",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "Configurando o banco de dados",
+            "url": "https://i.imgur.com/don6b94.png",
+            "caption": "",
+            "showPreview": true
+          },
+          "children": []
+        },
+        {
+          "id": "cf0877e0-df0c-43bf-ba7e-505f01000a64",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao final desse processo, será exibido a seguinte tela:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "60f15730-5fb5-4f20-868e-68018314fe6f",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "Tela inicial firestore",
+            "url": "https://i.imgur.com/dVqDjSj.png",
+            "caption": "",
+            "showPreview": true
+          },
+          "children": []
+        },
+        {
+          "id": "05939822-adcc-44b0-9fff-58337054fcb0",
+          "type": "heading",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left",
+            "level": 2,
+            "isToggleable": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Habilitando modo escrita",
+              "styles": {}
+            }
+          ],
+          "children": [
+            {
+              "id": "ad1ca842-f508-4942-b0b5-bed1c1e34b54",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Por padrão, o Firestore não deixa habilitado o modo escrita no banco de dados.\nPara mudar isso, acessa a aba ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "Rules",
+                  "styles": {
+                    "code": true
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "92bdca04-fd0d-4130-9024-f1ffa1a2aed6",
+              "type": "image",
+              "props": {
+                "textAlignment": "left",
+                "backgroundColor": "default",
+                "name": "configuração padrão",
+                "url": "https://i.imgur.com/5XSDJ6d.png",
+                "caption": "",
+                "showPreview": true
+              },
+              "children": []
+            },
+            {
+              "id": "aca2ccb7-8d3b-4ae1-96ed-f693b9baa02b",
+              "type": "paragraph",
+              "props": {
+                "backgroundColor": "default",
+                "textColor": "default",
+                "textAlignment": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Nessa aba, onde está ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "false",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " mude para ",
+                  "styles": {}
+                },
+                {
+                  "type": "text",
+                  "text": "true",
+                  "styles": {
+                    "code": true
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " na linha 5. O conteúdo ficará da seguinte forma:",
+                  "styles": {}
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "90203376-c0ac-4e57-8fc6-ccd4ca88384c",
+              "type": "image",
+              "props": {
+                "textAlignment": "left",
+                "backgroundColor": "default",
+                "name": "",
+                "url": "https://i.imgur.com/QIW6ihd.png",
+                "caption": "",
+                "showPreview": true
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4f458cec-5677-41f9-a527-ea14269d78df",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "eb63afad-f70b-4c10-b510-a31ecb004c96",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Instalação",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "e86b03d5-522f-41d0-b4cf-a61ce7826573",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma vez configurado no console do Firebase, adicione a biblioteca no projeto com o seguinte comando:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ab9b3abf-02fd-4e77-b44c-8ede10679258",
+          "type": "terminal",
+          "props": {
+            "code": "npx expo install firebase",
+            "title": ""
+          },
+          "children": []
+        },
+        {
+          "id": "5b0292fe-6119-49fd-8277-1813589031b9",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "⚠️  ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "IMPORTANTE",
+              "styles": {
+                "bold": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " Não é necessário instalar essa biblioteca caso já tenha instalado anteriormente",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "f1462865-5b22-40ba-83ff-48994f544cd4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "516059eb-4f3c-45ca-932c-34831fc6997e",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Utilização",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "0bd6da6b-c492-42b0-b7ee-35cffdb7fd04",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Adicione o código no arquivo onde tem seu arquivo com as configurações do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "firebase",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " (exemplo: no arquivo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "firebaseConfig.ts",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ")",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b1ef7b3f-b25b-4be0-8a87-0cca2b95a292",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { initializeApp } from \"firebase/app\";\nimport { getFirestore } from \"firebase/firestore\";\n\nconst firebaseConfig = {\n  ...\n};\n\n// Initialize Firebase\nconst app = initializeApp(firebaseConfig);\nconst database = getFirestore(app);\n\nexport { database };",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cccca4fe-7e6c-41be-bb1d-01dd89a0dc4d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "⚠️  ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "IMPORTANTE",
+              "styles": {
+                "bold": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " Sempre que precisar fazer alguma operação com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", importe o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "database",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " onde for necessário",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e86a08e5-5749-45f3-b9d9-ee288e170503",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para utilizar no código é bem simples. Basta importar a biblioteca ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "firestore",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9bd8229f-574d-4461-8b3c-c7ddab4af206",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import * as firestore from 'firebase/firestore';",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0180adf1-0812-437f-bf14-721fab513dd8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", tudo são coleções. Então para realizar operações CRUD (",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Create, Read, Update e Delete",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ") com ele, é preciso criar uma coleção.\nPara isso basta fazer o seguinte:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "21bdf06b-d213-4448-9a74-f639d9511fe6",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import { database } from './firebaseConfig';\n\nconst collection = firestore.collection(database, 'todo');",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8784e75b-5726-4d2a-8eb6-0d23523d26ca",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para adicionar um item na coleção, utilizamos o método ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "add",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c88ec16c-6db1-44dc-a840-f3ce82fdc3b5",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "await firestore.addDoc(collection, {\n  name: 'minha tarefa',\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "96ec5054-106d-47d4-aab5-a62074f0be51",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "O metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "add",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " aceita como argumento um objeto, que pode ter qualquer estrutura que você quiser",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0f117ee7-1f57-458f-9ceb-5d8aac6dc53e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma vez adicionado um objeto em uma coleção, é possível consultar no ",
+              "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://console.firebase.google.com",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "console",
+                  "styles": {}
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " os dados",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1f339336-f03a-4b5f-8abf-8d3c9c2e354f",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "dados Firebase",
+            "url": "https://i.imgur.com/7thdON9.png",
+            "caption": "",
+            "showPreview": true
+          },
+          "children": []
+        },
+        {
+          "id": "273c423b-59e7-4149-aa28-d1cfdca088a0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No Firestore, cada registro é considerado um Documento. Como se pode notar, cada documento criado com o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "add",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", tem um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "ID",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " gerado automaticamente pela biblioteca.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a64a77d9-777b-446f-8126-c3f53fd0bdbe",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "5d1a2bd1-3e1d-4671-aba8-415e41931ab0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Além do metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "add",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", também é possível utilizar o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "set",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Com o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "set",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", é possível definir qual o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "ID",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " do Documento",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b68de941-64df-4e5a-a0b7-bb6f8a49ff06",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const doc = firestore.doc(collection, 'seu novo doc');\nawait firestore.setDoc(doc, { name: 'Minha tarefa' });",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "98fd4d12-6904-4db3-87d5-f572d948bdb6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "E quando consultado no console:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e6142263-2a58-4667-8383-97dde603d7d4",
+          "type": "image",
+          "props": {
+            "textAlignment": "left",
+            "backgroundColor": "default",
+            "name": "dados Firebase",
+            "url": "https://i.imgur.com/UAynqpp.png",
+            "caption": "",
+            "showPreview": true
+          },
+          "children": []
+        },
+        {
+          "id": "b10cedd3-b69b-4512-9ca9-0fb8d34f43b9",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "⚠️  Vale ressaltar que os ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "ID",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " são únicos. Ou seja, se você chamar o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "set",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " utilizando o mesmo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "ID",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", os dados do documento são atualizados",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c034dec7-3aa0-4a39-ad3f-5ef57e4f54d7",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "5989b8ed-8b08-456e-a549-fd6c29707475",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para deletar um documento, utilize a função  ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "delete",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "83e9cf3c-176b-4618-a424-3d0393a03b3b",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const doc = firestore.doc(collection, 'seu novo doc');\nawait firestore.deleteDoc(doc);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "497b9db6-c237-44f3-8e22-124d0a42a8a6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "aeb1ed3e-b03c-42e6-b69d-65201f830557",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para obter os dados de uma coleção, basta utilizar o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "get",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d70f35b9-467f-41a9-afae-5dbc7d1c1987",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const { docs } = await firestore.getDocs(collection);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6fca9672-3c63-4ee6-85f9-861ee6dfa4d0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Com isso, todos os itens serão obtidos de uma coleção",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "567bf219-1071-4b7e-b281-5c4e314490f1",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "e71ef1f3-fca3-49d7-bf8f-23d075bc2f61",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso deseja obter apenas um item, é possível definir qual documento você gostaria de obter:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c6cd0982-53a9-437f-813c-69357eb49e3d",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const doc = firestore.doc(collection, '5wZV4I2TECWo7fnPVXdH');\nconst item = await firestore.getDoc(doc);\nconst data = item.data();",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d6da4236-0d62-4867-a833-0088bd105e8c",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É importante notar que a estrutura de um documento no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é da seguinte forma:\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "id",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> é o id que foi gerado na sua criação\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "data",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " -> é metódo que retorna os dados que foram enviados ao ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2eef003f-9299-4084-8b5b-db4facd6685a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "15b1550a-5b5a-4de9-9277-ba61ad762541",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É possível aplicar filtros para obter os documentos do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firebase",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "32c77b60-38aa-460c-8893-e6a0b0d96616",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const query = firestore.query(\n  collection,\n  firestore.where('status', '==', 'pending'),\n);\nconst { docs } = await firestore.getDocs(query);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "405da76b-42eb-4c86-8663-47e539cb3934",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "5dfbb04f-debb-4dad-ab3a-6e859d92ed23",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Um recurso muito interessante do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Firestore",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é acompanhar as atualizações em tempo real. É possível acompanhar em múltiplos registros ou até mesmo um único registro. Utiliza-se o metódo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "onSnapshot",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " para acompanhar as modificações feitas",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "52550f2b-e8f6-408c-8507-7f4e4609678f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useEffect(() => {\n  const subscriber = firestore.onSnapshot(collection, async (snapshot) => {\n    setTasks(snapshot.docs);\n  });\n  return subscriber;\n}, []);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "28f38a00-94e7-4b8c-ab12-d0283b19d008",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No exemplo, a coleção inteira será observada. Ou seja, a atualização em qualquer documento irá disparar o evento ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "onSnapshot",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7035e0f6-456e-49bd-bf0d-4ec32aa54e24",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "d763944c-e80d-4a2e-9a6e-efd5ef1f20ca",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Pode-se utilizar para observar apenas registros específicos, usando uma ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "query",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5c1a7d4d-4e6e-4c0c-a78f-339a9f363d13",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useEffect(() => {\n  const query = firestore.query(\n    collection,\n    firestore.where('status', '==', 'pending'),\n  );\n  const subscriber = firestore.onSnapshot(query, async (snapshot) => {\n    setTasks(snapshot.docs);\n  });\n  return subscriber;\n}, []);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ae384677-367a-4417-9cd1-dc941b35efc4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "d0e47baa-3b2f-4ef9-a1c9-d4dc41cdd9e1",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso queira acompanhar as atualizações feitas em único objeto, é só informar qual documento gostaria de observar.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "65d9c1ed-173e-438e-90a3-bf63a75e2860",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useEffect(() => {\n  const doc = firestore.doc(collection, '5wZV4I2TECWo7fnPVXdH');\n  const subscriber = firestore.onSnapshot(doc, async (snapshot) => {\n    setTasks(snapshot.docs);\n  });\n  return subscriber;\n}, []);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "167064b3-16d0-4584-abbd-0ae792456263",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
