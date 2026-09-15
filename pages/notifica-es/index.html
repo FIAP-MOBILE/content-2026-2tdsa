@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2 style="background-color: #FBF3DB;">marp: true<br>theme: fiap-dark</h2>
+<p></p>
+
+<hr>
+<p></p>
+
+
+<p>Mobile App Development</p>
+<hr>
+<p></p>
+
+<p>Um recurso muito interessante que podemos utilizar nas aplicações é a parte de notificações. Considere que seu aplicativo está em segundo plano enquanto uma ação é executada. O usuário não vai ficar olhando toda hora o seu aplicativo. Então, uma notificação pode ser enviada para alertar o usuário.<br>Iremos ver nessa aula como trabalhamos com notificações</p>
+<hr>
+<p></p>
+
+<p>O Expo tem sua própria implementação de <a href="https://docs.expo.dev/versions/latest/sdk/notifications/">notificações</a></p>
+<p>Instale a biblioteca com o seguinte comando:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install expo-notifications</code></pre></div></div></div>
+<hr>
+<p>Além de instalar a parte de notificações, é necessário instalar a biblioteca para fazer a compilação do projeto adequada para ser publicada nas lojas. (Play Store, App Store, etc.)</p>
+<p>Rode o seguinte comando:</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install expo-dev-client</code></pre></div></div></div>
+<hr>
+<p></p>
+
+<p>Para utilizar, pode ser feito o seguinte <code>import</code>:</p>
+<p>Para importar:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">import * as Notifications from &#39;expo-notifications&#39;;</code></pre></div></div>
+<p>E então, devemos configurar no começo do <code>App.tsx</code>, como seu aplicativo vai mostrar as notificações:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">Notifications.setNotificationHandler({
+  handleNotification: async () =&gt; ({
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+    shouldShowBanner: true,
+    shouldShowList: true,
+  }),
+});</code></pre></div></div>
+<hr>
+<p>É importante solicitar a permissão do usuário.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-typescript">await Notifications.requestPermissionsAsync();</code></pre></div></div>
+<hr>
+<p>Uma vez autorizado o uso das notificações, podemos notificar da seguinte forma:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-typescript">await Notifications.scheduleNotificationAsync({
+  trigger: null,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>No <code>Android</code>, é possível criar um canal de notificações. Essa abordagem é interessante para evitar que o usuário desligue todas as notificações do seu app, segmentando o que realmente é relevante.</p>
+<p>Primeiro, deve ser criar o canal:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-typescript">await Notifications.setNotificationChannelAsync(&#39;marketing&#39;, {
+  importance: Notifications.AndroidImportance.MAX,
+  name: &#39;Marketing&#39;,
+  description: &#39;Mensagens de campanha de marketing&#39;,
+});</code></pre></div></div>
+<p>Uma vez criado o canal, então é possível enviar a mensagem:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: {
+    channelId: &#39;marketing&#39;,
+  },
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<p>:warning: Como o <code>iOS</code> não tem recurso de canal de notificações, o código irá executar normalmente.</p>
+<hr>
+<p>É possível atualizar uma notificação. Para isso, ao usar a função <code>scheduleNotificationAsync</code>, podemos informar o <code>identifier</code> da mesma.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-typescript">const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: null,
+  identifier: &#39;minha_notificacao&#39;,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>Caso você não informe o <code>identifier</code> da notificação, será gerado um <code>id</code> automático e retornado pela função <code>scheduleNotificationAsync</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span></div><pre><code class="language-typescript">const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: null,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});
+
+await Notifications.scheduleNotificationAsync({
+  trigger: null,
+  identifier: notificationId,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>É possível cancelar uma notificação. Para isso, devemos utilizar o <code>idenfier</code> da notificação</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: null,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});
+
+await Notifications.dismissNotificationAsync(notificationId);</code></pre></div></div>
+<hr>
+<p>Uma outra forma é utilizar o <code>dismissAllNotificationsAsync</code>. Essa função vai excluir todos os agendamentos existentes:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: null,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});
+
+await Notifications.dismissAllNotificationsAsync();</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Um recurso interessante é o agendamento de notificações. Com isso, você pode agendar no sistema operacional que horas a notificação será exibida.<br>Até o momento, todas as notificações que foram demonstradas eram ativadas instantaneamente.</p>
+<hr>
+<p>Uma das formas de se agendar é passando o intervalo de tempo:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-typescript">const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: {
+    type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+    seconds: 5,
+  },
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<p>A notificação será enviada em 5 segundos partir do momento que ela foi registrada</p>
+<hr>
+<p>É possível agendar a notificação para um horário específico:<br><br></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span></div><pre><code class="language-typescript">const date = new Date();
+date.setMinutes(date.getMinutes() + 1);
+
+const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: {
+    type: Notifications.SchedulableTriggerInputTypes.DATE,
+    date,
+  },
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>Para atualizar um agendamento de notificação, funciona da mesma forma que uma notificação convencional. Basta utilizar o <code>identifier</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span></div><pre><code class="language-typescript">const date = new Date();
+date.setMinutes(date.getMinutes() + 1);
+
+const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: {
+    type: Notifications.SchedulableTriggerInputTypes.DATE,
+    date,
+  },
+  identifier: notificationId,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});
+
+// Atualizando a notificação
+const date = new Date();
+date.setMinutes(date.getMinutes() + 5);
+await Notifications.scheduleNotificationAsync({
+  trigger: {
+    type: Notifications.SchedulableTriggerInputTypes.DATE,
+    date,
+  },
+  identifier: notificationId,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>Caso queira cancelar um agendamento de notificação, pode-se utilizar o <code>cancelScheduledNotificationAsync</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span></div><pre><code class="language-typescript">const date = new Date();
+date.setMinutes(date.getMinutes() + 1);
+
+const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: {
+    type: Notifications.SchedulableTriggerInputTypes.DATE,
+    date,
+  },
+  identifier: notificationId,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});
+
+await Notifications.cancelScheduledNotificationAsync(notificationId);</code></pre></div></div>
+<hr>
+<p>Uma outra forma é utilizar o <code>cancelAllScheduledNotificationsAsync</code>. Essa função vai excluir todos os agendamentos existentes:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span></div><pre><code class="language-typescript">const date = new Date();
+date.setMinutes(date.getMinutes() + 1);
+
+const notificationId = await Notifications.scheduleNotificationAsync({
+  trigger: {
+    type: Notifications.SchedulableTriggerInputTypes.DATE,
+    date,
+  },
+  identifier: notificationId,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+  },
+});
+
+await Notifications.cancelAllScheduledNotificationsAsync();</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>Além dos eventos para saber o que acontece com a notificação, é possível definir ações que uma notificação pode ter. Esse recurso só é disponível no <code>Android</code>, pois ele é mais rico quanto a esse recurso.<br>Por padrão, se você clica na notificação, a biblioteca <code>expo-notifications</code> não realiza nada. Ao clicar em uma notificação, ele automaticamente vai abrir a aplicação.<br>O <code>Expo</code> define as ações como <code>Categories</code>. Para usar na notificação, primeiro deve-se criar a categoria:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-typescript">await Notifications.setNotificationCategoryAsync(&#39;reply&#39;, [
+  {
+    buttonTitle: &#39;Mark as read&#39;,
+    identifier: &#39;REPLY_READ&#39;,
+  },
+  {
+    buttonTitle: &#39;Archive&#39;,
+    identifier: &#39;REPLY_ARCHIVE&#39;,
+  },
+]);</code></pre></div></div>
+<hr>
+<p>O primeiro argumento da função, <code>setNotificationCategoryAsync</code> é a identificação da categoria. No exemplo, foi criada uma categoria identificada como <code>reply</code>. Essa mesma identificação deve ser usada na notificação que deseja ter a opção de realizar ações. No código a seguir, um exemplo de como criar essa notificação:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">const notification = await Notifications.scheduleNotificationAsync({
+  identifier: notificationId,
+  trigger: null,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+    categoryIdentifier: &#39;reply&#39;,
+  },
+});</code></pre></div></div>
+<p>Ao criar a notificação, será exibido as ações <code>Reply</code> e <code>Archive</code><br>É possível adicionar até 3 ações na notificação.</p>
+<hr>
+<p>Para conseguir interagir com a notificação, é necessário registrar um <code>listener</code> utilizando a função<br><code>addNotificationResponseReceivedListener</code>. Com essa função, é possível registrar um <code>callback</code> (chamada de retorno) onde é possível obter os dados referentes a notificação que o usuário interagiu.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-typescript">useEffect(() =&gt; {
+  const notificationListener =
+    Notifications.addNotificationResponseReceivedListener((listener) =&gt; {
+      const { actionIdentifier } = listener;
+      console.log(&#39;Ação realizada&#39;, actionIdentifier);
+    });
+
+  return () =&gt; {
+    notificationListener.remove();
+  };
+}, []);</code></pre></div></div>
+<p>Com o <code>actionIdentifier</code>, é possível saber qual ação o usuário selecionou na notificação.</p>
+<hr>
+<p>Nas ações é possível utilizar uma caixa de texto onde o usuário pode digitar algo e ser capturado pelo <code>listener</code>. Primeiro, vamos criar as ações usando o <code>setNotificationCategoryAsync</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span></div><pre><code class="language-typescript">await Notifications.setNotificationCategoryAsync(&#39;reply&#39;, [
+  {
+    buttonTitle: &#39;Mark as read&#39;,
+    identifier: &#39;REPLY_READ&#39;,
+  },
+  {
+    buttonTitle: &#39;Message&#39;,
+    identifier: &#39;REPLY_MESSAGE&#39;,
+    textInput: {
+      placeholder: &#39;Type your message&#39;,
+      submitButtonTitle: &#39;Send&#39;,
+    },
+  },
+]);</code></pre></div></div>
+<hr>
+<p>Agora, vamos utilizar essas ações em uma notificação:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-typescript">const notification = await Notifications.scheduleNotificationAsync({
+  identifier: notificationId,
+  trigger: null,
+  content: {
+    title: &#39;Hey&#39;,
+    body: &#39;Welcome to the app!&#39;,
+    categoryIdentifier: &#39;reply&#39;,
+  },
+});</code></pre></div></div>
+<hr>
+<p>Então, com o <code>addNotificationResponseReceivedListener</code>, vamos pegar o que o usuário digitou na caixa de entrada assim que ele clicar no botão de enviar:</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-typescript">useEffect(() =&gt; {
+  const notificationListener =
+    Notifications.addNotificationResponseReceivedListener((listener) =&gt; {
+      const { actionIdentifier, userText } = listener;
+      console.log(&#39;Ação realizada&#39;, actionIdentifier);
+      console.log(&#39;Texto digitado&#39;, userText);
+    });
+
+  return () =&gt; {
+    notificationListener.remove();
+  };
+}, []);</code></pre></div></div>
+<p>O <code>userText</code> contém o conteúdo digitado na caixa de entrada da notificação.</p>
+<p>Caso o usuário interaja com uma das ações, devemos utilizar <code>onForegroundEvent</code> ou <code>onBackgroundEvent</code>.</p>
+<hr>
+<p>Para capturar o que o usuário digitou, novamente deve-se utilizar <code>onForegroundEvent</code>/<code>onBackgroundEvent</code></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-typescript">useEffect(() =&gt; {
+  return notifee.onForegroundEvent(({ type, detail }) =&gt; {
+    if (type === EventType.ACTION_PRESS) {
+      console.log(&#39;Ação&#39;, detail.pressAction?.id, detail.input);
+    }
+  });
+}, []);</code></pre></div></div>
+<hr>
+<p></p>
+
+<p>A ideia de usar notificações é informar o usuário de forma instantanea que seu aplicativo pode te algo que exige atenção. Com isso, é importante considerar quando o aplicativo está em primeiro plano e em segundo plano.</p>
+<p>E o que seriam esses planos?</p>
+<ul>
+<li>Primeiro plano: O usuário está com o aplicativo aberto e visível na tela.</li>
+<li>Segundo plano: O usuário não está com o aplicativo visível na tela. Ele abriu em algum momento e mudou seu foco para outro aplicativo.</li>
+</ul>
+<hr>
+<p>Para tratar as notificações em segundo plano, é necessário instalar a biblioteca <code>expo-task-manager</code>.</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">npx expo install expo-task-manager</code></pre></div></div></div>
+<p>Depois de instalada a biblioteca, basta registrar sua tarefa para obter as ações da notificação que teve interação por parte do usuário</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">TypeScript</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span></div><pre><code class="language-typescript">import * as TaskManager from &#39;expo-task-manager&#39;;
+import * as Notifications from &#39;expo-notifications&#39;;
+
+const BACKGROUND_NOTIFICATION_TASK = &#39;BACKGROUND-NOTIFICATION-TASK&#39;;
+
+TaskManager.defineTask&lt;Notifications.NotificationTaskPayload&gt;(
+  BACKGROUND_NOTIFICATION_TASK,
+  async ({ data, error, executionInfo }) =&gt; {
+    const hasAction = &#39;actionIdentifier&#39; in data;
+    if (hasAction) {
+      const { actionIdentifier, userText, notification } = data;
+      console.log(&#39;Action&#39;, actionIdentifier);
+      console.log(&#39;User Text&#39;, userText);
+      console.log(&#39;Notification&#39;, notification);
+    }
+    return Notifications.BackgroundNotificationTaskResult.NoData;
+  },
+);
+
+Notifications.registerTaskAsync(BACKGROUND_NOTIFICATION_TASK);</code></pre></div></div>
+<hr>
+<p></p>
+
+<h1 style="background-color: #DDEBF1;">Dúvidas?</h1>
+
+</body>
+</html>
