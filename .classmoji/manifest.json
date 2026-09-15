@@ -90,6 +90,7 @@
   },
   "general": {
     "pages": [
+      "notificaes",
       "03-preparando-o-ambiente",
       "requisies-http",
       "08-react-navigation-ii",
