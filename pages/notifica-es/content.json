@@ -1,0 +1,1672 @@
+{
+  "blocks": [
+    {
+      "id": "077f48d0-416d-4955-a8b7-13952fa91024",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "ffd1adec-c372-4c1d-aa1a-0fcfc4132d23",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Introdução",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "ef2f44bd-7521-4297-a898-3b9b66dc27d3",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Um recurso muito interessante que podemos utilizar nas aplicações é a parte de notificações. Considere que seu aplicativo está em segundo plano enquanto uma ação é executada. O usuário não vai ficar olhando toda hora o seu aplicativo. Então, uma notificação pode ser enviada para alertar o usuário.\nIremos ver nessa aula como trabalhamos com notificações",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "82cd09b1-8290-4341-b70a-0980b66acf8d",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Instalação",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "0d72736d-ebc6-4922-86e4-e0c1a3c04a31",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "O Expo tem sua própria implementação de ",
+              "styles": {}
+            },
+            {
+              "type": "link",
+              "href": "https://docs.expo.dev/versions/latest/sdk/notifications/",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "notificações",
+                  "styles": {}
+                }
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d0fb1b4f-b429-4493-a946-519ec4a9a573",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Instale a biblioteca com o seguinte comando:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9b9817b3-cce9-4c9e-8c3d-a03924964c6c",
+          "type": "terminal",
+          "props": {
+            "code": "npx expo install expo-notifications",
+            "title": "Terminal"
+          },
+          "children": []
+        },
+        {
+          "id": "7711371c-3809-4d7e-9f08-3dd8ce7c669b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Além de instalar a parte de notificações, é necessário instalar a biblioteca para fazer a compilação do projeto adequada para ser publicada nas lojas. (Play Store, App Store, etc.)",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "63b540e4-ba23-421c-b78b-76239169af39",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Rode o seguinte comando:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c46021c6-bc19-4201-9d6f-8efbc64b66c0",
+          "type": "terminal",
+          "props": {
+            "code": "npx expo install expo-dev-client",
+            "title": "Terminal"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "5d50bf0c-add6-485d-b0b9-9afa689275df",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Utilização",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "84d32133-62de-47d8-b096-710c7ced0ec4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para utilizar, pode ser feito o seguinte ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "import",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ":",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "82a2a4b6-1162-4bbb-938a-303f4683943d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para importar:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "348caaff-18e9-4bd5-a67a-5a32ef7239d6",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import * as Notifications from 'expo-notifications';",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "da9563d9-9caf-4472-8524-e53997465483",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "E então, devemos configurar no começo do ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "App.tsx",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", como seu aplicativo vai mostrar as notificações:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6d6366db-1380-47c9-9074-cfcaa06519b5",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Notifications.setNotificationHandler({\n  handleNotification: async () => ({\n    shouldPlaySound: false,\n    shouldSetBadge: false,\n    shouldShowBanner: true,\n    shouldShowList: true,\n  }),\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c0c92f41-a08f-4c89-866c-7109b871b0a8",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É importante solicitar a permissão do usuário.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0b48d391-cc12-436b-9e08-4dc8e0ed5e09",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "await Notifications.requestPermissionsAsync();",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0dff70a6-d755-47b2-b193-3c6e7073005b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma vez autorizado o uso das notificações, podemos notificar da seguinte forma:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "97515308-6f83-4941-9209-68ac89897a28",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "await Notifications.scheduleNotificationAsync({\n  trigger: null,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dd71e2f5-2811-4063-bd37-f0675de0890a",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Android",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", é possível criar um canal de notificações. Essa abordagem é interessante para evitar que o usuário desligue todas as notificações do seu app, segmentando o que realmente é relevante.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7e739cc1-a7f4-4b08-8e5b-82ff04d6e0fa",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Primeiro, deve ser criar o canal:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9a8afd6a-03c0-4c25-abb8-24b37ad31fd3",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "await Notifications.setNotificationChannelAsync('marketing', {\n  importance: Notifications.AndroidImportance.MAX,\n  name: 'Marketing',\n  description: 'Mensagens de campanha de marketing',\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f71d0b4c-ac9e-403d-afae-fd2052cc4284",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma vez criado o canal, então é possível enviar a mensagem:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8686999e-77ab-4590-aa4a-297b4050f2cb",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: {\n    channelId: 'marketing',\n  },\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2f0a58da-b8d9-4f44-9518-f6fbb7ca9921",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "⚠️  Como o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "iOS",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " não tem recurso de canal de notificações, o código irá executar normalmente.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f1ff1d30-8176-4031-8349-193831d105a0",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "27468d36-c9af-4dd1-876a-7c1b23f2e55d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É possível atualizar uma notificação. Para isso, ao usar a função ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "scheduleNotificationAsync",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", podemos informar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "identifier",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " da mesma.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "155403b3-46d9-49ef-8712-1aa0c6b34e0f",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: null,\n  identifier: 'minha_notificacao',\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9004b152-db07-44f6-b674-de819e352280",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso você não informe o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "identifier",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " da notificação, será gerado um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "id",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " automático e retornado pela função ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "scheduleNotificationAsync",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6e787411-247c-4779-bee2-4552b2f53dee",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: null,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});\n\nawait Notifications.scheduleNotificationAsync({\n  trigger: null,\n  identifier: notificationId,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "05d4fd66-8157-47f5-82d2-9e4448c8f883",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "6f172101-ba13-4cfc-8ea9-84e7f5129d95",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É possível cancelar uma notificação. Para isso, devemos utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "idenfier",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " da notificação",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c34e3cf2-088e-4c8e-82e4-deb79f1f3222",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: null,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});\n\nawait Notifications.dismissNotificationAsync(notificationId);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5ea5f27c-c6ab-48e8-9da4-4c1f86c02cad",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma outra forma é utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "dismissAllNotificationsAsync",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Essa função vai excluir todos os agendamentos existentes:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0ecb0d8c-eae8-4804-8006-bb8bc015e08a",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: null,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});\n\nawait Notifications.dismissAllNotificationsAsync();",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "fecf3a4c-e808-4c5a-8c0b-da30e215b05c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Agendamento",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "78360c59-5002-4072-a957-7a06a998e5dd",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Um recurso interessante é o agendamento de notificações. Com isso, você pode agendar no sistema operacional que horas a notificação será exibida.\nAté o momento, todas as notificações que foram demonstradas eram ativadas instantaneamente.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d460784f-4e86-4a59-a8d2-8cb591fc8592",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma das formas de se agendar é passando o intervalo de tempo:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5eb6fabd-730b-42f5-8008-d762a81488b8",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: {\n    type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,\n    seconds: 5,\n  },\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9080402b-d428-42aa-a554-435adc20da9f",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "A notificação será enviada em 5 segundos partir do momento que ela foi registrada",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "34995e15-b230-49f3-8625-f9421090b66b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "ae78cd78-c4f3-4e6a-9e39-ae799a727388",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "É possível agendar a notificação para um horário específico:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ddec7bce-82f0-4ea6-adb5-58e3fe13bc8b",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const date = new Date();\ndate.setMinutes(date.getMinutes() + 1);\n\nconst notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: {\n    type: Notifications.SchedulableTriggerInputTypes.DATE,\n    date,\n  },\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "952dac00-3b9d-47a6-bee4-4070d39fa0a6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "43080c4d-10f8-414c-9e39-a0dc231809eb",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para atualizar um agendamento de notificação, funciona da mesma forma que uma notificação convencional. Basta utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "identifier",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4fb280fc-2eb3-492a-8ce0-091baf4e021d",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const date = new Date();\ndate.setMinutes(date.getMinutes() + 1);\n\nconst notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: {\n    type: Notifications.SchedulableTriggerInputTypes.DATE,\n    date,\n  },\n  identifier: notificationId,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});\n\n// Atualizando a notificação\nconst date = new Date();\ndate.setMinutes(date.getMinutes() + 5);\nawait Notifications.scheduleNotificationAsync({\n  trigger: {\n    type: Notifications.SchedulableTriggerInputTypes.DATE,\n    date,\n  },\n  identifier: notificationId,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e3eea944-aa85-4b75-b6be-2f49436c1263",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "4218e8bc-8e91-4095-a224-3befac117fa6",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Caso queira cancelar um agendamento de notificação, pode-se utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "cancelScheduledNotificationAsync",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5940ac83-1c8a-4702-9428-941b7a0782ee",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const date = new Date();\ndate.setMinutes(date.getMinutes() + 1);\n\nconst notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: {\n    type: Notifications.SchedulableTriggerInputTypes.DATE,\n    date,\n  },\n  identifier: notificationId,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});\n\nawait Notifications.cancelScheduledNotificationAsync(notificationId);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d22ca84b-f052-49c4-931b-9219b798ac18",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "225eaa04-a962-4e06-b5dd-02d0760530ee",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Uma outra forma é utilizar o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "cancelAllScheduledNotificationsAsync",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Essa função vai excluir todos os agendamentos existentes:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "762fd016-92af-4382-a483-76387db30e43",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const date = new Date();\ndate.setMinutes(date.getMinutes() + 1);\n\nconst notificationId = await Notifications.scheduleNotificationAsync({\n  trigger: {\n    type: Notifications.SchedulableTriggerInputTypes.DATE,\n    date,\n  },\n  identifier: notificationId,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n  },\n});\n\nawait Notifications.cancelAllScheduledNotificationsAsync();",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "a11d4c2c-4dee-45f8-aa58-2ddc07a767c4",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ações",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "ccbe0f6f-7b4f-4153-ba81-26002301b571",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Além dos eventos para saber o que acontece com a notificação, é possível definir ações que uma notificação pode ter. Esse recurso só é disponível no ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Android",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", pois ele é mais rico quanto a esse recurso.\nPor padrão, se você clica na notificação, a biblioteca ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "expo-notifications",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " não realiza nada. Ao clicar em uma notificação, ele automaticamente vai abrir a aplicação.\nO ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Expo",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " define as ações como ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Categories",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Para usar na notificação, primeiro deve-se criar a categoria:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "02fed0f0-867f-46c6-a973-091ddabc80c4",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "await Notifications.setNotificationCategoryAsync('reply', [\n  {\n    buttonTitle: 'Mark as read',\n    identifier: 'REPLY_READ',\n  },\n  {\n    buttonTitle: 'Archive',\n    identifier: 'REPLY_ARCHIVE',\n  },\n]);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "14e6fcef-9a72-4ff0-a9ec-398b1a8e5a41",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "O primeiro argumento da função, ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "setNotificationCategoryAsync",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " é a identificação da categoria. No exemplo, foi criada uma categoria identificada como ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "reply",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Essa mesma identificação deve ser usada na notificação que deseja ter a opção de realizar ações. No código a seguir, um exemplo de como criar essa notificação:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "48b361b6-9c2d-4225-8a9f-83d8cd89724d",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notification = await Notifications.scheduleNotificationAsync({\n  identifier: notificationId,\n  trigger: null,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n    categoryIdentifier: 'reply',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "98da15bb-2a79-4c5c-a340-fb8ae8b56b5d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao criar a notificação, será exibido as ações ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Reply",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " e ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "Archive\n",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": "É possível adicionar até 3 ações na notificação.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "aa8c7816-21b8-43e8-82ad-ce65f813430e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "0779f572-7c29-48e0-9135-8d28ae6a4298",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para conseguir interagir com a notificação, é necessário registrar um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "listener",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " utilizando a função\n",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "addNotificationResponseReceivedListener",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Com essa função, é possível registrar um ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "callback",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " (chamada de retorno) onde é possível obter os dados referentes a notificação que o usuário interagiu.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6af2cc70-096a-4138-a868-fe31626b1e88",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useEffect(() => {\n  const notificationListener =\n    Notifications.addNotificationResponseReceivedListener((listener) => {\n      const { actionIdentifier } = listener;\n      console.log('Ação realizada', actionIdentifier);\n    });\n\n  return () => {\n    notificationListener.remove();\n  };\n}, []);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "226b6336-fba6-4541-b216-aca1db0d8111",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "actionIdentifier",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", é possível saber qual ação o usuário selecionou na notificação.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "93426cba-cea9-4163-86c4-686e5a11594e",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "40548c9e-350f-410c-8c4e-db5b85ed2048",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Nas ações é possível utilizar uma caixa de texto onde o usuário pode digitar algo e ser capturado pelo ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "listener",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Primeiro, vamos criar as ações usando o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "setNotificationCategoryAsync",
+              "styles": {
+                "code": true
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6c59582c-db34-4e86-88d7-1c3bd823f001",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "await Notifications.setNotificationCategoryAsync('reply', [\n  {\n    buttonTitle: 'Mark as read',\n    identifier: 'REPLY_READ',\n  },\n  {\n    buttonTitle: 'Message',\n    identifier: 'REPLY_MESSAGE',\n    textInput: {\n      placeholder: 'Type your message',\n      submitButtonTitle: 'Send',\n    },\n  },\n]);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "997b68fb-78fe-47a5-bbcc-67461b62a4f4",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Agora, vamos utilizar essas ações em uma notificação:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f9c1cc4d-d976-4194-8d36-1aaadf962c05",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "const notification = await Notifications.scheduleNotificationAsync({\n  identifier: notificationId,\n  trigger: null,\n  content: {\n    title: 'Hey',\n    body: 'Welcome to the app!',\n    categoryIdentifier: 'reply',\n  },\n});",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3daa6728-8870-4474-984a-e71174396515",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Então, com o ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "addNotificationResponseReceivedListener",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ", vamos pegar o que o usuário digitou na caixa de entrada assim que ele clicar no botão de enviar:",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b7c92c58-7a06-40a3-91a7-f370a4f6b5f2",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "useEffect(() => {\n  const notificationListener =\n    Notifications.addNotificationResponseReceivedListener((listener) => {\n      const { actionIdentifier, userText } = listener;\n      console.log('Ação realizada', actionIdentifier);\n      console.log('Texto digitado', userText);\n    });\n\n  return () => {\n    notificationListener.remove();\n  };\n}, []);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1cb9307d-348b-460f-808a-e3e0c086ab6d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "O ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "userText",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": " contém o conteúdo digitado na caixa de entrada da notificação.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "59514202-6fc8-49ae-b099-b4d419fe5ec6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "58a24837-a957-45b2-a3be-4b5ec45d6299",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 1,
+        "isToggleable": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Estado do aplicativo",
+          "styles": {}
+        }
+      ],
+      "children": [
+        {
+          "id": "a3e7237b-e5ef-46a7-89dc-47c49944019f",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "A ideia de usar notificações é informar o usuário de forma instantanea que seu aplicativo pode te algo que exige atenção. Com isso, é importante considerar quando o aplicativo está em primeiro plano e em segundo plano.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "20f9761d-4ed4-4933-a609-59653f60b02d",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "E o que seriam esses planos?",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "368781aa-39c1-4f86-b0f2-c0ecf713d008",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Primeiro plano: O usuário está com o aplicativo aberto e visível na tela.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "822bcc31-71e1-44c2-8021-e5cfc8bf7147",
+          "type": "bulletListItem",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Segundo plano: O usuário não está com o aplicativo visível na tela. Ele abriu em algum momento e mudou seu foco para outro aplicativo.",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4beb8619-e6c4-4a9a-bf89-7f60ddc6638b",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "2f091dfe-b969-46c6-923d-b9ab585f3eef",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Para tratar as notificações em segundo plano, é necessário instalar a biblioteca ",
+              "styles": {}
+            },
+            {
+              "type": "text",
+              "text": "expo-task-manager",
+              "styles": {
+                "code": true
+              }
+            },
+            {
+              "type": "text",
+              "text": ".",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d7f39277-b6a0-4ffe-8e0e-6face15bfcce",
+          "type": "terminal",
+          "props": {
+            "code": "npx expo install expo-task-manager",
+            "title": "Terminal"
+          },
+          "children": []
+        },
+        {
+          "id": "c6e75ee6-d95a-4f5b-963d-75232343c7ca",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [],
+          "children": []
+        },
+        {
+          "id": "8e0d5c93-141d-4941-abb9-f00f2aaf19ac",
+          "type": "paragraph",
+          "props": {
+            "backgroundColor": "default",
+            "textColor": "default",
+            "textAlignment": "left"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Depois de instalada a biblioteca, basta registrar sua tarefa para obter as ações da notificação que teve interação por parte do usuário",
+              "styles": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4aeb5410-23e0-4273-9252-ef9d9c0ef254",
+          "type": "codeBlock",
+          "props": {
+            "language": "typescript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "import * as TaskManager from 'expo-task-manager';\nimport * as Notifications from 'expo-notifications';\n\nconst BACKGROUND_NOTIFICATION_TASK = 'BACKGROUND-NOTIFICATION-TASK';\n\nTaskManager.defineTask<Notifications.NotificationTaskPayload>(\n  BACKGROUND_NOTIFICATION_TASK,\n  async ({ data, error, executionInfo }) => {\n    const hasAction = 'actionIdentifier' in data;\n    if (hasAction) {\n      const { actionIdentifier, userText, notification } = data;\n      console.log('Action', actionIdentifier);\n      console.log('User Text', userText);\n      console.log('Notification', notification);\n    }\n    return Notifications.BackgroundNotificationTaskResult.NoData;\n  },\n);\n\nNotifications.registerTaskAsync(BACKGROUND_NOTIFICATION_TASK);",
+              "styles": {}
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "791b77d1-8aeb-4564-aa6a-ec7e416c0e0c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
