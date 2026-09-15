@@ -1,21 +1,10 @@
 {
   "blocks": [
     {
-      "id": "077f48d0-416d-4955-a8b7-13952fa91024",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [],
-      "children": []
-    },
-    {
       "id": "ffd1adec-c372-4c1d-aa1a-0fcfc4132d23",
       "type": "heading",
       "props": {
-        "backgroundColor": "rgb(251, 243, 219)",
+        "backgroundColor": "default",
         "textColor": "default",
         "textAlignment": "left",
         "level": 1,
