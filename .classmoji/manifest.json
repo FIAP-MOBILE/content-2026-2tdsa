@@ -67,6 +67,11 @@
         }
       }
     },
+    "location-demo": {
+      "pages": [],
+      "slides": [],
+      "assignments": {}
+    },
     "react-components": {
       "pages": [],
       "slides": [],
