@@ -37,11 +37,11 @@
       "pages": [],
       "slides": [],
       "assignments": {
-        "filmski": {
+        "checkpoint-4": {
           "pages": [],
           "slides": []
         },
-        "checkpoint-4": {
+        "filmski": {
           "pages": [],
           "slides": []
         }
@@ -70,7 +70,12 @@
     "location-demo": {
       "pages": [],
       "slides": [],
-      "assignments": {}
+      "assignments": {
+        "location-demo": {
+          "pages": [],
+          "slides": []
+        }
+      }
     },
     "react-components": {
       "pages": [],
@@ -111,7 +116,8 @@
       "firestore-expo"
     ],
     "slides": [
-      "navega-o"
+      "navega-o",
+      "javascript"
     ]
   }
 }
