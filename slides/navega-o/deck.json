@@ -5,31 +5,19 @@
   "slides": [
     {
       "id": "1dd2ceed",
-      "html": "<h1>Navegação</h1>",
-      "attrs": {
-        "style": "top: 283.5px;"
-      }
+      "html": "<h1>Navegação</h1>"
     },
     {
       "id": "75236e41",
-      "html": "<h2>Slide 2</h2>\n<p>Add your content here...</p>",
-      "attrs": {
-        "style": "top: 350px;"
-      }
+      "html": "<h2>Slide 2</h2>\n<p>Add your content here...</p><div class=\"sl-block\" data-block-type=\"sandpack\" style=\"left: 30px; top: 100px; width: 900px; height: 400px;\"><div class=\"sl-block-content\"><div class=\"sandpack-embed\" data-template=\"vanilla\" data-theme=\"auto\" data-layout=\"preview-right\"><script type=\"application/json\" data-sandpack-files=\"\">{\n  \"/index.html\": \"<!DOCTYPE html>\\n<html>\\n<head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"styles.css\\\">\\n</head>\\n<body>\\n  <h1>Hello World</h1>\\n  <p>Edit the code to see changes!</p>\\n  <script src=\\\"index.js\\\"><\\/script>\\n</body>\\n</html>\",\n  \"/styles.css\": \"body {\\n  font-family: system-ui, sans-serif;\\n  padding: 20px;\\n  margin: 0;\\n}\\n\\nh1 {\\n  color: #333;\\n}\",\n  \"/index.js\": \"// Your JavaScript code here\\nconsole.log('Hello from JavaScript!');\\n\\ndocument.querySelector('h1').addEventListener('click', () => {\\n  alert('Clicked!');\\n});\"\n}</script></div></div></div>"
     },
     {
       "id": "b0300f07",
-      "html": "<h2>Code Example</h2>\n<pre><code class=\"language-javascript\">// Your code here\nfunction example() {\n  return \"Hello, World!\";\n}</code></pre>",
-      "attrs": {
-        "style": "top: 350px;"
-      }
+      "html": "<h2>Code Example</h2>\n<pre><code class=\"language-javascript\">// Your code here\nfunction example() {\n  return \"Hello, World!\";\n}</code></pre>"
     },
     {
       "id": "0350ba1d",
-      "html": "<h2>Questions?</h2>",
-      "attrs": {
-        "style": "top: 350px;"
-      }
+      "html": "<h2>Questions?</h2>"
     }
   ],
   "config": {
