@@ -18,7 +18,10 @@
       "slides": [],
       "assignments": {
         "checkpoint-5": {
-          "pages": [],
+          "pages": [
+            "12-firebase-firestore",
+            "firestore-expo"
+          ],
           "slides": []
         }
       }
@@ -112,8 +115,7 @@
       "04-typescript",
       "05-componentes-do-react-native",
       "permisses",
-      "firebase-expo",
-      "firestore-expo"
+      "firebase-expo"
     ],
     "slides": [
       "navega-o"
