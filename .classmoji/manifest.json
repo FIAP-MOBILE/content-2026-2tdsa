@@ -118,7 +118,8 @@
       "firebase-expo"
     ],
     "slides": [
-      "revisitando-o-javascript"
+      "revisitando-o-javascript",
+      "revisitando-o-react"
     ]
   }
 }
