@@ -2,12 +2,6 @@
   "version": 1,
   "theme": "shared:fiap",
   "codeTheme": "github",
-  "config": {
-    "width": 960,
-    "height": 700,
-    "center": false
-  },
-  "customCss": "\n    /* Override slides.com animation system - make all elements fully visible */\n    .sl-block-content,\n    .sl-block-content[data-animation-type],\n    .sl-block-content[data-animation-type=\"fade-in\"],\n    .sl-block-content[data-animation-type=\"fade-out\"] {\n      opacity: 1 !important;\n      visibility: visible !important;\n      pointer-events: auto !important;\n    }\n  ",
   "slides": [
     {
       "id": "13998350",
@@ -70,7 +64,7 @@
         },
         {
           "id": "6b1d07d5",
-          "html": "\n<div class=\"sl-block\" data-block-type=\"text\" data-name=\"text-28a399\" data-block-id=\"28a399a46c26a66e553aeded2c4bd58a\" style=\"left: 56.89px; top: 84px; width: 903.11px; height: auto;\"><div class=\"sl-block-content marp-header\" style=\"z-index: 11;\">\n<header>Ambiente</header>\n</div></div>\n<div class=\"sl-block\" data-block-type=\"text\" data-name=\"text-d04a2d\" data-block-id=\"d04a2dbbe2270f07b074b33debea1d2e\" style=\"left: 56.89px; top: 199.11px; width: 846.22px; height: 500.89px;\"><div class=\"sl-block-content marp-body\" style=\"z-index: 10;\">\n<p>Escolha de IDE</p>\n<ul>\n<li><a href=\"https://code.visualstudio.com/\">https://code.visualstudio.com/</a> (Recomendado)</li>\n<li><a href=\"http://brackets.io/\">https://zed.dev/</a></li>\n</ul>\n</div></div>\n",
+          "html": "\n<div class=\"sl-block\" data-block-type=\"text\" data-name=\"text-28a399\" data-block-id=\"28a399a46c26a66e553aeded2c4bd58a\" style=\"left: 56.89px; top: 84px; width: 903.11px; height: auto;\"><div class=\"sl-block-content marp-header\" style=\"z-index: 11;\">\n<header>Ambiente</header>\n</div></div>\n<div class=\"sl-block\" data-block-type=\"text\" data-name=\"text-d04a2d\" data-block-id=\"d04a2dbbe2270f07b074b33debea1d2e\" style=\"left: 56.89px; top: 199px; width: 846.22px; height: 500.89px;\"><div class=\"sl-block-content marp-body\" style=\"z-index: 10;\">\n<p>Escolha de IDE</p>\n<ul>\n<li><a href=\"https://code.visualstudio.com/\">https://code.visualstudio.com/</a> (Recomendado)</li><li><a href=\"http://brackets.io/\" style=\"color: rgb(9, 105, 218); text-underline-offset: 3.456px;\">https://zed.dev/</a></li>\n</ul>\n</div></div>\n",
           "attrs": {
             "data-id": "7fd64f4322c5f8baa38011fba24cf1e2"
           }
@@ -282,5 +276,11 @@
         "class": "title"
       }
     }
-  ]
+  ],
+  "config": {
+    "width": 960,
+    "height": 700,
+    "center": false
+  },
+  "customCss": "\n    /* Override slides.com animation system - make all elements fully visible */\n    .sl-block-content,\n    .sl-block-content[data-animation-type],\n    .sl-block-content[data-animation-type=\"fade-in\"],\n    .sl-block-content[data-animation-type=\"fade-out\"] {\n      opacity: 1 !important;\n      visibility: visible !important;\n      pointer-events: auto !important;\n    }\n  "
 }
