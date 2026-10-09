@@ -2,6 +2,12 @@
   "version": 1,
   "theme": "shared:fiap",
   "codeTheme": "github",
+  "config": {
+    "width": 960,
+    "height": 700,
+    "center": false
+  },
+  "customCss": "\n    /* Override slides.com animation system - make all elements fully visible */\n    .sl-block-content,\n    .sl-block-content[data-animation-type],\n    .sl-block-content[data-animation-type=\"fade-in\"],\n    .sl-block-content[data-animation-type=\"fade-out\"] {\n      opacity: 1 !important;\n      visibility: visible !important;\n      pointer-events: auto !important;\n    }\n  ",
   "slides": [
     {
       "id": "13998350",
@@ -276,11 +282,5 @@
         "class": "title"
       }
     }
-  ],
-  "config": {
-    "width": 960,
-    "height": 700,
-    "center": false
-  },
-  "customCss": "\n    /* Override slides.com animation system - make all elements fully visible */\n    .sl-block-content,\n    .sl-block-content[data-animation-type],\n    .sl-block-content[data-animation-type=\"fade-in\"],\n    .sl-block-content[data-animation-type=\"fade-out\"] {\n      opacity: 1 !important;\n      visibility: visible !important;\n      pointer-events: auto !important;\n    }\n  "
+  ]
 }
