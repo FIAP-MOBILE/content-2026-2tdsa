@@ -1,5 +1,10 @@
 {
   "repositories": {
+    "camera": {
+      "pages": [],
+      "slides": [],
+      "assignments": {}
+    },
     "checkpoint-2": {
       "pages": [],
       "slides": [],
